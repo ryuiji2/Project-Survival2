@@ -10,6 +10,7 @@ public class Wave : MonoBehaviour {
     public float waveEnemy; //hoeveel enemies per wave.
     public float extraSpawn; //hoeveel extra enemies er zijn na de enemy cap.
     public GameObject zombie; //de zombie.
+    public List<EnemyStats> zombieStats = new List<EnemyStats> (); //list van EnemyStats, handig voor instakill drop (if implimented)
     public List<GameObject> spawnLoc = new List<GameObject>(); //in deze list komen de spawnpoints voor de zombies.
     public float waveTime; //hoeveel tijd er tussen de waves zit.
     public float spawnTime; //hoeveel tijd er tussen de spawning van zombies zit.
@@ -18,7 +19,7 @@ public class Wave : MonoBehaviour {
     private bool canSpawnExtra;
 
 	void Start () {
-        waveEnemy = 6; //verrander deze als je het aantal begin enemies wilt verranderen
+        waveEnemy = 6; //verrander dit als je het aantal begin enemies wilt verranderen
         currWave = 0; //hoef je niet aan te passen
         maxEnemy = 30; //maximum aantal enemies dat in 1 keer op de map kunnen zitten
 	}
@@ -39,7 +40,7 @@ public class Wave : MonoBehaviour {
             currWave++;
             waveEnemy = Mathf.Ceil (waveEnemy *= 1.1f); //elke wave gaat het aantal zombies omhoog, afgerond naar boven.
             coroutineActive = true;
-            StartCoroutine ("NextWave");
+            StartCoroutine (NextWave());
             if (waveEnemy > maxEnemy) {
                 extraSpawn = waveEnemy - maxEnemy;
             }
@@ -50,7 +51,8 @@ public class Wave : MonoBehaviour {
         int randomSpawnLoc = Random.Range (0, spawnLoc.Count);
         if (canSpawnExtra == true) {
             if (extraSpawn > 0 && currEnemy < maxEnemy) {
-                Instantiate (zombie, spawnLoc [randomSpawnLoc].transform.position, Quaternion.identity);
+                GameObject spawnedZombie = Instantiate (zombie, spawnLoc [randomSpawnLoc].transform.position, Quaternion.identity) as GameObject;
+                zombieStats.Add (spawnedZombie.GetComponent<EnemyStats> ());
                 currEnemy++;
                 extraSpawn--;
             }
