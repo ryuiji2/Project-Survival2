@@ -12,19 +12,29 @@ public class Shooting : MonoBehaviour {
 	public Weapon _Weapon;
 	public bool pistol, mp40;
 
-	public int pistolMaxAmmo, pistolAmmo, mp40MaxAmmo, mp40Ammo;
+	public int pistolCurrentAmmo, pistolMagAmmo, pistolAmmo, mp40CurrentAmmo, mp40MagAmmo, mp40Ammo;
 
 	//USE INHERITANCE?
 	public Camera cam;
 
 	public KeyCode key, switchkey;
 
+	public UIManager uim;
+
+	public Sprite pistolIcon, mp40Icon;
+
 	//sets cursorstate
 	private void Awake () {
-		//Cursor.lockState = CursorLockMode.Locked; //should happen in ui manager
+
+		uim = GameObject.Find("Canvas").GetComponent<UIManager>();
+
+		
+		pistolCurrentAmmo = pistolMagAmmo; //needs to be how much you picked
+		mp40CurrentAmmo = mp40MagAmmo;
+
+		uim.gunIconSlot.sprite = null;
+
 		WeaponState();
-		pistolAmmo = pistolMaxAmmo;
-		mp40Ammo = mp40MaxAmmo;
 	}
 	// Update is called once per frame
 	private void Update () {
@@ -39,21 +49,27 @@ public class Shooting : MonoBehaviour {
 
 			case Weapon.Pistol:
 
+				mp40 = false;
+				pistol = true;
 				//play grab pistol animation
 				//show visual weapon this weapon on other off
 				//update ammo
-				mp40 = false;
-				pistol = true;
+				Debug.Log("Start pistol");
+				uim.SetGunIcon(pistolIcon);
+				SendAmmoValues();
+
 
 			break;
 
 			case Weapon.Mp40:
 
+				pistol = false;
+				mp40 = true;
 				//play grab mp40 animation
 				//show visual weapon
 				//update ammo
-				pistol = false;
-				mp40 = true;
+				uim.SetGunIcon(mp40Icon);
+				SendAmmoValues();
 
 			break;
 		}
@@ -66,6 +82,7 @@ public class Shooting : MonoBehaviour {
 			if(pistol == true) {
 
 				_Weapon = Weapon.Mp40;
+				//maybe other guns false
 			}
 			if(mp40 == true) {
 
@@ -75,20 +92,50 @@ public class Shooting : MonoBehaviour {
 			WeaponState();
 		}
 	}
+	public void SendAmmoValues () {
+
+		if(pistol) {
+
+			Debug.Log("Start");
+			uim.CheckAmmo(pistolCurrentAmmo, pistolAmmo);
+		}
+		if(mp40) {
+
+			uim.CheckAmmo(mp40CurrentAmmo, mp40Ammo);
+		}
+	}
 	//Checks for shooting Input
 	public void CheckInput () {
 	
         if(pistol == true && Input.GetKeyDown(key)) {
 
-			Shoot();
-			pistolAmmo--;
-			Debug.Log("SHoot pistol");
+			pistolCurrentAmmo --;
+			CheckAmmoCount();
+			SendAmmoValues();
 		} 
 		else if(mp40 == true && Input.GetKey(key)) {
 
+			mp40CurrentAmmo --;
+			CheckAmmoCount();
+			SendAmmoValues();
+		}	
+	}
+	public void CheckAmmoCount () {
+
+
+		if(mp40CurrentAmmo <= 0) {
+
+			mp40CurrentAmmo = 0;
+			Debug.Log("reload");
+		}
+		if(pistolCurrentAmmo <= 0) {
+
+			pistolCurrentAmmo = 0;
+			Debug.Log("Reload");
+		}
+		if(pistolCurrentAmmo > 0 & pistol|| mp40CurrentAmmo > 0 & mp40){
+
 			Shoot();
-			mp40Ammo--;
-			Debug.Log("Shoot mp40");
 		}
 	}
 	//shoots and hit
@@ -105,6 +152,7 @@ public class Shooting : MonoBehaviour {
 			if(hit.collider.tag == "Enemy") {
 
 				GameObject objectHit = hit.collider.gameObject; //what you hit
+				//particles
 				//objectHit.GetComponent<EnemyStats>.Health(damage);
 			}
 			else {

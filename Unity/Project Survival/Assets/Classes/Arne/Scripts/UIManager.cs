@@ -45,12 +45,24 @@ public class UIManager : MonoBehaviour
 
 	bool cursorActive;
 
+	public Image gunIconSlot;
+
+	public Shooting shootScript;
+
+	string infinite;
+
 
 	//sets some things ready
 	private void Awake () {	
 		
+		infinite = "∞";
+		shootScript = GameObject.Find("Gun").GetComponent<Shooting>();
+
 		//camRotateScript = GameObject.Find("Camera").GetComponent<RotateCamera>();
 		playerStats = GameObject.Find("Player").GetComponent<PlayerStats>();
+
+		//gunIconSlot = GameObject.Find("Gun Icon").GetComponent<Image>();
+
 		CheckUIState();
 
 		cursorActive = false;
@@ -78,6 +90,7 @@ public class UIManager : MonoBehaviour
 			//camRotateScript.gameObject.SetActive(false);
 			List<RectTransform> ingameList = new List<RectTransform>() {ingame};
 			EnableMenuItems(ingame);
+			
 			SwitchCursorState();
             
             break;
@@ -90,6 +103,10 @@ public class UIManager : MonoBehaviour
 
 			break;
         }
+	}
+	public void SetGunIcon (Sprite icon) {
+
+		gunIconSlot.sprite = icon;
 	}
 	//makes you pause ingame or unpause
 	private void PressEscape () {
@@ -158,8 +175,7 @@ public class UIManager : MonoBehaviour
 		else {
 
 			Cursor.lockState = CursorLockMode.Locked; 
-		}
-		
+		}	
 	}
 	//receives items and will make a list of them that will get send to another function
 	private void EnableMenuItems(RectTransform item) {
@@ -182,8 +198,8 @@ public class UIManager : MonoBehaviour
 		healthBar.fillAmount = playerStats.healthPercentage;
 	}
 	//checks ammo and updates ui    	NOT MADE YET
-	public void CheckAmmo () //needs overload so it can receive health or damage
+	public void CheckAmmo (int current, int max) //needs overload so it can receive health or damage
 	{
-		//current weapons ammo
+		ammoText.text = current + " / " + max;
 	}
 }
