@@ -15,7 +15,8 @@ public class CameraLook : MonoBehaviour {
         player = transform.parent;
     }
 
-    void Update () {
+    void FixedUpdate () {
+        
         yaw += speedH * Input.GetAxis ("Mouse X");
         pitch -= speedV * Input.GetAxis ("Mouse Y");
         pitch = Mathf.Clamp (pitch, -90f, 90f);

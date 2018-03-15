@@ -18,13 +18,21 @@ public class Wave : MonoBehaviour {
     private bool coroutineActive;
     private bool canSpawnExtra;
 
+    public Transform player;
+
+    private void Awake () {
+
+        player = GameObject.Find("Player").transform;
+	}
 	void Start () {
-        waveEnemy = 6; //verrander dit als je het aantal begin enemies wilt verranderen
+
+        //waveEnemy = 6; //verrander dit als je het aantal begin enemies wilt verranderen
         currWave = 0; //hoef je niet aan te passen
-        maxEnemy = 30; //maximum aantal enemies dat in 1 keer op de map kunnen zitten
+        //maxEnemy = 30; //maximum aantal enemies dat in 1 keer op de map kunnen zitten
 	}
 	
 	void Update () {
+
         EnemyCheck();
         ExtraEnemy ();
 
@@ -33,7 +41,6 @@ public class Wave : MonoBehaviour {
             dit word aangepast met EnemyStats (Voor --)
         }*/
 	}
-
     void EnemyCheck () {
 
         if (currEnemy == 0 && !coroutineActive) {
@@ -48,6 +55,7 @@ public class Wave : MonoBehaviour {
     }
 
     void ExtraEnemy () {
+
         int randomSpawnLoc = Random.Range (0, spawnLoc.Count);
         if (canSpawnExtra == true) {
             if (extraSpawn > 0 && currEnemy < maxEnemy) {
@@ -60,6 +68,7 @@ public class Wave : MonoBehaviour {
     }
 
     IEnumerator NextWave() {
+
         canSpawnExtra = false;
         yield return new WaitForSeconds(waveTime);
 

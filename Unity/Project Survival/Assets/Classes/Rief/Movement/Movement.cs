@@ -9,12 +9,14 @@ public class Movement : MonoBehaviour {
     private bool canJump;
     public int jumpHeight; //hoog zetten, werkt anders niet heel goed. 300 werkte prima.
 
-    void Update() {
+    void FixedUpdate() {
+
         CharMove();
         Jump ();
     }
 
     void CharMove() {
+
         float forwardBack = Input.GetAxis("Vertical") * moveSpeed * Time.deltaTime;
         float leftRight = Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime;
 
@@ -22,6 +24,7 @@ public class Movement : MonoBehaviour {
     }
 
     void Jump () {
+
         if (Input.GetButtonDown ("Jump") && canJump) {
             GetComponent<Rigidbody> ().AddForce (0, jumpHeight, 0);
             canJump = false;
@@ -29,6 +32,7 @@ public class Movement : MonoBehaviour {
     }
 
     private void OnCollisionEnter (Collision collision) {
+        
         if (collision.gameObject.tag == "Ground") {
             canJump = true;
         }

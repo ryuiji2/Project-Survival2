@@ -8,7 +8,7 @@ public class Regeneration : MonoBehaviour {
     public float outOfCombat;
     public int regen;
     public int maxRegen;
-    private bool beenHit = false;
+    public bool beenHit = false;
     private IEnumerator Timer;
     private IEnumerator Regenerate;
     private PlayerStats playerstats;
@@ -27,7 +27,7 @@ public class Regeneration : MonoBehaviour {
             StopCoroutine (Regenerate);
             beenHit = true;
     }
-    void Regenerating () {
+    public void Regenerating () {
 
         if (beenHit == true) {
             if (isTimer != null) {

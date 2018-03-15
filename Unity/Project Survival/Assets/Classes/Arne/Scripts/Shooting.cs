@@ -23,6 +23,10 @@ public class Shooting : MonoBehaviour {
 
 	public Sprite pistolIcon, mp40Icon;
 
+	public float damage;
+
+
+
 	//sets cursorstate
 	private void Awake () {
 
@@ -41,6 +45,7 @@ public class Shooting : MonoBehaviour {
 		
 		CheckInput();
 		SwitchWeapon();
+		Reload();
 	}
 	//state for weapon update like ammo and the like
 	public void WeaponState () {
@@ -53,7 +58,6 @@ public class Shooting : MonoBehaviour {
 				pistol = true;
 				//play grab pistol animation
 				//show visual weapon this weapon on other off
-				//update ammo
 				Debug.Log("Start pistol");
 				uim.SetGunIcon(pistolIcon);
 				SendAmmoValues();
@@ -67,7 +71,6 @@ public class Shooting : MonoBehaviour {
 				mp40 = true;
 				//play grab mp40 animation
 				//show visual weapon
-				//update ammo
 				uim.SetGunIcon(mp40Icon);
 				SendAmmoValues();
 
@@ -138,6 +141,10 @@ public class Shooting : MonoBehaviour {
 			Shoot();
 		}
 	}
+	private void Reload () {
+
+
+	}
 	//shoots and hit
 	private void Shoot () {
 
@@ -152,6 +159,8 @@ public class Shooting : MonoBehaviour {
 			if(hit.collider.tag == "Enemy") {
 
 				GameObject objectHit = hit.collider.gameObject; //what you hit
+				EnemyStats enemy = objectHit.GetComponent<EnemyStats>();
+				enemy.EnemyHealth(damage);
 				//particles
 				//objectHit.GetComponent<EnemyStats>.Health(damage);
 			}
