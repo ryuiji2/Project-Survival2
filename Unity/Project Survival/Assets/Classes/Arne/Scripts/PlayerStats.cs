@@ -22,22 +22,10 @@ public class PlayerStats : MonoBehaviour {
 		maxHP = 100;
 		health = maxHP;
 	}
-
-	// Use this for initialization
-	private void Start () {
-		
-		
-	}
-	
-	// Update is called once per frame
-	private void Update () {
-		
-	}
 	public void PlayerHealth (float dmg) {
 
 		health -= dmg;
 		healthPercentage = health / maxHP;
 		uim.CheckHealth();
-
 	}
 }
