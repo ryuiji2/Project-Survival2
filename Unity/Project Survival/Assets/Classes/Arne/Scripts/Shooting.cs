@@ -28,6 +28,12 @@ public class Shooting : MonoBehaviour {
 
 	public bool reload;
 
+	public GameObject bulletHole;
+
+	public bool block;
+
+	public float fireRate, fireRateTime;
+
 
 
 	//sets cursorstate
@@ -35,7 +41,8 @@ public class Shooting : MonoBehaviour {
 
 		uim = GameObject.Find("Canvas").GetComponent<UIManager>();
 
-		
+		fireRate = fireRateTime;
+
 		pistolCurrentAmmo = pistolMagAmmo; //needs to be how much you picked
 		mp40CurrentAmmo = mp40MagAmmo;
 
@@ -46,9 +53,12 @@ public class Shooting : MonoBehaviour {
 	// Update is called once per frame
 	private void Update () {
 		
-		CheckInput();
+		if(!block)
+		{
+			CheckInput();
 		SwitchWeapon();
 		Reload();
+		}
 	}
 	//state for weapon update like ammo and the like
 	public void WeaponState () {
@@ -123,9 +133,15 @@ public class Shooting : MonoBehaviour {
 		} 
 		else if(mp40 == true && Input.GetKey(key)) {
 
+			//timer
 			//mp40CurrentAmmo --; //the cause of 1 fake bullet!
-			CheckAmmoCount();
-			SendAmmoValues();
+			fireRate -= Time.deltaTime;
+			if(fireRate < 0) {
+
+				CheckAmmoCount();
+				SendAmmoValues();
+				fireRate = fireRateTime;
+			}
 		}	
 	}
 	public void CheckAmmoCount () {
@@ -140,7 +156,7 @@ public class Shooting : MonoBehaviour {
 			pistolCurrentAmmo = 0;
 			Debug.Log("Reload");
 		}
-		if(pistolCurrentAmmo > 0 & pistol || mp40CurrentAmmo > 0 & mp40){
+		if(pistolCurrentAmmo > 0 & pistol || mp40CurrentAmmo > 0 & mp40) {
 
 			Shoot();
 		}
@@ -150,15 +166,13 @@ public class Shooting : MonoBehaviour {
 		if(Input.GetButtonDown("Reload")) {
 
 			
-			if(pistol)
-			{
+			if(pistol) {
 				//play animation
 				Debug.Log("Reload pistol");
 				pistolCurrentAmmo = pistolMagAmmo;
 				
 			}
-			if(mp40)
-			{
+			if(mp40) {
 
 				//play animation
 				Debug.Log("Reload mp40");
@@ -190,9 +204,9 @@ public class Shooting : MonoBehaviour {
 		//random range for accuracy
 
 		RaycastHit hit;
-        Ray ray = cam.ScreenPointToRay(Input.mousePosition); // * accuracy
+        //Ray ray = cam.ScreenPointToRay(Input.mousePosition); // * accuracy
 
-		if (Physics.Raycast(ray, out hit)) {
+		if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit)) {
 
 			if(hit.collider.tag == "Enemy") {
 
@@ -205,6 +219,7 @@ public class Shooting : MonoBehaviour {
 			else {
 
 				//spawn plane that looks like bullethole
+				Instantiate(bulletHole, hit.point, Quaternion.FromToRotation(Vector3.up, hit.normal));
 				
 			}	
 		}

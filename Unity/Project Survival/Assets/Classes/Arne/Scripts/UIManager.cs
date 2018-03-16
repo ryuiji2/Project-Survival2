@@ -8,7 +8,6 @@ public class UIManager : MonoBehaviour
 {
 	//Things to be added:
 	/*
-	AMMO COUNT PER WEAPON
 
 	TIMER
 	
@@ -118,13 +117,16 @@ public class UIManager : MonoBehaviour
 
 			camLook.block = true;
 			playerMove.block = true;
+			shootScript.block = true;
 		}
 		if(!state) {
 
 			camLook.block = false;
 			playerMove.block = false;
+			shootScript.block = false;
 		}
 	}
+	//sets the correct icon of gun used
 	public void SetGunIcon (Sprite icon) {
 
 		gunIconSlot.sprite = icon;
