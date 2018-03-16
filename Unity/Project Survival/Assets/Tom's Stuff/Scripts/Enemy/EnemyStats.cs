@@ -15,12 +15,14 @@ public class EnemyStats : MonoBehaviour {
 
 	private Regeneration regen;
 
-	private float timer;
+	private float timer, attackCooldown;
 
 	private void Awake () {
 
 		regen = GameObject.Find("Player").GetComponent<Regeneration>();
 		player = GameObject.Find("Player").GetComponent<PlayerStats>();
+		
+		attackCooldown = 2f;
 	}
 	private void FixedUpdate () {
 
@@ -34,20 +36,18 @@ public class EnemyStats : MonoBehaviour {
 		Debug.DrawRay(transform.position, transform.forward, Color.green);
         if(Physics.Raycast(transform.position, transform.forward, out hit, attackRange, mask)) {
 
-			//timer stuff
-			//start timer
-			if(timer > 0f)
+			if(timer <= 0f)
 			{
-				
-			}
-			
 				Debug.Log("Attack");
 				//random range which attack anim
-				regen.beenHit = true;
-				regen.Regenerating();
+				
+				regen.EnemyAttack();
 
 				player.PlayerHealth(damage);
+				timer = attackCooldown;
+			}	
 		}
+		timer -= Time.deltaTime;
 	}
 	public void EnemyHealth (float dmg) {
 

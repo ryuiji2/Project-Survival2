@@ -16,7 +16,7 @@ public class PersonalDrops : MonoBehaviour {
     private void OnCollisionEnter (Collision drop) {
         if (drop.transform.tag == "ammoDrop") {
             mp40 = FindObjectOfType<Shooting> ();
-            mp40.mp40Ammo += ammo;
+            mp40.mp40AmmoTotal += ammo;
             Destroy (drop.gameObject);
         }
         if(drop.transform.tag == "Finish") {

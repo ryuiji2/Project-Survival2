@@ -9,10 +9,15 @@ public class Movement : MonoBehaviour {
     private bool canJump;
     public int jumpHeight; //hoog zetten, werkt anders niet heel goed. 300 werkte prima.
 
+    public bool block;
+
     void FixedUpdate() {
 
-        CharMove();
-        Jump ();
+        if(!block) {
+
+            CharMove();
+            Jump ();
+        }
     }
 
     void CharMove() {

@@ -51,10 +51,16 @@ public class UIManager : MonoBehaviour
 
 	string infinite;
 
+	public CameraLook camLook;
+	public Movement playerMove;
+
 
 	//sets some things ready
 	private void Awake () {	
 		
+		camLook = GameObject.Find("Player").GetComponent<CameraLook>();
+		playerMove = GameObject.Find("Player").GetComponent<Movement>();
+
 		infinite = "∞";
 		shootScript = GameObject.Find("Gun").GetComponent<Shooting>();
 
@@ -80,6 +86,8 @@ public class UIManager : MonoBehaviour
 			//camRotateScript.gameObject.SetActive(true);
 
 			Time.timeScale = 0;
+
+
             List<RectTransform> mainmenulist = new List<RectTransform>() {mainMenu};
 			EnableMenuItems(mainmenulist);
 
@@ -103,6 +111,19 @@ public class UIManager : MonoBehaviour
 
 			break;
         }
+	}
+	public void BlockMovement (bool state) {
+
+		if(state) {
+
+			camLook.block = true;
+			playerMove.block = true;
+		}
+		if(!state) {
+
+			camLook.block = false;
+			playerMove.block = false;
+		}
 	}
 	public void SetGunIcon (Sprite icon) {
 

@@ -10,7 +10,7 @@ public class AmmoDrop : MonoBehaviour {
     private void OnCollisionEnter (Collision ammoDrop) {
         if(ammoDrop.transform.tag == "ammoDrop") {
             mp40 = FindObjectOfType<Shooting> ();
-            mp40.mp40Ammo += ammo;
+            mp40.mp40AmmoTotal += ammo;
             Destroy (ammoDrop.gameObject);
         }
     }

@@ -26716,10 +26716,12 @@ MonoBehaviour:
   mp40: 0
   pistolCurrentAmmo: 8
   pistolMagAmmo: 8
-  pistolAmmo: 999
+  pistolAmmoTotal: 999
   mp40CurrentAmmo: 40
   mp40MagAmmo: 40
-  mp40Ammo: 120
+  mp40AmmoTotal: 120
+  pistolDMG: 2
+  mp40DMG: 5
   cam: {fileID: 2040484059}
   key: 323
   switchkey: 102
@@ -26727,6 +26729,7 @@ MonoBehaviour:
   pistolIcon: {fileID: 21300000, guid: 63e46a728a09d864bae40142f2453ca1, type: 3}
   mp40Icon: {fileID: 21300000, guid: f0fb32ce7a3641342abfd9b890a15be8, type: 3}
   damage: 10
+  reload: 0
 --- !u!1001 &1437105874
 Prefab:
   m_ObjectHideFlags: 0
@@ -31289,6 +31292,7 @@ GameObject:
   - component: {fileID: 1625281297}
   - component: {fileID: 1625281295}
   - component: {fileID: 1625281300}
+  - component: {fileID: 1625281301}
   - component: {fileID: 1625281299}
   m_Layer: 0
   m_Name: Player
@@ -31358,8 +31362,9 @@ MonoBehaviour:
   moveSpeed: 10
   rotateSpeed: 5
   jumpHeight: 0
---- !u!136 &1625281299
-CapsuleCollider:
+  block: 0
+--- !u!65 &1625281299
+BoxCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -31367,10 +31372,9 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 1.8
-  m_Direction: 1
-  m_Center: {x: 0, y: -0.6, z: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.8, z: 1}
+  m_Center: {x: 0, y: -0.57, z: 0}
 --- !u!54 &1625281300
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -31386,6 +31390,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!136 &1625281301
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1625281294}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1.8
+  m_Direction: 1
+  m_Center: {x: 0, y: -0.55, z: 0}
 --- !u!1 &1626671856
 GameObject:
   m_ObjectHideFlags: 0
@@ -36480,6 +36497,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1881111713}
+  - component: {fileID: 1881111714}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -36500,6 +36518,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1881111714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1881111712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 337ecedc5cb900f428d6839db8407ad1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1882054438
 GameObject:
   m_ObjectHideFlags: 0
@@ -37380,8 +37409,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currEnemy: 0
-  maxEnemy: 6
-  waveEnemy: 1
+  maxEnemy: 2
+  waveEnemy: 0
   extraSpawn: 0
   zombie: {fileID: 1066464270205326, guid: b3137b2f7a9dcc84289c7ede867d9f82, type: 2}
   zombieStats: []
@@ -39714,6 +39743,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedH: 2
   speedV: 2
+  block: 0
 --- !u!20 &2040484059 stripped
 Camera:
   m_PrefabParentObject: {fileID: 20078847083315384, guid: cc90cec2917739345b0a169b0fce6617,

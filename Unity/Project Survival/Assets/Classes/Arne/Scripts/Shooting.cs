@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class Shooting : MonoBehaviour {
 
+
 	public ParticleSystem shootParticle;
 	public ParticleSystem enemyHit, envWoodhit, envStonehit;
 
-	//weaponswitch test
+	//weaponswitch 
 	public enum Weapon {Pistol, Mp40};
 	public Weapon _Weapon;
 	public bool pistol, mp40;
-
-	public int pistolCurrentAmmo, pistolMagAmmo, pistolAmmo, mp40CurrentAmmo, mp40MagAmmo, mp40Ammo;
+	public int pistolCurrentAmmo, pistolMagAmmo, pistolAmmoTotal, mp40CurrentAmmo, mp40MagAmmo, mp40AmmoTotal;
+	public int pistolDMG, mp40DMG;
 
 	//USE INHERITANCE?
 	public Camera cam;
@@ -24,6 +25,8 @@ public class Shooting : MonoBehaviour {
 	public Sprite pistolIcon, mp40Icon;
 
 	public float damage;
+
+	public bool reload;
 
 
 
@@ -56,6 +59,7 @@ public class Shooting : MonoBehaviour {
 
 				mp40 = false;
 				pistol = true;
+				damage = pistolDMG;
 				//play grab pistol animation
 				//show visual weapon this weapon on other off
 				Debug.Log("Start pistol");
@@ -69,6 +73,7 @@ public class Shooting : MonoBehaviour {
 
 				pistol = false;
 				mp40 = true;
+				damage = mp40DMG;
 				//play grab mp40 animation
 				//show visual weapon
 				uim.SetGunIcon(mp40Icon);
@@ -78,7 +83,7 @@ public class Shooting : MonoBehaviour {
 		}
 	}
 	//switches weapon
-	public void SwitchWeapon () {
+	public void SwitchWeapon () { //scroll and a value goes up and scroll in a list of weapons, if hit limit of list goes back to 0
 
 		if(Input.GetKeyDown(switchkey)) {
 
@@ -100,11 +105,11 @@ public class Shooting : MonoBehaviour {
 		if(pistol) {
 
 			Debug.Log("Start");
-			uim.CheckAmmo(pistolCurrentAmmo, pistolAmmo);
+			uim.CheckAmmo(pistolCurrentAmmo, pistolAmmoTotal);
 		}
 		if(mp40) {
 
-			uim.CheckAmmo(mp40CurrentAmmo, mp40Ammo);
+			uim.CheckAmmo(mp40CurrentAmmo, mp40AmmoTotal);
 		}
 	}
 	//Checks for shooting Input
@@ -112,43 +117,76 @@ public class Shooting : MonoBehaviour {
 	
         if(pistol == true && Input.GetKeyDown(key)) {
 
-			pistolCurrentAmmo --;
+			//pistolCurrentAmmo --; //the cause of 1 fake bullet!
 			CheckAmmoCount();
 			SendAmmoValues();
 		} 
 		else if(mp40 == true && Input.GetKey(key)) {
 
-			mp40CurrentAmmo --;
+			//mp40CurrentAmmo --; //the cause of 1 fake bullet!
 			CheckAmmoCount();
 			SendAmmoValues();
 		}	
 	}
 	public void CheckAmmoCount () {
 
-
-		if(mp40CurrentAmmo <= 0) {
+		if(mp40CurrentAmmo < 0) {
 
 			mp40CurrentAmmo = 0;
 			Debug.Log("reload");
 		}
-		if(pistolCurrentAmmo <= 0) {
+		if(pistolCurrentAmmo < 0) {
 
 			pistolCurrentAmmo = 0;
 			Debug.Log("Reload");
 		}
-		if(pistolCurrentAmmo > 0 & pistol|| mp40CurrentAmmo > 0 & mp40){
+		if(pistolCurrentAmmo > 0 & pistol || mp40CurrentAmmo > 0 & mp40){
 
 			Shoot();
 		}
 	}
 	private void Reload () {
 
+		if(Input.GetButtonDown("Reload")) {
 
+			
+			if(pistol)
+			{
+				//play animation
+				Debug.Log("Reload pistol");
+				pistolCurrentAmmo = pistolMagAmmo;
+				
+			}
+			if(mp40)
+			{
+
+				//play animation
+				Debug.Log("Reload mp40");
+				
+				int extraFilling = mp40MagAmmo - mp40CurrentAmmo;
+
+				if(mp40AmmoTotal < extraFilling)
+				{
+					extraFilling = mp40AmmoTotal;
+				}
+				mp40CurrentAmmo += extraFilling;
+				mp40AmmoTotal -= extraFilling;		
+			}
+			SendAmmoValues();
+		}
 	}
 	//shoots and hit
 	private void Shoot () {
 
 		Debug.Log("Shoot");
+		if(pistol)
+		{
+			pistolCurrentAmmo --;
+		}
+		if(mp40)
+		{
+			mp40CurrentAmmo --;
+		}
 		//random range for accuracy
 
 		RaycastHit hit;
@@ -165,6 +203,7 @@ public class Shooting : MonoBehaviour {
 				//objectHit.GetComponent<EnemyStats>.Health(damage);
 			}
 			else {
+
 				//spawn plane that looks like bullethole
 				
 			}	

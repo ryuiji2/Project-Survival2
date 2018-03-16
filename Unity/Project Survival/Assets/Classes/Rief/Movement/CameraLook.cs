@@ -11,16 +11,22 @@ public class CameraLook : MonoBehaviour {
 
     private Transform player;
 
+    public bool block;
+
     void Start () {
+
         player = transform.parent;
     }
 
     void FixedUpdate () {
         
-        yaw += speedH * Input.GetAxis ("Mouse X");
-        pitch -= speedV * Input.GetAxis ("Mouse Y");
-        pitch = Mathf.Clamp (pitch, -90f, 90f);
-        player.eulerAngles = new Vector3 (0.0f, yaw, 0.0f);
-        transform.eulerAngles = new Vector3(pitch, yaw, 0.0f);
+        if(!block)
+        {
+            yaw += speedH * Input.GetAxis ("Mouse X");
+            pitch -= speedV * Input.GetAxis ("Mouse Y");
+            pitch = Mathf.Clamp (pitch, -90f, 90f);
+            player.eulerAngles = new Vector3 (0.0f, yaw, 0.0f);
+            transform.eulerAngles = new Vector3(pitch, yaw, 0.0f);
+        }
     }
 }

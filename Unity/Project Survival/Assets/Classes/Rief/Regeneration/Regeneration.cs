@@ -20,17 +20,19 @@ public class Regeneration : MonoBehaviour {
         Regenerate = RegenHealth ();
         outOfCombat = waitForRegen;
     }
-    void EnemyAttack () {
+    public void EnemyAttack () {
 
-            playerstats.PlayerHealth(25);
-            outOfCombat = waitForRegen;
-            StopCoroutine (Regenerate);
-            beenHit = true;
+        outOfCombat = waitForRegen;
+        StopCoroutine (Regenerate);
+        beenHit = true;
+        Regenerating();
     }
     public void Regenerating () {
 
         if (beenHit == true) {
+
             if (isTimer != null) {
+                
                 StopCoroutine (isTimer);
             }
             isTimer = StartCoroutine (HitTime());
@@ -40,6 +42,7 @@ public class Regeneration : MonoBehaviour {
     IEnumerator HitTime () {
 
         while(outOfCombat > 0) {
+
             yield return new WaitForSeconds (1);
             outOfCombat -= 1;
         }
@@ -48,6 +51,7 @@ public class Regeneration : MonoBehaviour {
     IEnumerator RegenHealth () {
         
         while (playerstats.health < maxRegen) {
+
             yield return new WaitForSeconds (1);
             //play animation on healthcontainer icon
             playerstats.PlayerHealth(-regen);
