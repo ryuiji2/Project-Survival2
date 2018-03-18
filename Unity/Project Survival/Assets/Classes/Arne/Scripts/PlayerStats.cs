@@ -14,11 +14,13 @@ public class PlayerStats : MonoBehaviour {
 	public float healthPercentage;
 	UIManager uim;
 
+	private Vector3 startPos;
+
 
 
 	private void Awake () {
 
-		uim = GameObject.Find("Canvas").GetComponent<UIManager>();
+		uim = GameObject.Find("Canvas").GetComponent<UIManager>(); //gives error needs to be manually put in
 		maxHP = 100;
 		health = maxHP;
 	}

@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 54785379033713482}
   - component: {fileID: 136813642143613972}
   - component: {fileID: 65988242423910932}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4878237137353238}
   - component: {fileID: 114652650014031376}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -63,7 +63,7 @@ GameObject:
   - component: {fileID: 114654282798944702}
   - component: {fileID: 114737078871260154}
   - component: {fileID: 114201946893618080}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -235,9 +235,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a20f26e71ab9a934ebb53d4c7b295b19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 10
+  moveSpeed: 6
   rotateSpeed: 5
-  jumpHeight: 0
+  jumpHeight: 1
   block: 0
 --- !u!114 &114652650014031376
 MonoBehaviour:
@@ -277,6 +277,7 @@ MonoBehaviour:
   block: 0
   fireRate: 0
   fireRateTime: 0.1
+  aimed: 0
 --- !u!114 &114654282798944702
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -331,7 +332,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 1389270345456790}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.5
   m_Height: 1.8
   m_Direction: 1

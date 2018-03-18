@@ -40,13 +40,15 @@ public class Shooting : MonoBehaviour {
 	//sets cursorstate and other variables that need a certain value at start of game
 	private void Awake () {
 
-		uim = GameObject.Find("Canvas").GetComponent<UIManager>();
+		uim = GameObject.Find("Canvas").GetComponent<UIManager>();//gives error needs to be manually put in
 
 		fireRate = fireRateTime;
 
 		pistolCurrentAmmo = pistolMagAmmo; //needs to be how much you picked
 		mp40CurrentAmmo = mp40MagAmmo;
 
+	
+		
 		uim.gunIconSlot.sprite = null;
 
 		WeaponState();
@@ -213,7 +215,7 @@ public class Shooting : MonoBehaviour {
 		Debug.Log(offsetX + "X");
 		Debug.Log(offsetY + "Y");
 		Debug.Log(offsetZ + "Z");
-		if(aimed)
+		if(!aimed)
 		{
 			offsetX = 0;
 			offsetY = 0;

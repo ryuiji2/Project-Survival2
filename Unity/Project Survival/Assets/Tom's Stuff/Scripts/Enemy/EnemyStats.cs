@@ -14,6 +14,7 @@ public class EnemyStats : MonoBehaviour {
 	public LayerMask mask;
 
 	private Regeneration regen;
+	private Wave wave;
 
 	private float timer, attackCooldown;
 
@@ -21,6 +22,7 @@ public class EnemyStats : MonoBehaviour {
 
 		regen = GameObject.Find("Player").GetComponent<Regeneration>();
 		player = GameObject.Find("Player").GetComponent<PlayerStats>();
+		wave = GameObject.Find("WaveManager").GetComponent<Wave>();
 		
 		attackCooldown = 2f;
 	}
@@ -28,7 +30,7 @@ public class EnemyStats : MonoBehaviour {
 
 		Attack();
 	}
-	public void Attack () {
+	public void Attack () { //bug not touching player and player receives damage
 
 
 		RaycastHit hit;
@@ -36,8 +38,8 @@ public class EnemyStats : MonoBehaviour {
 		Debug.DrawRay(transform.position, transform.forward, Color.green);
         if(Physics.Raycast(transform.position, transform.forward, out hit, attackRange, mask)) {
 
-			if(timer <= 0f)
-			{
+			if(timer <= 0f) {
+
 				Debug.Log("Attack");
 				//random range which attack anim
 				
@@ -64,6 +66,7 @@ public class EnemyStats : MonoBehaviour {
 
 		// Die
 		//play animation
+		wave.currEnemy--;
 		Destroy(gameObject);
 	}
 }

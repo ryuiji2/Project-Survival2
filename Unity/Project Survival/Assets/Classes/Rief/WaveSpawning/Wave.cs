@@ -19,15 +19,19 @@ public class Wave : MonoBehaviour {
     private bool canSpawnExtra;
 
     public Transform player;
+    private UIManager uim;
+    
 
     private void Awake () {
 
+        uim = GameObject.Find("Canvas").GetComponent<UIManager>();
         player = GameObject.Find("Player").transform;
 	}
 	void Start () {
 
         //waveEnemy = 6; //verrander dit als je het aantal begin enemies wilt verranderen
         currWave = 0; //hoef je niet aan te passen
+        //uim.CheckWave(currWave);
         //maxEnemy = 30; //maximum aantal enemies dat in 1 keer op de map kunnen zitten
 	}
 	
@@ -45,6 +49,7 @@ public class Wave : MonoBehaviour {
 
         if (currEnemy == 0 && !coroutineActive) {
             currWave++;
+            uim.CheckWave(currWave);
             waveEnemy = Mathf.Ceil (waveEnemy *= 1.1f); //elke wave gaat het aantal zombies omhoog, afgerond naar boven.
             coroutineActive = true;
             StartCoroutine (NextWave());

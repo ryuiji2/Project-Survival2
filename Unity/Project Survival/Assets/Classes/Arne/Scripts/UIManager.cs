@@ -9,9 +9,10 @@ public class UIManager : MonoBehaviour
 	//Things to be added:
 	/*
 
-	TIMER
+	QUIT GAME SHOULD KILL ALL ENEMIES
 	
-	WAVECOUNT
+	TIMER
+
 
 	ENEMIES LEFT
 	
@@ -30,6 +31,8 @@ public class UIManager : MonoBehaviour
 
 	//ammo
 	public Text ammoText;
+
+	public Text waveText;
 
 
 	//UI stuff
@@ -186,7 +189,7 @@ public class UIManager : MonoBehaviour
 	}
 	public void QuitGame () {
 
-		//application.close
+		Application.Quit();
 	}
 	private void SwitchCursorState () {
 
@@ -224,5 +227,9 @@ public class UIManager : MonoBehaviour
 	public void CheckAmmo (int current, int max) //needs overload so it can receive health or damage
 	{
 		ammoText.text = current + " / " + max;
+	}
+	public void CheckWave (int waveNumber) {
+
+		waveText.text = "Wave : " + waveNumber;
 	}
 }
