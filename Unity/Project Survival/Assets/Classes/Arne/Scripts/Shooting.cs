@@ -34,9 +34,10 @@ public class Shooting : MonoBehaviour {
 
 	public float fireRate, fireRateTime;
 
+	public bool aimed; // if we can aim
 
 
-	//sets cursorstate
+	//sets cursorstate and other variables that need a certain value at start of game
 	private void Awake () {
 
 		uim = GameObject.Find("Canvas").GetComponent<UIManager>();
@@ -56,8 +57,8 @@ public class Shooting : MonoBehaviour {
 		if(!block)
 		{
 			CheckInput();
-		SwitchWeapon();
-		Reload();
+			SwitchWeapon();
+			Reload();
 		}
 	}
 	//state for weapon update like ammo and the like
@@ -110,6 +111,7 @@ public class Shooting : MonoBehaviour {
 			WeaponState();
 		}
 	}
+	//updates the current ammo values in UIManager
 	public void SendAmmoValues () {
 
 		if(pistol) {
@@ -127,14 +129,12 @@ public class Shooting : MonoBehaviour {
 	
         if(pistol == true && Input.GetKeyDown(key)) {
 
-			//pistolCurrentAmmo --; //the cause of 1 fake bullet!
 			CheckAmmoCount();
 			SendAmmoValues();
 		} 
 		else if(mp40 == true && Input.GetKey(key)) {
 
-			//timer
-			//mp40CurrentAmmo --; //the cause of 1 fake bullet!
+			//how quick it shoots
 			fireRate -= Time.deltaTime;
 			if(fireRate < 0) {
 
@@ -144,6 +144,7 @@ public class Shooting : MonoBehaviour {
 			}
 		}	
 	}
+	//Checks ammo count so you can't shoot when you don't have ammo
 	public void CheckAmmoCount () {
 
 		if(mp40CurrentAmmo < 0) {
@@ -161,11 +162,11 @@ public class Shooting : MonoBehaviour {
 			Shoot();
 		}
 	}
+	//Will fill your magazine again with bullets
 	private void Reload () {
 
 		if(Input.GetButtonDown("Reload")) {
 
-			
 			if(pistol) {
 				//play animation
 				Debug.Log("Reload pistol");
@@ -177,6 +178,7 @@ public class Shooting : MonoBehaviour {
 				//play animation
 				Debug.Log("Reload mp40");
 				
+				//calculates with math that it won't grab ammo that doesn't exist
 				int extraFilling = mp40MagAmmo - mp40CurrentAmmo;
 
 				if(mp40AmmoTotal < extraFilling)
@@ -201,12 +203,27 @@ public class Shooting : MonoBehaviour {
 		{
 			mp40CurrentAmmo --;
 		}
+
 		//random range for accuracy
+		float offsetX = Random.Range(-.05f, .05f);
+		float offsetY = Random.Range(-.05f, .05f);
+		float offsetZ = Random.Range(-.05f, .05f);
+		//offsetZ = 0;
+
+		Debug.Log(offsetX + "X");
+		Debug.Log(offsetY + "Y");
+		Debug.Log(offsetZ + "Z");
+		if(aimed)
+		{
+			offsetX = 0;
+			offsetY = 0;
+			offsetZ = 0;
+		}
+
 
 		RaycastHit hit;
-        //Ray ray = cam.ScreenPointToRay(Input.mousePosition); // * accuracy
 
-		if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit)) {
+		if (Physics.Raycast(cam.transform.position, new Vector3(cam.transform.forward.x + offsetX, cam.transform.forward.y + offsetY, cam.transform.forward.z + offsetZ), out hit)) {
 
 			if(hit.collider.tag == "Enemy") {
 
@@ -214,13 +231,11 @@ public class Shooting : MonoBehaviour {
 				EnemyStats enemy = objectHit.GetComponent<EnemyStats>();
 				enemy.EnemyHealth(damage);
 				//particles
-				//objectHit.GetComponent<EnemyStats>.Health(damage);
 			}
 			else {
 
 				//spawn plane that looks like bullethole
 				Instantiate(bulletHole, hit.point, Quaternion.FromToRotation(Vector3.up, hit.normal));
-				
 			}	
 		}
 	}
