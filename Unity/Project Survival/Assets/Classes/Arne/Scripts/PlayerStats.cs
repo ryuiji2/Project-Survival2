@@ -23,11 +23,20 @@ public class PlayerStats : MonoBehaviour {
 		uim = GameObject.Find("Canvas").GetComponent<UIManager>(); //gives error needs to be manually put in
 		maxHP = 100;
 		health = maxHP;
+		startPos = transform.position;
 	}
 	public void PlayerHealth (float dmg) {
 
 		health -= dmg;
 		healthPercentage = health / maxHP;
+		if(health < 0f) {
+
+			uim.SetState(UIManager.UIState.GameOver);
+		}
 		uim.CheckHealth();
+	}
+	public void ResetPosition () {
+
+		transform.position = startPos;
 	}
 }

@@ -23,27 +23,24 @@ public class UIManager : MonoBehaviour
 
 	//script reference
 	private PlayerStats playerStats;
-	
-	private RotateCamera camRotateScript;
+	public RotateCamera camRotateScript;
+	public Wave wave;
 
 	//health
 	public Image healthBar;
 
 	//ammo
 	public Text ammoText;
-
 	public Text waveText;
-
 
 	//UI stuff
 	public List<RectTransform> allMenuItems = new List<RectTransform>();
-	public RectTransform mainMenu, pauseMenu, ingame, settings, gameOver; //gonna add more to these 
+	public RectTransform mainMenu, pauseMenu, ingame, settings, gameOver, controlInfo; //gonna add more to these 
 	public enum UIState {MainMenu, Ingame, GameOver};
 	public UIState _UIState;
 
-	public bool paused, settingsActive;
+	public bool paused, settingsActive, controlInfoActive;
 	public KeyCode esc;
-
 
 	bool cursorActive;
 
@@ -56,24 +53,37 @@ public class UIManager : MonoBehaviour
 	public CameraLook camLook;
 	public Movement playerMove;
 
+	public GameObject player, cam;
+
+	public Manager manager;
+
 
 	//sets some things ready
 	private void Awake () {	
 		
-		camLook = GameObject.Find("Player").GetComponent<CameraLook>();
-		playerMove = GameObject.Find("Player").GetComponent<Movement>();
+		manager = GameObject.Find("GameManager").GetComponent<Manager>();
+		player = GameObject.Find("Player");
+		cam = GameObject.Find("Camera");
 
-		infinite = "∞";
 		shootScript = GameObject.Find("Gun").GetComponent<Shooting>();
+		wave = GameObject.Find("WaveManager").GetComponent<Wave>();
 
-		//camRotateScript = GameObject.Find("Camera").GetComponent<RotateCamera>();
-		playerStats = GameObject.Find("Player").GetComponent<PlayerStats>();
+		camLook = cam.GetComponent<CameraLook>();
+		playerMove = player.GetComponent<Movement>();
+		playerStats = player.GetComponent<PlayerStats>();	
+			
+
+
+
+		camRotateScript = player.GetComponent<RotateCamera>();
+
+
 
 		//gunIconSlot = GameObject.Find("Gun Icon").GetComponent<Image>();
 
-		CheckUIState();
-
 		cursorActive = false;
+
+		CheckUIState();
 	}
 	private void Update () {
 
@@ -85,9 +95,13 @@ public class UIManager : MonoBehaviour
 
         case UIState.MainMenu:
 
-			//camRotateScript.gameObject.SetActive(true);
+			manager.ResetGame();
+			playerStats.ResetPosition();
+			BlockMovement(true);
+			//wave.enabled = false;
 
-			Time.timeScale = 0;
+
+			Time.timeScale = 1;
 
 
             List<RectTransform> mainmenulist = new List<RectTransform>() {mainMenu};
@@ -97,7 +111,11 @@ public class UIManager : MonoBehaviour
 
         case UIState.Ingame:
 
-			//camRotateScript.gameObject.SetActive(false);
+			BlockMovement(false);
+			camRotateScript.enabled = false;
+			wave.spawnEnemies = true;
+			//wave.enabled = true;
+
 			List<RectTransform> ingameList = new List<RectTransform>() {ingame};
 			EnableMenuItems(ingame);
 			
@@ -107,9 +125,18 @@ public class UIManager : MonoBehaviour
 
 		case UIState.GameOver:
 
+			manager.ResetGame();
+
 			List<RectTransform> gameOverList = new List<RectTransform>() {gameOver};
 			EnableMenuItems(gameOverList);
 			SwitchCursorState();
+			//wave.enabled = false;
+
+			//kill all enemies in manager
+			camRotateScript.enabled = true;
+
+			
+			manager.ResetGame();
 
 			break;
         }
@@ -121,12 +148,15 @@ public class UIManager : MonoBehaviour
 			camLook.block = true;
 			playerMove.block = true;
 			shootScript.block = true;
+			camRotateScript.enabled = true;
+			
 		}
 		if(!state) {
 
 			camLook.block = false;
 			playerMove.block = false;
 			shootScript.block = false;
+			camRotateScript.enabled = false;
 		}
 	}
 	//sets the correct icon of gun used
@@ -143,7 +173,8 @@ public class UIManager : MonoBehaviour
 			Time.timeScale = 0;
 			pauseMenu.gameObject.SetActive(true);
 
-			print(Time.timeScale);
+			SwitchCursorState();
+
 			//pause game and turns pausemenu on
 			//if statements so you can esc out of every window
 		}		
@@ -151,23 +182,29 @@ public class UIManager : MonoBehaviour
 
 			SettingMenu();
 		}
+		else if(Input.GetKeyDown(esc) && controlInfoActive == true) {
+
+			ControlInfo();
+		}
 		else if(Input.GetKeyDown(esc) && _UIState == UIState.Ingame && paused == true) {
 
 			paused = false;
 			Time.timeScale = 1;
 			pauseMenu.gameObject.SetActive(false);
 
-			print(Time.timeScale);
+			SwitchCursorState();
 			//pause game and turns pausemenu on
 			//if statements so you can esc out of every window
 		}		
 	}
-		//sets state and checks the next state 
+	//sets state and checks the next state 
 	public void SetState (UIState state) {
 
+		
 		_UIState = state;
 		paused = false;
 		settingsActive = false;
+		controlInfoActive = false;
 		CheckUIState();
 	}
 	//make you enable or disable the settings
@@ -177,30 +214,43 @@ public class UIManager : MonoBehaviour
 		settings.gameObject.SetActive(settingsActive);
 		//enables settings rectTransform or disables it
 	}
+	//enables and disables the control info panel
+	public void ControlInfo () {
+
+		controlInfoActive = !controlInfoActive;
+		controlInfo.gameObject.SetActive(controlInfoActive);
+	}
+	//button function
 	public void MainMenu () {
 
 		SetState(UIState.MainMenu);
 		//activate camera rotate script
 	}
+	//button function
 	public void Ingame () {
 
 		SetState(UIState.Ingame);
 		Time.timeScale = 1;
 	}
+	//button function
 	public void QuitGame () {
 
 		Application.Quit();
 	}
+	//sets the right cursor state
 	private void SwitchCursorState () {
 
 		cursorActive = !cursorActive;
 		if(!cursorActive) {
 
+			Cursor.visible = true;
 			Cursor.lockState = CursorLockMode.None; 
+			
 		}
-		else {
+		if(cursorActive) {
 
 			Cursor.lockState = CursorLockMode.Locked; 
+			Cursor.visible = false;
 		}	
 	}
 	//receives items and will make a list of them that will get send to another function
@@ -219,15 +269,16 @@ public class UIManager : MonoBehaviour
             rT.gameObject.SetActive(true);
     }
 	//checks health and updates ui
-	public void CheckHealth () 
-	{
+	public void CheckHealth () {
+
 		healthBar.fillAmount = playerStats.healthPercentage;
 	}
-	//checks ammo and updates ui    	NOT MADE YET
-	public void CheckAmmo (int current, int max) //needs overload so it can receive health or damage
-	{
+	//checks ammo and updates ui    	
+	public void CheckAmmo (int current, int max) {
+
 		ammoText.text = current + " / " + max;
 	}
+	//checks wave and updates ui
 	public void CheckWave (int waveNumber) {
 
 		waveText.text = "Wave : " + waveNumber;

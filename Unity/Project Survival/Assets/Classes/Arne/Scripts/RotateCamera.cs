@@ -6,16 +6,15 @@ using UnityEngine;
 
 public class RotateCamera : MonoBehaviour {
 
-	private CameraRotation lookScript;
-	private MovementPlayer movement;
+	private GameObject cam;
 
 	private void Awake () {
 
-		//disable moving and look scripts
+		cam = GameObject.Find("Camera");
 	}
 	//constantly rotates
 	void FixedUpdate () 
 	{
-		transform.Rotate(Vector3.up * Time.deltaTime);	
+		cam.transform.Rotate(Vector3.up * Time.deltaTime * 2);	
 	}
 }

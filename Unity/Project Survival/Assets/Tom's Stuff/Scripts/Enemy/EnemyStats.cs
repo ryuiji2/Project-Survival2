@@ -26,6 +26,14 @@ public class EnemyStats : MonoBehaviour {
 		
 		attackCooldown = 2f;
 	}
+	private void Start () {
+
+		if(!wave.spawnEnemies) {
+
+			wave.ResetEnemies();
+			Death();
+		}
+	}
 	private void FixedUpdate () {
 
 		Attack();

@@ -9,20 +9,24 @@ public class Manager : MonoBehaviour {
 	[Range(1,100)]
 	public static int currentWave = 1;
 
-/* 
-	public bool inUI;					//was meant to disable movement from this script
-	public Movement playerMove;
-	public CameraLook camLook;
+	private List<GameObject> enemyObject = new List <GameObject>();
+	private GameObject enemy;
+	private Wave wave;
 
-	public void InUIMode () {
+	private void Awake () {
 
-		if(inUI) {
+		wave = GameObject.Find("WaveManager").GetComponent<Wave>();
+	}
+	public void ResetGame () {
 
-			//block movement
+		//make list of enemies and kill
+		var objects = GameObject.FindGameObjectsWithTag("Enemy");
+		foreach (var enemy in objects) {
+			
+			wave.ResetEnemies();
+			Destroy(enemy);
+			Debug.Log("reset");
 		}
-		else {
-
-			camLook.
-		}
-	}*/
+		
+	}
 }

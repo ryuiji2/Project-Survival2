@@ -20,6 +20,10 @@ public class Wave : MonoBehaviour {
 
     public Transform player;
     private UIManager uim;
+
+    public float starterEnemycount;
+
+    public bool spawnEnemies;
     
 
     private void Awake () {
@@ -29,16 +33,18 @@ public class Wave : MonoBehaviour {
 	}
 	void Start () {
 
-        //waveEnemy = 6; //verrander dit als je het aantal begin enemies wilt verranderen
+        waveEnemy = 2; //verrander dit als je het aantal begin enemies wilt verranderen
+        starterEnemycount = waveEnemy;
         currWave = 0; //hoef je niet aan te passen
         //uim.CheckWave(currWave);
         //maxEnemy = 30; //maximum aantal enemies dat in 1 keer op de map kunnen zitten
 	}
-	
 	void Update () {
 
+        
         EnemyCheck();
-        ExtraEnemy ();
+        ExtraEnemy();
+        Debug.Log("updating");
 
        /* if (Input.GetButtonDown ("Cancel")) {
             currEnemy--;
@@ -47,7 +53,11 @@ public class Wave : MonoBehaviour {
 	}
     void EnemyCheck () {
 
-        if (currEnemy == 0 && !coroutineActive) {
+        if(currEnemy < 0) {
+            
+            currEnemy = 0;
+        }
+        if (currEnemy == 0 && !coroutineActive && spawnEnemies) {
             currWave++;
             uim.CheckWave(currWave);
             waveEnemy = Mathf.Ceil (waveEnemy *= 1.1f); //elke wave gaat het aantal zombies omhoog, afgerond naar boven.
@@ -58,7 +68,6 @@ public class Wave : MonoBehaviour {
             }
         }
     }
-
     void ExtraEnemy () {
 
         int randomSpawnLoc = Random.Range (0, spawnLoc.Count);
@@ -71,7 +80,6 @@ public class Wave : MonoBehaviour {
             }
         }
     }
-
     IEnumerator NextWave() {
 
         canSpawnExtra = false;
@@ -87,5 +95,13 @@ public class Wave : MonoBehaviour {
         }
         canSpawnExtra = true;
         coroutineActive = false;
+    }
+    public void ResetEnemies () {
+
+        Debug.Log("ResetEnemies");
+        spawnEnemies = false;
+        currEnemy--;
+		waveEnemy = starterEnemycount;
+        currWave = 0;
     }
 }
