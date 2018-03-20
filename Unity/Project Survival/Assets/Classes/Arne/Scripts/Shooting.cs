@@ -36,6 +36,8 @@ public class Shooting : MonoBehaviour {
 
 	public bool aimed; // if we can aim
 
+    public int damageMulti;
+
 
 	//sets cursorstate and other variables that need a certain value at start of game
 	private void Awake () {
@@ -227,13 +229,18 @@ public class Shooting : MonoBehaviour {
 
 		if (Physics.Raycast(cam.transform.position, new Vector3(cam.transform.forward.x + offsetX, cam.transform.forward.y + offsetY, cam.transform.forward.z + offsetZ), out hit)) {
 
-			if(hit.collider.tag == "Enemy") {
+            GameObject objectHit = hit.collider.gameObject; //what you hit
+            EnemyStats enemy = objectHit.GetComponent<EnemyStats> ();
 
-				GameObject objectHit = hit.collider.gameObject; //what you hit
-				EnemyStats enemy = objectHit.GetComponent<EnemyStats>();
+            if (hit.collider.tag == "Enemy") {
+
 				enemy.EnemyHealth(damage);
 				//particles
 			}
+            if(hit.collider.tag == "Head") {
+
+                enemy.EnemyHealth (damage * damageMulti);
+            }
 			else {
 
 				//spawn plane that looks like bullethole
