@@ -56,6 +56,7 @@ public class UIManager : MonoBehaviour
 	public GameObject player, cam;
 
 	public Manager manager;
+	public Timer timer;
 
 
 	//sets some things ready
@@ -71,6 +72,7 @@ public class UIManager : MonoBehaviour
 		camLook = cam.GetComponent<CameraLook>();
 		playerMove = player.GetComponent<Movement>();
 		playerStats = player.GetComponent<PlayerStats>();	
+		timer.GetComponent<Timer>();
 			
 
 
@@ -115,6 +117,7 @@ public class UIManager : MonoBehaviour
 			camRotateScript.enabled = false;
 			wave.spawnEnemies = true;
 			//wave.enabled = true;
+			timer.SetTimer(true);
 
 			List<RectTransform> ingameList = new List<RectTransform>() {ingame};
 			EnableMenuItems(ingame);
@@ -123,8 +126,9 @@ public class UIManager : MonoBehaviour
             
             break;
 
-		case UIState.GameOver:
+		case UIState.GameOver: //needs to be made
 
+			timer.SetTimer(false);
 			manager.ResetGame();
 
 			List<RectTransform> gameOverList = new List<RectTransform>() {gameOver};
@@ -132,7 +136,6 @@ public class UIManager : MonoBehaviour
 			SwitchCursorState();
 			//wave.enabled = false;
 
-			//kill all enemies in manager
 			camRotateScript.enabled = true;
 
 			
