@@ -50,6 +50,7 @@ public class EnemyStats : MonoBehaviour {
 
 				Debug.Log("Attack");
 				//random range which attack anim
+                
 				
 				regen.EnemyAttack();
 
