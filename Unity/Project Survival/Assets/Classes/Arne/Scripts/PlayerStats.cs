@@ -14,7 +14,7 @@ public class PlayerStats : MonoBehaviour {
 	public float healthPercentage;
 	UIManager uim;
 
-	private Vector3 startPos;
+	public Vector3 startPos;
 
 
 

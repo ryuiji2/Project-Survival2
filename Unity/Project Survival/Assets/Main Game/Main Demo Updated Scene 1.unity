@@ -5829,7 +5829,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4141085334869804, guid: 04a8ab1e9ac0b1745be3ab59f4c7d265, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1.8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4141085334869804, guid: 04a8ab1e9ac0b1745be3ab59f4c7d265, type: 2}
       propertyPath: m_LocalPosition.z
@@ -5899,6 +5899,11 @@ Prefab:
     - target: {fileID: 4614178355371558, guid: 04a8ab1e9ac0b1745be3ab59f4c7d265, type: 2}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114356767150713564, guid: 04a8ab1e9ac0b1745be3ab59f4c7d265,
+        type: 2}
+      propertyPath: startPos.y
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 04a8ab1e9ac0b1745be3ab59f4c7d265, type: 2}
@@ -22674,11 +22679,24 @@ Prefab:
       propertyPath: camRotateScript
       value: 
       objectReference: {fileID: 1102704207}
-    - target: {fileID: 224048677228402126, guid: 55e66937a3a0c46429e2bb8e9dd2222a,
+    - target: {fileID: 114085984186840344, guid: 55e66937a3a0c46429e2bb8e9dd2222a,
         type: 2}
-      propertyPath: m_AnchoredPosition.x
-      value: 8.800049
-      objectReference: {fileID: 0}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: d35938eaaa448084997364c1f99f0cfa,
+        type: 3}
+    - target: {fileID: 114220151284337640, guid: 55e66937a3a0c46429e2bb8e9dd2222a,
+        type: 2}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: d35938eaaa448084997364c1f99f0cfa,
+        type: 3}
+    - target: {fileID: 114320322604721540, guid: 55e66937a3a0c46429e2bb8e9dd2222a,
+        type: 2}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: d35938eaaa448084997364c1f99f0cfa,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 55e66937a3a0c46429e2bb8e9dd2222a, type: 2}
   m_IsPrefabParent: 0

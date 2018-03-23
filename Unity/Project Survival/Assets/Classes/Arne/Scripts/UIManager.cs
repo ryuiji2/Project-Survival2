@@ -26,12 +26,12 @@ public class UIManager : MonoBehaviour
 	public RotateCamera camRotateScript;
 	public Wave wave;
 
-	//health
+	//HUD
 	public Image healthBar;
-
-	//ammo
 	public Text ammoText;
 	public Text waveText;
+	public Text scoreText;
+	private int currentScore;
 
 	//UI stuff
 	public List<RectTransform> allMenuItems = new List<RectTransform>();
@@ -129,14 +129,17 @@ public class UIManager : MonoBehaviour
 		case UIState.GameOver: //needs to be made
 
 			timer.SetTimer(false);
-			manager.ResetGame();
+			//manager.ResetGame();
 
 			List<RectTransform> gameOverList = new List<RectTransform>() {gameOver};
 			EnableMenuItems(gameOverList);
 			SwitchCursorState();
+
+			//panel with a button to go back to main menu and retry, plus the score the player got
+
 			//wave.enabled = false;
 
-			camRotateScript.enabled = true;
+			//camRotateScript.enabled = true;
 
 			
 			manager.ResetGame();
@@ -285,5 +288,10 @@ public class UIManager : MonoBehaviour
 	public void CheckWave (int waveNumber) {
 
 		waveText.text = "Wave : " + waveNumber;
+	}
+	public void CheckScore (int points) {
+
+		currentScore += points;
+		scoreText.text = "Score : " + currentScore;
 	}
 }

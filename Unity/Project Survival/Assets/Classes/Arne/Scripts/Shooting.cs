@@ -240,12 +240,17 @@ public class Shooting : MonoBehaviour {
             if(hit.collider.tag == "Head") {
 
                 enemy.EnemyHealth (damage * damageMulti);
+				//particles
             }
-			else {
+			else if(hit.collider.tag == "Ground" || hit.collider.tag == "Stone") {
 
-				//spawn plane that looks like bullethole
+				//stone particles
 				Instantiate(bulletHole, hit.point, Quaternion.FromToRotation(Vector3.up, hit.normal));
 			}	
+			else if(hit.collider.tag == "Wood") {
+
+				//wood particles
+			}
 		}
 	}
 }
