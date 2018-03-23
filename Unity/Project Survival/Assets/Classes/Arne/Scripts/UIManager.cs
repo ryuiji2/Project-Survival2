@@ -8,54 +8,49 @@ public class UIManager : MonoBehaviour
 {
 	//Things to be added:
 	/*
+	ENEMIES LEFT	
 
-	QUIT GAME SHOULD KILL ALL ENEMIES
-	
-	TIMER
-
-
-	ENEMIES LEFT
-	
-	NEW UI AND FONT:
-	CROSSHAIR, BUTTONS, HEALTHBAR, AMMOBAR, WEAPONSWITCH
-	
 	*/
 
 	//script reference
 	private PlayerStats playerStats;
 	public RotateCamera camRotateScript;
 	public Wave wave;
+	public Shooting shootScript;
+	public CameraLook camLook;
+	public Movement playerMove;
+	public Manager manager;
 
-	//health
+	//HUD
 	public Image healthBar;
-
-	//ammo
 	public Text ammoText;
 	public Text waveText;
+	public Text scoreText;
+	public Image gunIconSlot;
+
+	//Highscores
+	public Text timeHS, waveHS, scoreHS;
 
 	//UI stuff
 	public List<RectTransform> allMenuItems = new List<RectTransform>();
 	public RectTransform mainMenu, pauseMenu, ingame, settings, gameOver, controlInfo; //gonna add more to these 
 	public enum UIState {MainMenu, Ingame, GameOver};
 	public UIState _UIState;
-
+	private bool cursorActive;
 	public bool paused, settingsActive, controlInfoActive;
 	public KeyCode esc;
 
-	bool cursorActive;
-
-	public Image gunIconSlot;
-
-	public Shooting shootScript;
-
-	string infinite;
-
-	public CameraLook camLook;
-	public Movement playerMove;
-
+	//Player 
 	public GameObject player, cam;
 
-	public Manager manager;
+	//Timer
+	public float time; //needed?
+	public float hour, minute, second;
+	public bool timing;
+	public Text timerText;
+
+	//Score
+	private int currentScore;
 
 
 	//sets some things ready
@@ -71,38 +66,37 @@ public class UIManager : MonoBehaviour
 		camLook = cam.GetComponent<CameraLook>();
 		playerMove = player.GetComponent<Movement>();
 		playerStats = player.GetComponent<PlayerStats>();	
-			
-
-
-
 		camRotateScript = player.GetComponent<RotateCamera>();
-
-
-
-		//gunIconSlot = GameObject.Find("Gun Icon").GetComponent<Image>();
+		//gunIconSlot = GameObject.Find("Gun Icon").GetComponent<Image>(); //not needed?
 
 		cursorActive = false;
 
+		CheckScore(currentScore); //so it updates in ui
+
+		ResetTimer();
 		CheckUIState();
 	}
+	//constantly updates
 	private void Update () {
 
 		PressEscape();
+		ClockingTime();	
 	}
+	//Updates state of ui
 	private void CheckUIState () {
 
 		switch (_UIState) {
 
         case UIState.MainMenu:
 
+			SetTimer(false);
+
 			manager.ResetGame();
 			playerStats.ResetPosition();
+
 			BlockMovement(true);
-			//wave.enabled = false;
-
-
+			
 			Time.timeScale = 1;
-
 
             List<RectTransform> mainmenulist = new List<RectTransform>() {mainMenu};
 			EnableMenuItems(mainmenulist);
@@ -111,10 +105,11 @@ public class UIManager : MonoBehaviour
 
         case UIState.Ingame:
 
+			SetTimer(true);
+
 			BlockMovement(false);
 			camRotateScript.enabled = false;
 			wave.spawnEnemies = true;
-			//wave.enabled = true;
 
 			List<RectTransform> ingameList = new List<RectTransform>() {ingame};
 			EnableMenuItems(ingame);
@@ -125,22 +120,22 @@ public class UIManager : MonoBehaviour
 
 		case UIState.GameOver:
 
+			SetTimer(false);
 			manager.ResetGame();
+			playerStats.ResetPosition();
 
 			List<RectTransform> gameOverList = new List<RectTransform>() {gameOver};
 			EnableMenuItems(gameOverList);
 			SwitchCursorState();
-			//wave.enabled = false;
 
-			//kill all enemies in manager
 			camRotateScript.enabled = true;
 
-			
-			manager.ResetGame();
+			BlockMovement(true);
 
 			break;
         }
 	}
+	//block movement and activates other things
 	public void BlockMovement (bool state) {
 
 		if(state) {
@@ -174,9 +169,6 @@ public class UIManager : MonoBehaviour
 			pauseMenu.gameObject.SetActive(true);
 
 			SwitchCursorState();
-
-			//pause game and turns pausemenu on
-			//if statements so you can esc out of every window
 		}		
 		else if(Input.GetKeyDown(esc) && settingsActive == true) {
 
@@ -193,14 +185,11 @@ public class UIManager : MonoBehaviour
 			pauseMenu.gameObject.SetActive(false);
 
 			SwitchCursorState();
-			//pause game and turns pausemenu on
-			//if statements so you can esc out of every window
 		}		
 	}
 	//sets state and checks the next state 
 	public void SetState (UIState state) {
 
-		
 		_UIState = state;
 		paused = false;
 		settingsActive = false;
@@ -224,7 +213,6 @@ public class UIManager : MonoBehaviour
 	public void MainMenu () {
 
 		SetState(UIState.MainMenu);
-		//activate camera rotate script
 	}
 	//button function
 	public void Ingame () {
@@ -283,4 +271,48 @@ public class UIManager : MonoBehaviour
 
 		waveText.text = "Wave : " + waveNumber;
 	}
+	//checks score and updates ui
+	public void CheckScore (int points) {
+
+		scoreText.text = "Score: " + currentScore + points;
+	}
+	#region Timer
+	//sets bool 
+	public void SetTimer (bool set) 
+	{
+		timing = set;
+	}
+	void ClockingTime () 
+	{
+		if(!timing)
+		{
+			
+			return;
+		}
+		second += Time.deltaTime;
+		
+		//round time
+		if(second >= 60f)
+		{
+			minute++;
+		}
+		if(minute >= 60f)
+		{
+			hour++;
+		}
+		SetTimerText();
+	}
+	void SetTimerText () 
+	{
+		timerText.text = "Time: " + hour + ":" + minute + ":" + (int)second;
+	}
+	public void ResetTimer () 
+	{
+		SetTimer(false);
+		SetTimerText();
+		hour = 0f;
+		minute = 0f;
+		second = 0f;
+	}
+	#endregion
 }
