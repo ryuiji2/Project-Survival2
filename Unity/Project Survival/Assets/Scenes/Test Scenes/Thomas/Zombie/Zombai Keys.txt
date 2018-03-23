@@ -1,0 +1,8 @@
+Walk Start: 0 - 15
+Walk Loop 15 - 70
+Walk Stop 70 - 75
+
+Attack1 75 - 150
+Attack2 150 - 216
+
+Death 216 - 272
