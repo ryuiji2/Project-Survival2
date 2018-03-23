@@ -26,12 +26,12 @@ public class UIManager : MonoBehaviour
 	public RotateCamera camRotateScript;
 	public Wave wave;
 
-	//HUD
+	//health
 	public Image healthBar;
+
+	//ammo
 	public Text ammoText;
 	public Text waveText;
-	public Text scoreText;
-	private int currentScore;
 
 	//UI stuff
 	public List<RectTransform> allMenuItems = new List<RectTransform>();
@@ -56,7 +56,6 @@ public class UIManager : MonoBehaviour
 	public GameObject player, cam;
 
 	public Manager manager;
-	public Timer timer;
 
 
 	//sets some things ready
@@ -72,7 +71,6 @@ public class UIManager : MonoBehaviour
 		camLook = cam.GetComponent<CameraLook>();
 		playerMove = player.GetComponent<Movement>();
 		playerStats = player.GetComponent<PlayerStats>();	
-		timer.GetComponent<Timer>();
 			
 
 
@@ -117,7 +115,6 @@ public class UIManager : MonoBehaviour
 			camRotateScript.enabled = false;
 			wave.spawnEnemies = true;
 			//wave.enabled = true;
-			timer.SetTimer(true);
 
 			List<RectTransform> ingameList = new List<RectTransform>() {ingame};
 			EnableMenuItems(ingame);
@@ -126,20 +123,17 @@ public class UIManager : MonoBehaviour
             
             break;
 
-		case UIState.GameOver: //needs to be made
+		case UIState.GameOver:
 
-			timer.SetTimer(false);
-			//manager.ResetGame();
+			manager.ResetGame();
 
 			List<RectTransform> gameOverList = new List<RectTransform>() {gameOver};
 			EnableMenuItems(gameOverList);
 			SwitchCursorState();
-
-			//panel with a button to go back to main menu and retry, plus the score the player got
-
 			//wave.enabled = false;
 
-			//camRotateScript.enabled = true;
+			//kill all enemies in manager
+			camRotateScript.enabled = true;
 
 			
 			manager.ResetGame();
@@ -288,10 +282,5 @@ public class UIManager : MonoBehaviour
 	public void CheckWave (int waveNumber) {
 
 		waveText.text = "Wave : " + waveNumber;
-	}
-	public void CheckScore (int points) {
-
-		currentScore += points;
-		scoreText.text = "Score : " + currentScore;
 	}
 }

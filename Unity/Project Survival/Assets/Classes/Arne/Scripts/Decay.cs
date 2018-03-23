@@ -4,12 +4,10 @@ using UnityEngine;
 
 public class Decay : MonoBehaviour {
 
-	public float duration;
-
 	// Use this for initialization
 	void Start () 
 	{
-		Invoke("Destroy",duration);
+		Invoke("Destroy",10f);
 	}
 	void Destroy () {
 

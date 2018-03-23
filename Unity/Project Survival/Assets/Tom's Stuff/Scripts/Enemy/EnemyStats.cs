@@ -1,14 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
 
 public class EnemyStats : MonoBehaviour {
-    //animator toevoegen
+
 	[Range(100f,0f)]
 	public float health = 100f;
 	public float damage = 10f;
-    public float deathTimer;
 
 	private PlayerStats player;
 
@@ -17,13 +15,6 @@ public class EnemyStats : MonoBehaviour {
 
 	private Regeneration regen;
 	private Wave wave;
-    private NavMeshAgent agent;
-    private Animation anim;
-    private UIManager UIM;
-    private int deathScore;
-    public GameObject ammoBox;
-    public int maxRNG;
-    private int toDrop;
 
 	private float timer, attackCooldown;
 
@@ -32,14 +23,10 @@ public class EnemyStats : MonoBehaviour {
 		regen = GameObject.Find("Player").GetComponent<Regeneration>();
 		player = GameObject.Find("Player").GetComponent<PlayerStats>();
 		wave = GameObject.Find("WaveManager").GetComponent<Wave>();
-        UIM = GameObject.Find ("Canvas").GetComponent<UIManager> ();
-        agent = GetComponent<NavMeshAgent> ();
-        anim = GetComponent<Animation> ();
 		
 		attackCooldown = 2f;
 	}
 	private void Start () {
-        toDrop = Random.Range (0, maxRNG);
 
 		if(!wave.spawnEnemies) {
 
@@ -47,19 +34,10 @@ public class EnemyStats : MonoBehaviour {
 			Death();
 		}
 	}
-	public void FixedUpdate () {
+	private void FixedUpdate () {
 
-        Death ();
-        Attack ();
-
-    }
-
-    public void AmmoDrop () {
-
-        if(toDrop == 0) {
-            Instantiate (ammoBox, transform.position, Quaternion.identity);
-        }
-    }
+		Attack();
+	}
 	public void Attack () { //bug not touching player and player receives damage
 
 
@@ -68,9 +46,8 @@ public class EnemyStats : MonoBehaviour {
 		Debug.DrawRay(transform.position, transform.forward, Color.green);
         if(Physics.Raycast(transform.position, transform.forward, out hit, attackRange, mask)) {
 
-			if(timer <= 0f && health > 0) {
+			if(timer <= 0f) {
 
-                agent.isStopped = true;
 				Debug.Log("Attack");
 				//random range which attack anim
                 
@@ -79,43 +56,26 @@ public class EnemyStats : MonoBehaviour {
 
 				player.PlayerHealth(damage);
 				timer = attackCooldown;
-                
 			}	
 		}
-        if (!anim.IsPlaying ("animationname")) { //change animation name to attack name.
-            agent.isStopped = false;
-        }
-        timer -= Time.deltaTime;
-    }
+		timer -= Time.deltaTime;
+	}
 	public void EnemyHealth (float dmg) {
 
-
-        if(health <= 0f) {
-            agent.enabled = false;
-            GetComponent<Collider> ().isTrigger = true;
-            AmmoDrop ();
-            wave.currEnemy--;
-        }
-            health -= dmg;
+		health -= dmg;
+		Debug.Log(health);
+		if(health <= 0f)
+		{
+			Debug.Log("dead");
+			Death();
+		}
 		//stagger?
 	}
 	public void Death() {
 
-        if (health <= 0f) {
-            deathTimer -= Time.deltaTime;
-
-            //play animation
-            //UIM.checkscore (deathScore);
-        }
-        if (deathTimer <= 0f) {
-            Debug.Log ("go down");
-            gameObject.transform.position += (Vector3.down * Time.deltaTime);
-        }
+		// Die
+		//play animation
+		wave.currEnemy--;
+		Destroy(gameObject);
 	}
-
-    public void OnTriggerEnter (Collider deathZone) {
-        if (deathZone.gameObject.tag == "deathZone") { //deathzone tag aanmaken.
-            Destroy (this.gameObject);
-        }
-    }
 }
