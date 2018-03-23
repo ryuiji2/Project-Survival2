@@ -6792,6 +6792,11 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114058108273066720, guid: 730d8073a211bb24d868ef80352e90ff,
+        type: 2}
+      propertyPath: maxEnemy
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 730d8073a211bb24d868ef80352e90ff, type: 2}
   m_IsPrefabParent: 0
@@ -12424,6 +12429,52 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 0}
+--- !u!1 &735317521
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 735317523}
+  - component: {fileID: 735317522}
+  m_Layer: 5
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &735317522
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 735317521}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 102.10746, y: 7.1254525, z: 104.311775}
+  m_Center: {x: -2.4508166, y: -2.872953, z: 0.21992159}
+--- !u!224 &735317523
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 735317521}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.5183333, y: 0.5183333, z: 0.5183333}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 24
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -3.67}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &737281828
 Prefab:
   m_ObjectHideFlags: 0
@@ -22679,6 +22730,7 @@ Prefab:
       propertyPath: camRotateScript
       value: 
       objectReference: {fileID: 1102704207}
+<<<<<<< HEAD
     - target: {fileID: 114085984186840344, guid: 55e66937a3a0c46429e2bb8e9dd2222a,
         type: 2}
       propertyPath: m_FontData.m_Font
@@ -22697,6 +22749,30 @@ Prefab:
       value: 
       objectReference: {fileID: 12800000, guid: d35938eaaa448084997364c1f99f0cfa,
         type: 3}
+=======
+<<<<<<< HEAD
+    - target: {fileID: 224712969110190498, guid: c4cf3e0cb4d29a84e99a79e35d522c15,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 8.799805
+      objectReference: {fileID: 0}
+    - target: {fileID: 224483730578104540, guid: c4cf3e0cb4d29a84e99a79e35d522c15,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 21.40039
+      objectReference: {fileID: 0}
+    - target: {fileID: 114694181255839166, guid: c4cf3e0cb4d29a84e99a79e35d522c15,
+        type: 2}
+      propertyPath: _UIState
+      value: 1
+=======
+    - target: {fileID: 224048677228402126, guid: 55e66937a3a0c46429e2bb8e9dd2222a,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 8.800049
+>>>>>>> c66bb1f0898706850939cee1fe45642960f458f3
+      objectReference: {fileID: 0}
+>>>>>>> 5d73a568cd123d164bd6e1525e444851c2ae869e
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 55e66937a3a0c46429e2bb8e9dd2222a, type: 2}
   m_IsPrefabParent: 0

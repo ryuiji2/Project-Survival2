@@ -44,7 +44,6 @@ public class Wave : MonoBehaviour {
         
         EnemyCheck();
         ExtraEnemy();
-        Debug.Log("updating");
 
        /* if (Input.GetButtonDown ("Cancel")) {
             currEnemy--;
