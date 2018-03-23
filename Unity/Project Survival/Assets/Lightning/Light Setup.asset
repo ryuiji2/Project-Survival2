@@ -149,14 +149,14 @@ MonoBehaviour:
             - serializedVersion: 2
               time: 0
               value: 0
-              inSlope: 1
-              outSlope: 1
+              inSlope: 1.6401099
+              outSlope: 1.6401099
               tangentMode: 0
             - serializedVersion: 2
-              time: 1
+              time: 0.58542717
               value: 1
-              inSlope: 1
-              outSlope: 1
+              inSlope: 1.6722683
+              outSlope: 1.6722683
               tangentMode: 0
             m_PreInfinity: 2
             m_PostInfinity: 2
