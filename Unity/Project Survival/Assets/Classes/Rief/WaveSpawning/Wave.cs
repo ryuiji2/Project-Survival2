@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Wave : MonoBehaviour {
 
-    private int currWave; //welke wave het is.
+    public int currWave; //welke wave het is.
     public int currEnemy; //hoeveel enemies er zijn gespawned.
     public int maxEnemy; //maximale enemies op de map.
     public float waveEnemy; //hoeveel enemies per wave.

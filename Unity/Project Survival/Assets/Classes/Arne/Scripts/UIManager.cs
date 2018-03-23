@@ -118,9 +118,11 @@ public class UIManager : MonoBehaviour
             
             break;
 
-		case UIState.GameOver:
+		case UIState.GameOver:			//player cam stutters when dead
 
 			SetTimer(false);
+
+			HighScore();
 			manager.ResetGame();
 			playerStats.ResetPosition();
 
@@ -274,8 +276,16 @@ public class UIManager : MonoBehaviour
 	//checks score and updates ui
 	public void CheckScore (int points) {
 
-		scoreText.text = "Score: " + currentScore + points;
+		currentScore += points;
+		scoreText.text = "Score: " + currentScore;
 	}
+	//Highscores
+	public void HighScore () {  //should be reset after exiting gameover
+
+		scoreHS.text = "Final Score : " + currentScore;
+		timeHS.text = "Final Time : " + hour + ":" + minute + ":" + second;
+		waveHS.text = "Final Wave : " + wave.currWave;
+	}	
 	#region Timer
 	//sets bool 
 	public void SetTimer (bool set) 
