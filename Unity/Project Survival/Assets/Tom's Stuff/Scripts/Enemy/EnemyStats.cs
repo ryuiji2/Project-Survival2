@@ -5,6 +5,10 @@ using UnityEngine.AI;
 
 public class EnemyStats : MonoBehaviour {
     //animator toevoegen
+    //deathzone tag aanmaken
+    //deathzone aanmaken
+    //random range voor attack
+
 	[Range(100f,0f)]
 	public float health = 100f;
 	public float damage = 10f;
@@ -82,7 +86,7 @@ public class EnemyStats : MonoBehaviour {
                 
 			}	
 		}
-        if (!anim.IsPlaying ("animationname")) { //change animation name to attack name.
+        if (!anim.IsPlaying ("animationname")) {
             agent.isStopped = false;
         }
         timer -= Time.deltaTime;
@@ -104,8 +108,8 @@ public class EnemyStats : MonoBehaviour {
         if (health <= 0f) {
             deathTimer -= Time.deltaTime;
 
-            //play animation
-            //UIM.checkscore (deathScore);
+            //play death animation
+            //UIM.checkscore (deathScore); > voor score
         }
         if (deathTimer <= 0f) {
             Debug.Log ("go down");
@@ -114,7 +118,7 @@ public class EnemyStats : MonoBehaviour {
 	}
 
     public void OnTriggerEnter (Collider deathZone) {
-        if (deathZone.gameObject.tag == "deathZone") { //deathzone tag aanmaken.
+        if (deathZone.gameObject.tag == "deathZone") {
             Destroy (this.gameObject);
         }
     }
