@@ -11,12 +11,12 @@
 		
 	}
 	SubShader {
-		Tags { "RenderType"="Opaque" }
+		Tags{ "Queue" = "Transparent" "RenderType" = "Transparent" }
 		LOD 200
 
 		CGPROGRAM
 
-		#pragma surface surf Standard fullforwardshadows
+		#pragma surface surf Standard fullforwardshadows alpha
 
 		#pragma target 3.0
 
@@ -45,13 +45,14 @@
 			
 			fixed4 c = tex2D (_MainTex, IN.uv_MainTex) * _Color;
 			fixed4 s = tex2D (_Simulation, scrollingUV) * tex2D (_SimMask, IN.uv_SimMask);
+			fixed4 m = tex2D (_SimMask, IN.uv_SimMask);
 			o.Albedo = c.rgb + s.rgb;
 			o.Emission = s.rgb;
 			
 			o.Metallic = 0;
 			o.Smoothness = 0;
 			o.Normal = UnpackNormal(tex2D(_Normal, IN.uv_Normal));
-			o.Alpha = c.a;
+			o.Alpha = 0;
 		}
 		ENDCG
 	}

@@ -7,9 +7,13 @@ public class Movement : MonoBehaviour {
     public float moveSpeed;
     public float rotateSpeed;
     private bool canJump;
-    public int jumpHeight; //hoog zetten, werkt anders niet heel goed. 300 werkte prima.
+    public int jumpHeight = 3; //hoog zetten, werkt anders niet heel goed. 300 werkte prima.
 
     public bool block;
+
+    void Start() {
+        canJump = true;
+    }
 
     void FixedUpdate() {
 
@@ -31,7 +35,8 @@ public class Movement : MonoBehaviour {
     void Jump () {
 
         if (Input.GetButtonDown ("Jump") && canJump) {
-            GetComponent<Rigidbody> ().AddForce (0, jumpHeight, 0);
+            print(1);
+            GetComponent<Rigidbody> ().AddForce (0, jumpHeight * 100, 0);
             canJump = false;
         }
     }
