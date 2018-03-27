@@ -61,7 +61,7 @@ public class EnemyStats : MonoBehaviour {
     public void AmmoDrop () {
 
         if(toDrop == 0) {
-            Instantiate (ammoBox, transform.position, Quaternion.identity);
+            //Instantiate (ammoBox, transform.position, Quaternion.identity);
         }
     }
 	public void Attack () { //bug not touching player and player receives damage
@@ -85,10 +85,10 @@ public class EnemyStats : MonoBehaviour {
 				timer = attackCooldown;
                 
 			}	
-		}
+		}/* 
         if (!anim.IsPlaying ("animationname")) {
             agent.isStopped = false;
-        }
+        }*/
         timer -= Time.deltaTime;
     }
 	public void EnemyHealth (float dmg) {

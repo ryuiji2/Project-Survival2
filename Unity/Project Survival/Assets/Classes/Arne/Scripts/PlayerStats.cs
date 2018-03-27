@@ -29,14 +29,16 @@ public class PlayerStats : MonoBehaviour {
 
 		health -= dmg;
 		healthPercentage = health / maxHP;
-		if(health < 0f) {
+		if(health <= 0f) {
 
 			uim.SetState(UIManager.UIState.GameOver);
 		}
 		uim.CheckHealth();
 	}
-	public void ResetPosition () {
+	public void PlayerReset () {
 
 		transform.position = startPos;
+		health = maxHP;
+		PlayerHealth(0f);
 	}
 }

@@ -13,11 +13,19 @@ public class Manager : MonoBehaviour {
 	private GameObject enemy;
 	private Wave wave;
 
+	private UIManager uim;
+	private GameObject player;
+	private PlayerStats playerStats;
+
 	private void Awake () {
 
 		wave = GameObject.Find("WaveManager").GetComponent<Wave>();
+		uim = GameObject.Find("Canvas").GetComponent<UIManager>();
+
+		player = GameObject.Find("Player");
+		playerStats = player.GetComponent<PlayerStats>();	
 	}
-	public void ResetGame () {
+	public void KillEnemies () {
 
 		//make list of enemies and kill
 		var objects = GameObject.FindGameObjectsWithTag("Enemy");
@@ -27,6 +35,18 @@ public class Manager : MonoBehaviour {
 			Destroy(enemy);
 			Debug.Log("reset");
 		}
-		
 	}
+	public void ResetHUD () {
+
+		//reset Highscore, Timer, Wave, Enemies, Playerhealth
+		uim.currentScore = 0;
+		uim.ResetTimer();
+		uim.wave.ResetEnemies();
+		playerStats.PlayerReset();
+	}
+	public void SetTimeScale (int scale) { //needed?
+
+		Time.timeScale = scale;
+	}
+
 }

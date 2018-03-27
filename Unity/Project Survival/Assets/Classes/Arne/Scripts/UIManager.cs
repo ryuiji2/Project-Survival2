@@ -50,7 +50,7 @@ public class UIManager : MonoBehaviour
 	public Text timerText;
 
 	//Score
-	private int currentScore;
+	public int currentScore;
 
 
 	//sets some things ready
@@ -89,54 +89,56 @@ public class UIManager : MonoBehaviour
 
         case UIState.MainMenu:
 
-			SetTimer(false);
+			//get ready everything for mainmenu and needs to loop 
 
-			manager.ResetGame();
-			playerStats.ResetPosition();
+			//manager.SetTimeScale(1);	standard value probably not needed
+
+			List<RectTransform> mainmenulist = new List<RectTransform>() {mainMenu};
+			EnableMenuItems(mainmenulist);
 
 			BlockMovement(true);
-			
-			Time.timeScale = 1;
+			SwitchCursorState(false);
+			playerStats.PlayerReset();
+			SetTimer(false);
 
-            List<RectTransform> mainmenulist = new List<RectTransform>() {mainMenu};
-			EnableMenuItems(mainmenulist);
+			//manager.KillEnemies(); 
 
             break;
 
         case UIState.Ingame:
-
-			SetTimer(true);
-
-			BlockMovement(false);
-			camRotateScript.enabled = false;
-			wave.spawnEnemies = true;
-
+								//reset player health etc (everything needed to be game ready)
 			List<RectTransform> ingameList = new List<RectTransform>() {ingame};
 			EnableMenuItems(ingame);
+
+			BlockMovement(false);			
+			SwitchCursorState(true);
+
+			SetTimer(true); //timer doesnt activate
+			//reset Highscore, Timer, Wave, Enemies, Playerhealth
+			manager.ResetHUD();
 			
-			SwitchCursorState();
-            
+			wave.spawnEnemies = true; 
+          
             break;
 
 		case UIState.GameOver:			//player cam stutters when dead
 
-			SetTimer(false);
-
-			HighScore();
-			manager.ResetGame();
-			playerStats.ResetPosition();
-
 			List<RectTransform> gameOverList = new List<RectTransform>() {gameOver};
 			EnableMenuItems(gameOverList);
-			SwitchCursorState();
-
-			camRotateScript.enabled = true;
 
 			BlockMovement(true);
+			SwitchCursorState(false);
+			playerStats.PlayerReset();
+			SetTimer(false);
+
+			HighScore(); //show highscore
+
+			manager.KillEnemies();
 
 			break;
         }
 	}
+	
 	//block movement and activates other things
 	public void BlockMovement (bool state) {
 
@@ -170,7 +172,7 @@ public class UIManager : MonoBehaviour
 			Time.timeScale = 0;
 			pauseMenu.gameObject.SetActive(true);
 
-			SwitchCursorState();
+			SwitchCursorState(false);
 		}		
 		else if(Input.GetKeyDown(esc) && settingsActive == true) {
 
@@ -186,7 +188,7 @@ public class UIManager : MonoBehaviour
 			Time.timeScale = 1;
 			pauseMenu.gameObject.SetActive(false);
 
-			SwitchCursorState();
+			SwitchCursorState(true);
 		}		
 	}
 	//sets state and checks the next state 
@@ -228,9 +230,9 @@ public class UIManager : MonoBehaviour
 		Application.Quit();
 	}
 	//sets the right cursor state
-	private void SwitchCursorState () {
+	private void SwitchCursorState (bool state) {
 
-		cursorActive = !cursorActive;
+		cursorActive = state;
 		if(!cursorActive) {
 
 			Cursor.visible = true;

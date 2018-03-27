@@ -24,12 +24,15 @@ public class Wave : MonoBehaviour {
     public float starterEnemycount;
 
     public bool spawnEnemies;
+
+    public Manager manager;
     
 
     private void Awake () {
 
         uim = GameObject.Find("Canvas").GetComponent<UIManager>();
         player = GameObject.Find("Player").transform;
+        manager = GameObject.Find("GameManager").GetComponent<Manager>();
 	}
 	void Start () {
 
@@ -100,7 +103,8 @@ public class Wave : MonoBehaviour {
 
         Debug.Log("ResetEnemies");
         spawnEnemies = false;
-        currEnemy--;
+        //currEnemy--;
+        manager.KillEnemies();
 		waveEnemy = starterEnemycount;
         currWave = 0;
     }
