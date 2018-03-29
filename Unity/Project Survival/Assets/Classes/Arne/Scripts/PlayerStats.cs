@@ -31,6 +31,7 @@ public class PlayerStats : MonoBehaviour {
 		healthPercentage = health / maxHP;
 		if(health <= 0f) {
 
+			Debug.Log("Dead");	
 			uim.SetState(UIManager.UIState.GameOver);
 		}
 		uim.CheckHealth();
