@@ -214,7 +214,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!81 &625535589
 AudioListener:
   m_ObjectHideFlags: 0
@@ -319,6 +319,52 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: acf3e3475154d5e4d8a111c63c0b1bb4, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &1155783641
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4644520741917520, guid: 2152f4d0ac446994ca408b27473e9a85, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -4.34
+      objectReference: {fileID: 0}
+    - target: {fileID: 4644520741917520, guid: 2152f4d0ac446994ca408b27473e9a85, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4644520741917520, guid: 2152f4d0ac446994ca408b27473e9a85, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -1.169
+      objectReference: {fileID: 0}
+    - target: {fileID: 4644520741917520, guid: 2152f4d0ac446994ca408b27473e9a85, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4644520741917520, guid: 2152f4d0ac446994ca408b27473e9a85, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4644520741917520, guid: 2152f4d0ac446994ca408b27473e9a85, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4644520741917520, guid: 2152f4d0ac446994ca408b27473e9a85, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4644520741917520, guid: 2152f4d0ac446994ca408b27473e9a85, type: 2}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4644520741917520, guid: 2152f4d0ac446994ca408b27473e9a85, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 2152f4d0ac446994ca408b27473e9a85, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1530673764
 Prefab:
