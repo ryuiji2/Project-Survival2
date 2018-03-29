@@ -25,7 +25,7 @@ public class Manager : MonoBehaviour {
 		player = GameObject.Find("Player");
 		playerStats = player.GetComponent<PlayerStats>();	
 	}
-	public void KillEnemies () {
+	public void KillEnemies () { //crashes game
 
 		//make list of enemies and kill
 		var objects = GameObject.FindGameObjectsWithTag("Enemy");

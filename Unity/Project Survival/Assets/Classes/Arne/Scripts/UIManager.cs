@@ -110,12 +110,12 @@ public class UIManager : MonoBehaviour
 			List<RectTransform> ingameList = new List<RectTransform>() {ingame};
 			EnableMenuItems(ingame);
 
+			manager.ResetHUD();
 			BlockMovement(false);			
 			SwitchCursorState(true);
 
 			SetTimer(true); //timer doesnt activate
 			//reset Highscore, Timer, Wave, Enemies, Playerhealth
-			manager.ResetHUD();
 			
 			wave.spawnEnemies = true; 
           
@@ -124,16 +124,17 @@ public class UIManager : MonoBehaviour
 		case UIState.GameOver:			//player cam stutters when dead
 
 			List<RectTransform> gameOverList = new List<RectTransform>() {gameOver};
-			EnableMenuItems(gameOverList);
+			EnableMenuItems(gameOverList); //not an issue
 
-			BlockMovement(true);
-			SwitchCursorState(false);
-			playerStats.PlayerReset();
-			SetTimer(false);
+			BlockMovement(true); // not an issue
+			SwitchCursorState(false);// not an issue
 
-			HighScore(); //show highscore
+			playerStats.PlayerReset(); // not an issue
+			SetTimer(false);// not an issue
 
-			manager.KillEnemies();
+			HighScore(); //show highscore //not an issue
+
+			manager.KillEnemies(); //makes game crash....
 
 			break;
         }

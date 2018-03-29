@@ -103,8 +103,8 @@ public class Wave : MonoBehaviour {
 
         Debug.Log("ResetEnemies");
         spawnEnemies = false;
-        //currEnemy--;
-        manager.KillEnemies();
+        currEnemy--; //was commented
+        //manager.KillEnemies(); //infinite loop
 		waveEnemy = starterEnemycount;
         currWave = 0;
     }
