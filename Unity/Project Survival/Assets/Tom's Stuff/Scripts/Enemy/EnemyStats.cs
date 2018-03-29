@@ -95,10 +95,10 @@ public class EnemyStats : MonoBehaviour {
 
 
         if(health <= 0f) {
-            agent.enabled = false;
+            //agent.enabled = false; //gives error
             GetComponent<Collider> ().isTrigger = true;
             AmmoDrop ();
-            wave.currEnemy--;
+            //wave.currEnemy--; i think this fucks with wave
         }
             health -= dmg;
 		//stagger?

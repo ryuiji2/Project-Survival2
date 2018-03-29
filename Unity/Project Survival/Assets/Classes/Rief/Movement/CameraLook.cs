@@ -9,16 +9,15 @@ public class CameraLook : MonoBehaviour {
     private float yaw = 0.0f;
     private float pitch = 0.0f;
 
-    private Transform player;
+    public Transform player;
 
     public bool block;
 
-    void Start () {
+    private void Awake () {
 
-        player = transform.parent;
+        player = GameObject.Find("Player").transform;
     }
-
-    void FixedUpdate () {
+    private void FixedUpdate () {
         
         if(!block)
         {
