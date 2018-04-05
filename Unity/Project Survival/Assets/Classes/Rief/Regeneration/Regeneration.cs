@@ -14,6 +14,10 @@ public class Regeneration : MonoBehaviour {
     private PlayerStats playerstats;
     private Coroutine isTimer;
 
+    public Animation regenIcon, regenBar;
+    public Animator regenIconR, regenBarR;
+
+
     void Start () {
 
         playerstats = GetComponent<PlayerStats>();
@@ -54,7 +58,14 @@ public class Regeneration : MonoBehaviour {
 
             yield return new WaitForSeconds (1);
             //play animation on healthcontainer icon
+            PlayAnimation();
             playerstats.PlayerHealth(-regen);
         }
+    }
+    private void PlayAnimation () {
+
+        //regenIcon.Play();
+        //regenBar.Play();
+        regenBarR.Play("HealthBarRegeneration");
     }
 }
