@@ -66,7 +66,7 @@ public class UIManager : MonoBehaviour
 		camLook = cam.GetComponent<CameraLook>();
 		playerMove = player.GetComponent<Movement>();
 		playerStats = player.GetComponent<PlayerStats>();	
-		camRotateScript = cam.GetComponent<RotateCamera>();
+		camRotateScript = player.GetComponent<RotateCamera>();
 		//gunIconSlot = GameObject.Find("Gun Icon").GetComponent<Image>(); //not needed?
 
 		cursorActive = false;

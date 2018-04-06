@@ -53,7 +53,7 @@ public class EnemyStats : MonoBehaviour {
 	}
 	public void FixedUpdate () {
 
-        Death ();
+        //Death ();
         Attack ();
 
     }
@@ -98,13 +98,14 @@ public class EnemyStats : MonoBehaviour {
             //agent.enabled = false; //gives error
             GetComponent<Collider> ().isTrigger = true;
             AmmoDrop ();
-            //wave.currEnemy--; i think this fucks with wave
+            wave.currEnemy--; //i think this fucks with wave
+            Destroy(gameObject);
         }
             health -= dmg;
 		//stagger?
 	}
 	public void Death() {
-
+/* 
         if (health <= 0f) {
             deathTimer -= Time.deltaTime;
 
@@ -114,7 +115,7 @@ public class EnemyStats : MonoBehaviour {
         if (deathTimer <= 0f) {
             Debug.Log ("go down");
             gameObject.transform.position += (Vector3.down * Time.deltaTime);
-        }
+        }*/
 	}
 
     public void OnTriggerEnter (Collider deathZone) {
