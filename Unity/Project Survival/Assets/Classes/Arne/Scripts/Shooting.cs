@@ -214,9 +214,9 @@ public class Shooting : MonoBehaviour {
 		float offsetZ = Random.Range(-.05f, .05f);
 		//offsetZ = 0;
 
-		Debug.Log(offsetX + "X");
-		Debug.Log(offsetY + "Y");
-		Debug.Log(offsetZ + "Z");
+		//Debug.Log(offsetX + "X");
+		//Debug.Log(offsetY + "Y");
+		//Debug.Log(offsetZ + "Z");
 		if(!aimed)
 		{
 			offsetX = 0;

@@ -3,6 +3,7 @@
 		_Color ("Color", Color) = (1,1,1,1)
 		_MainTex ("Albedo (RGB)", 2D) = "white" {}
 		_Normal ("Normal Map", 2D) = "bump" {}
+		[Toggle] _Alpha ("Alpha toggle" , float) = 0
 		
 		_TexOne ("Simulation Mask One", 2D) = "white" {}
 		_SliderOne ("Slider Mask One", range(0,1)) = 1
@@ -16,11 +17,13 @@
 	}
 	SubShader {
 		Tags{ "Queue" = "Transparent" "RenderType" = "Transparent" }
+		
 		LOD 200
 
 		CGPROGRAM
 
 		#pragma surface surf Standard fullforwardshadows alpha
+		#pragma multi_compile ALPHA_ON ALPHA_OFF
 
 		#pragma target 3.0
 
@@ -39,6 +42,7 @@
 		};
 
 		fixed4 _Color;
+		float _Alpha;
 		float _SSX;
 		float _SSY;
 
@@ -62,7 +66,7 @@
 			o.Metallic = 0;
 			o.Smoothness = 0;
 			o.Normal = UnpackNormal(tex2D(_Normal, IN.uv_Normal));
-			o.Alpha = 0;
+			o.Alpha = !_Alpha;
 		}
 		ENDCG
 	}

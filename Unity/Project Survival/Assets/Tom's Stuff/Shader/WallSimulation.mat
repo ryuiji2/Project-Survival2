@@ -66,7 +66,16 @@ Material:
         m_Texture: {fileID: 2800000, guid: 9b247b0206171974ba814e984c90f1d9, type: 3}
         m_Scale: {x: 3, y: 3}
         m_Offset: {x: 0, y: 0}
+    - _TexOne:
+        m_Texture: {fileID: 2800000, guid: 17c3daa7d0c0bc04186dfe6f45d0a95e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TexTwo:
+        m_Texture: {fileID: 2800000, guid: 17c3daa7d0c0bc04186dfe6f45d0a95e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
+    - _Alpha: 0
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
@@ -80,6 +89,8 @@ Material:
     - _Parallax: 0.02
     - _SSX: -1
     - _SSY: 0.5
+    - _SliderOne: 1
+    - _SliderTwo: 0
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1

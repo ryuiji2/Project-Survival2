@@ -53,7 +53,7 @@ public class EnemyStats : MonoBehaviour {
 	}
 	public void FixedUpdate () {
 
-        Death ();
+        //Death ();
         Attack ();
 
     }
