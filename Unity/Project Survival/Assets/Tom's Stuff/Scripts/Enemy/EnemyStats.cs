@@ -22,12 +22,13 @@ public class EnemyStats : MonoBehaviour {
 	private Regeneration regen;
 	private Wave wave;
     private NavMeshAgent agent;
-    private Animation anim;
+    private Animator anim;
     private UIManager UIM;
     private int deathScore;
     public GameObject ammoBox;
     public int maxRNG;
     private int toDrop;
+    private bool death;
 
 	private float timer, attackCooldown;
 
@@ -38,7 +39,7 @@ public class EnemyStats : MonoBehaviour {
 		wave = GameObject.Find("WaveManager").GetComponent<Wave>();
         UIM = GameObject.Find ("Canvas").GetComponent<UIManager> ();
         agent = GetComponent<NavMeshAgent> ();
-        anim = GetComponent<Animation> ();
+        anim = GetComponent<Animator> ();
 		
 		attackCooldown = 2f;
 	}
@@ -53,7 +54,7 @@ public class EnemyStats : MonoBehaviour {
 	}
 	public void FixedUpdate () {
 
-        //Death ();
+        Death ();
         Attack ();
 
     }
@@ -69,9 +70,9 @@ public class EnemyStats : MonoBehaviour {
 
 		RaycastHit hit;
 
-		Debug.DrawRay(transform.position, transform.forward, Color.green);
-        if(Physics.Raycast(transform.position, transform.forward, out hit, attackRange, mask)) {
-
+		Debug.DrawRay(new Vector3(transform.position.x,transform.position.y+1,transform.position.z), transform.forward, Color.green);
+        if(Physics.Raycast(new Vector3(transform.position.x,transform.position.y+1,transform.position.z), transform.forward, out hit, attackRange, mask)) {
+            anim.SetBool ("InRange", true);
 			if(timer <= 0f && health > 0) {
 
                 agent.isStopped = true;
@@ -95,32 +96,29 @@ public class EnemyStats : MonoBehaviour {
 
 
         if(health <= 0f) {
-            //agent.enabled = false; //gives error
-            GetComponent<Collider> ().isTrigger = true;
+            GetComponentInChildren<Collider> ().isTrigger = true;
+            agent.enabled = false;
             AmmoDrop ();
             wave.currEnemy--; //i think this fucks with wave
-            Destroy(gameObject);
         }
             health -= dmg;
 		//stagger?
 	}
 	public void Death() {
-/* 
+
         if (health <= 0f) {
             deathTimer -= Time.deltaTime;
 
-            //play death animation
+            if (death == false) {
+                anim.SetTrigger ("Death");
+                anim.SetBool ("InRange", false);
+                anim.SetBool ("Attack", false);
+                death = true;
+            }
             //UIM.checkscore (deathScore); > voor score
         }
         if (deathTimer <= 0f) {
-            Debug.Log ("go down");
             gameObject.transform.position += (Vector3.down * Time.deltaTime);
-        }*/
-	}
-
-    public void OnTriggerEnter (Collider deathZone) {
-        if (deathZone.gameObject.tag == "deathZone") {
-            Destroy (this.gameObject);
         }
-    }
+	}
 }

@@ -20,7 +20,10 @@ public class EnemyMovement : MonoBehaviour {
 	}
 	public void FixedUpdate () {
 
-		agent.destination = player.position;
+        if (agent.enabled == true) {
+            agent.destination = player.position;
+
+        }
 	}
 	private IEnumerator Movement() {  //werkt niet
 

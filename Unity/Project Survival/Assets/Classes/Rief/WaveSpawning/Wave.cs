@@ -36,23 +36,15 @@ public class Wave : MonoBehaviour {
 	}
 	void Start () {
 
-        waveEnemy = 2; //verrander dit als je het aantal begin enemies wilt verranderen
-        starterEnemycount = waveEnemy;
-        currWave = 0; //hoef je niet aan te passen
-        //uim.CheckWave(currWave);
-        //maxEnemy = 30; //maximum aantal enemies dat in 1 keer op de map kunnen zitten
+
+        uim.CheckWave(currWave);
 	}
 	void Update () {
 
         
         EnemyCheck();
         ExtraEnemy();
-        Debug.Log("updating");
 
-       /* if (Input.GetButtonDown ("Cancel")) {
-            currEnemy--;
-            dit word aangepast met EnemyStats (Voor --)
-        }*/
 	}
     void EnemyCheck () {
 
@@ -100,8 +92,7 @@ public class Wave : MonoBehaviour {
         coroutineActive = false;
     }
     public void ResetEnemies () {
-
-        Debug.Log("ResetEnemies");
+        
         spawnEnemies = false;
         currEnemy--; //was commented
         //manager.KillEnemies(); //infinite loop

@@ -308,16 +308,22 @@ public class UIManager : MonoBehaviour
 		if(second >= 60f)
 		{
 			minute++;
+            second = 0;
 		}
 		if(minute >= 60f)
 		{
 			hour++;
+            minute = 0;
 		}
 		SetTimerText();
 	}
 	void SetTimerText () 
 	{
-		timerText.text = "Time: " + hour + ":" + minute + ":" + (int)second;
+        if (second >= 10) {
+            timerText.text = "Time: 0" + hour + ":0" + minute + ":" + (int)second;
+        } else {
+            timerText.text = "Time: 0" + hour + ":0" + minute + ":0" + (int)second;
+        }
 	}
 	public void ResetTimer () 
 	{

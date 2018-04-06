@@ -77,7 +77,6 @@ public class Shooting : MonoBehaviour {
 				damage = pistolDMG;
 				//play grab pistol animation
 				//show visual weapon this weapon on other off
-				Debug.Log("Start pistol");
 				uim.SetGunIcon(pistolIcon);
 				SendAmmoValues();
 
@@ -111,7 +110,6 @@ public class Shooting : MonoBehaviour {
 
 				_Weapon = Weapon.Pistol;
 			}
-			Debug.Log(_Weapon);
 			WeaponState();
 		}
 	}
@@ -119,8 +117,7 @@ public class Shooting : MonoBehaviour {
 	public void SendAmmoValues () {
 
 		if(pistol) {
-
-			Debug.Log("Start");
+            
 			uim.CheckAmmo(pistolCurrentAmmo, pistolAmmoTotal);
 		}
 		if(mp40) {
@@ -154,12 +151,10 @@ public class Shooting : MonoBehaviour {
 		if(mp40CurrentAmmo < 0) {
 
 			mp40CurrentAmmo = 0;
-			Debug.Log("reload");
 		}
 		if(pistolCurrentAmmo < 0) {
 
 			pistolCurrentAmmo = 0;
-			Debug.Log("Reload");
 		}
 		if(pistolCurrentAmmo > 0 & pistol || mp40CurrentAmmo > 0 & mp40) {
 
@@ -173,14 +168,12 @@ public class Shooting : MonoBehaviour {
 
 			if(pistol) {
 				//play animation
-				Debug.Log("Reload pistol");
 				pistolCurrentAmmo = pistolMagAmmo;
 				
 			}
 			if(mp40) {
 
 				//play animation
-				Debug.Log("Reload mp40");
 				
 				//calculates with math that it won't grab ammo that doesn't exist
 				int extraFilling = mp40MagAmmo - mp40CurrentAmmo;
@@ -197,8 +190,7 @@ public class Shooting : MonoBehaviour {
 	}
 	//shoots and hit
 	private void Shoot () {
-
-		Debug.Log("Shoot");
+        
 		if(pistol)
 		{
 			pistolCurrentAmmo --;
@@ -213,10 +205,6 @@ public class Shooting : MonoBehaviour {
 		float offsetY = Random.Range(-.05f, .05f);
 		float offsetZ = Random.Range(-.05f, .05f);
 		//offsetZ = 0;
-
-		//Debug.Log(offsetX + "X");
-		//Debug.Log(offsetY + "Y");
-		//Debug.Log(offsetZ + "Z");
 		if(!aimed)
 		{
 			offsetX = 0;
@@ -230,22 +218,22 @@ public class Shooting : MonoBehaviour {
 		if (Physics.Raycast(cam.transform.position, new Vector3(cam.transform.forward.x + offsetX, cam.transform.forward.y + offsetY, cam.transform.forward.z + offsetZ), out hit)) {
 
             GameObject objectHit = hit.collider.gameObject; //what you hit
-            EnemyStats enemy = objectHit.GetComponent<EnemyStats> ();
+            if (objectHit.transform.parent != null) {
+                EnemyStats enemy = objectHit.transform.parent.GetComponent<EnemyStats> ();
 
-            if (hit.collider.tag == "Enemy") {
+                if (hit.collider.tag == "Enemy" && hit.collider.isTrigger == false) {
 
-				enemy.EnemyHealth(damage);
-				//particles
-			}
-            if(hit.collider.tag == "Head") {
+                    enemy.EnemyHealth (damage);
+                    //particles
+                }
+                if (hit.collider.tag == "Head") {
 
-                enemy.EnemyHealth (damage * damageMulti);
+                    enemy.EnemyHealth (damage * damageMulti);
+                } else {
+
+                    Instantiate (bulletHole, hit.point, Quaternion.FromToRotation (Vector3.up, hit.normal));
+                }
             }
-			else {
-
-				//spawn plane that looks like bullethole
-				Instantiate(bulletHole, hit.point, Quaternion.FromToRotation(Vector3.up, hit.normal));
-			}	
 		}
 	}
 }
