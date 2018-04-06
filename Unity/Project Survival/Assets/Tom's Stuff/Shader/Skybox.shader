@@ -16,7 +16,7 @@
 		
 	}
 	SubShader {
-		Tags{ "Queue" = "Transparent + 1000" "RenderType" = "Transparent" }
+		Tags{ "Queue" = "Transparent" "RenderType" = "Transparent" }
 		
 		LOD 200
 
