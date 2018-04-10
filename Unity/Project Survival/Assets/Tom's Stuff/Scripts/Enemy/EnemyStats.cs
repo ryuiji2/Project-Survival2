@@ -15,7 +15,7 @@ public class EnemyStats : MonoBehaviour {
     public float deathTimer;
 
 	private PlayerStats player;
-
+    public GameObject playerModel;
 	public float attackRange;
 	public LayerMask mask;
 
@@ -29,7 +29,7 @@ public class EnemyStats : MonoBehaviour {
     public int maxRNG;
     private int toDrop;
     private bool death;
-
+    public int whichAttack;
 	private float timer, attackCooldown;
 
 	private void Awake () {
@@ -53,6 +53,7 @@ public class EnemyStats : MonoBehaviour {
 		}
 	}
 	public void FixedUpdate () {
+        
 
         Death ();
         Attack ();
@@ -62,35 +63,40 @@ public class EnemyStats : MonoBehaviour {
     public void AmmoDrop () {
 
         if(toDrop == 0) {
-            //Instantiate (ammoBox, transform.position, Quaternion.identity);
+            Instantiate (ammoBox, transform.position, Quaternion.identity);
         }
     }
 	public void Attack () { //bug not touching player and player receives damage
 
+        
 
 		RaycastHit hit;
 
-		Debug.DrawRay(new Vector3(transform.position.x,transform.position.y+1,transform.position.z), transform.forward, Color.green);
-        if(Physics.Raycast(new Vector3(transform.position.x,transform.position.y+1,transform.position.z), transform.forward, out hit, attackRange, mask)) {
+		Debug.DrawRay(new Vector3(transform.position.x,transform.position.y+1,transform.position.z), transform.forward * attackRange, Color.green);
+        if (Physics.Raycast (new Vector3 (transform.position.x, transform.position.y + 1, transform.position.z), transform.forward, out hit, attackRange, mask)) {
             anim.SetBool ("InRange", true);
-			if(timer <= 0f && health > 0) {
-
+            if (timer <= 0f && health > 0) {
                 agent.isStopped = true;
-				Debug.Log("Attack");
-				//random range which attack anim
-                
-				
-				regen.EnemyAttack();
 
-				player.PlayerHealth(damage);
-				timer = attackCooldown;
-                
-			}	
-		}/* 
-        if (!anim.IsPlaying ("animationname")) {
-            agent.isStopped = false;
-        }*/
-        timer -= Time.deltaTime;
+                whichAttack = Random.Range (0, 1);
+
+                if (whichAttack == 0) {
+                    anim.SetBool ("Attack", true);
+                } else {
+                    anim.SetBool ("Attack", false);
+                }
+
+                regen.EnemyAttack ();
+
+                player.PlayerHealth (damage);
+                timer = attackCooldown;
+
+            }
+        } else {
+            anim.SetBool ("InRange", false);
+                agent.isStopped = false;
+            }
+            timer -= Time.deltaTime;
     }
 	public void EnemyHealth (float dmg) {
 
@@ -99,7 +105,7 @@ public class EnemyStats : MonoBehaviour {
             GetComponentInChildren<Collider> ().isTrigger = true;
             agent.enabled = false;
             AmmoDrop ();
-            wave.currEnemy--; //i think this fucks with wave
+            wave.currEnemy--;
         }
             health -= dmg;
 		//stagger?

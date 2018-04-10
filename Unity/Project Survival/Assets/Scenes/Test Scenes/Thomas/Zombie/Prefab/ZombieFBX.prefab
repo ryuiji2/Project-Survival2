@@ -2415,12 +2415,14 @@ MonoBehaviour:
   health: 100
   damage: 10
   deathTimer: 3
-  attackRange: 0
+  playerModel: {fileID: 0}
+  attackRange: 2
   mask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   ammoBox: {fileID: 0}
   maxRNG: 0
+  whichAttack: 0
 --- !u!114 &114853704232217952
 MonoBehaviour:
   m_ObjectHideFlags: 1
