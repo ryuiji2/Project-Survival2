@@ -51,9 +51,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf5566033e3c69543b148ee435de5aa4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currEnemy: 0
+  currWave: 0
+  currEnemy: 1
   maxEnemy: 10
-  waveEnemy: 0
+  waveEnemy: 1
   extraSpawn: 0
   zombie: {fileID: 1066464270205326, guid: b3137b2f7a9dcc84289c7ede867d9f82, type: 2}
   zombieStats: []
@@ -65,3 +66,6 @@ MonoBehaviour:
   waveTime: 0
   spawnTime: 1
   player: {fileID: 0}
+  starterEnemycount: 0
+  spawnEnemies: 0
+  manager: {fileID: 0}

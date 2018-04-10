@@ -133,7 +133,7 @@ public class UIManager : MonoBehaviour
 			SetTimer(false);// not an issue
 
 			HighScore(); //show highscore //not an issue
-
+			wave.spawnEnemies = false;
 			manager.KillEnemies(); //makes game crash....
 
 			break;
@@ -214,6 +214,12 @@ public class UIManager : MonoBehaviour
 	public void MainMenu () {
 
 		SetState(UIState.MainMenu);
+	}
+	//button function
+	public void Ingame () {
+
+		SetState(UIState.Ingame);
+		Time.timeScale = 1;
 	}
 	//resume button function
 	public void Resume () {
@@ -319,8 +325,12 @@ public class UIManager : MonoBehaviour
 	void SetTimerText () 
 	{
         if (second >= 10) {
+
             timerText.text = "Time: 0" + hour + ":0" + minute + ":" + (int)second;
-        } else {
+
+        } 
+		else {
+
             timerText.text = "Time: 0" + hour + ":0" + minute + ":0" + (int)second;
         }
 	}

@@ -6762,11 +6762,6 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114058108273066720, guid: 730d8073a211bb24d868ef80352e90ff,
         type: 2}
-      propertyPath: waveEnemy
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114058108273066720, guid: 730d8073a211bb24d868ef80352e90ff,
-        type: 2}
       propertyPath: spawnLoc.Array.data[0]
       value: 
       objectReference: {fileID: 1624317099}
@@ -6787,17 +6782,22 @@ Prefab:
       objectReference: {fileID: 1739926238}
     - target: {fileID: 114058108273066720, guid: 730d8073a211bb24d868ef80352e90ff,
         type: 2}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114058108273066720, guid: 730d8073a211bb24d868ef80352e90ff,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 1
+      propertyPath: waveEnemy
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114058108273066720, guid: 730d8073a211bb24d868ef80352e90ff,
         type: 2}
       propertyPath: currEnemy
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114058108273066720, guid: 730d8073a211bb24d868ef80352e90ff,
+        type: 2}
+      propertyPath: currWave
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114058108273066720, guid: 730d8073a211bb24d868ef80352e90ff,
+        type: 2}
+      propertyPath: starterEnemycount
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
