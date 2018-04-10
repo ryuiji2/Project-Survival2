@@ -185,11 +185,7 @@ public class UIManager : MonoBehaviour
 		}
 		else if(Input.GetKeyDown(esc) && _UIState == UIState.Ingame && paused == true) {
 
-			paused = false;
-			Time.timeScale = 1;
-			pauseMenu.gameObject.SetActive(false);
-
-			SwitchCursorState(true);
+			Resume();
 		}		
 	}
 	//sets state and checks the next state 
@@ -219,11 +215,14 @@ public class UIManager : MonoBehaviour
 
 		SetState(UIState.MainMenu);
 	}
-	//button function
-	public void Ingame () {
+	//resume button function
+	public void Resume () {
 
-		SetState(UIState.Ingame);
+		paused = false;
 		Time.timeScale = 1;
+		pauseMenu.gameObject.SetActive(false);
+
+		SwitchCursorState(true);
 	}
 	//button function
 	public void QuitGame () {
