@@ -291,7 +291,7 @@ public class UIManager : MonoBehaviour
 	public void HighScore () {  //should be reset after exiting gameover
 
 		scoreHS.text = "Final Score : " + currentScore;
-		timeHS.text = "Final Time : " + hour + ":" + minute + ":" + second;
+		timeHS.text = "Final Time : " + hour + ":" + minute + ":" + (int)second;
 		waveHS.text = "Final Wave : " + wave.currWave;
 	}	
 	#region Timer
