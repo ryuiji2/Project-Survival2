@@ -2420,7 +2420,7 @@ MonoBehaviour:
   mask:
     serializedVersion: 2
     m_Bits: 256
-  ammoBox: {fileID: 0}
+  ammoBox: {fileID: 1678453499500202, guid: 2d0a06effc61c5a44a6e1c17c23060fa, type: 2}
   maxRNG: 0
   whichAttack: 0
 --- !u!114 &114853704232217952

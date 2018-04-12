@@ -93,8 +93,12 @@ public class EnemyStats : MonoBehaviour {
 
             }
         } else {
-            anim.SetBool ("InRange", false);
-                agent.isStopped = false;
+            if (!anim.GetCurrentAnimatorStateInfo (0).IsName ("Attack")) {
+                anim.SetBool ("InRange", false);
+                if (agent != null) {
+                    agent.isStopped = false;
+                }
+            }
             }
             timer -= Time.deltaTime;
     }
