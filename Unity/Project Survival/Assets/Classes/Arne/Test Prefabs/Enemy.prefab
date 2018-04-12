@@ -128,7 +128,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  damage: 50
+  damage: 10
   deathTimer: 0
   playerModel: {fileID: 0}
   attackRange: 1

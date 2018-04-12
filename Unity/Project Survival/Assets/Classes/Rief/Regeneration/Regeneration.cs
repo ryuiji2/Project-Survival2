@@ -23,6 +23,7 @@ public class Regeneration : MonoBehaviour {
         playerstats = GetComponent<PlayerStats>();
         Regenerate = RegenHealth ();
         outOfCombat = waitForRegen;
+        //PlayAnimation(false);
     }
     public void EnemyAttack () {
 
@@ -58,14 +59,26 @@ public class Regeneration : MonoBehaviour {
 
             yield return new WaitForSeconds (1);
             //play animation on healthcontainer icon
-            PlayAnimation();
+            PlayAnimation(true);
             playerstats.PlayerHealth(-regen);
         }
+        PlayAnimation(false);
     }
-    private void PlayAnimation () {
+    private void PlayAnimation (bool state) {
 
         //regenIcon.Play();
         //regenBar.Play();
-        regenBarR.Play("HealthBarRegeneration");
+        if(state) {
+            
+            Debug.Log("Play");
+            regenBar.Play();
+            regenIcon.Play();
+        }
+        if(!state) {
+            
+            Debug.Log("Stop");
+            regenBar.Stop();
+            regenIcon.Stop();
+        }
     }
 }
