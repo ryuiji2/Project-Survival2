@@ -4,9 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 
 public class EnemyStats : MonoBehaviour {
-    //animator toevoegen
-    //deathzone tag aanmaken
-    //deathzone aanmaken
+
     //random range voor attack
 
 	[Range(100f,0f)]
@@ -95,7 +93,7 @@ public class EnemyStats : MonoBehaviour {
         } else {
             if (!anim.GetCurrentAnimatorStateInfo (0).IsName ("Attack")) {
                 anim.SetBool ("InRange", false);
-                if (agent != null) {
+                if (agent != null && health> 0) {
                     agent.isStopped = false;
                 }
             }

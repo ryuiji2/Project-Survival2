@@ -24896,6 +24896,11 @@ Prefab:
       propertyPath: regenBarR
       value: 
       objectReference: {fileID: 1996852999}
+    - target: {fileID: 114102892177482792, guid: 473322e15fb2bf34d88dcd11a669c4b9,
+        type: 2}
+      propertyPath: moveSpeed
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 473322e15fb2bf34d88dcd11a669c4b9, type: 2}
   m_IsPrefabParent: 0
