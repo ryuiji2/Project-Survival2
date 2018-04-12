@@ -9836,7 +9836,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81058b27c9420ac42a34b0ddf6b584a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  material: {fileID: 2100000, guid: d9d648eb1b5c66d4c9050e4b1496205f, type: 2}
+  material: {fileID: 2100000, guid: f90f9762718653641b9c2de178042e8b, type: 2}
   boolA: 1
   boolB: 0
   timeMultiplier: 0.2
@@ -26825,7 +26825,8 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -75.521
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114561021141321590, guid: 5c34d0fedaa95f14fa478ce165e54cd6, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 5c34d0fedaa95f14fa478ce165e54cd6, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1380593146
@@ -29853,7 +29854,7 @@ Prefab:
     - target: {fileID: 2300000, guid: 57a72d8f46641244081f4cf5f60c612f, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: d9d648eb1b5c66d4c9050e4b1496205f, type: 2}
+      objectReference: {fileID: 2100000, guid: f90f9762718653641b9c2de178042e8b, type: 2}
     - target: {fileID: 9500000, guid: 57a72d8f46641244081f4cf5f60c612f, type: 3}
       propertyPath: m_Controller
       value: 
@@ -34152,7 +34153,8 @@ Prefab:
       propertyPath: m_LocalPosition.z
       value: 0.031
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114561021141321590, guid: 5c34d0fedaa95f14fa478ce165e54cd6, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 5c34d0fedaa95f14fa478ce165e54cd6, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1706060759

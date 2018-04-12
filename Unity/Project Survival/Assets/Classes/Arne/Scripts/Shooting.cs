@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,14 +11,14 @@ public class Shooting : MonoBehaviour {
 	//weaponswitch 
 	public enum Weapon {Pistol, Mp40};
 	public Weapon _Weapon;
-	public bool pistol, mp40;
+    public bool mp40;
 	public int pistolCurrentAmmo, pistolMagAmmo, pistolAmmoTotal, mp40CurrentAmmo, mp40MagAmmo, mp40AmmoTotal;
 	public int pistolDMG, mp40DMG;
 
 	//USE INHERITANCE?
 	public Camera cam;
 
-	public KeyCode key, switchkey;
+	public KeyCode key, switchkey, zoom;
 
 	public UIManager uim;
 
@@ -38,23 +38,31 @@ public class Shooting : MonoBehaviour {
 
     public int damageMulti;
 
+    //Animation
+    public Animator anim;
+    public bool reloading;
 
-	//sets cursorstate and other variables that need a certain value at start of game
-	private void Awake () {
+    //Shake
+    public CameraShake camShake;
 
-		uim = GameObject.Find("Canvas").GetComponent<UIManager>();//gives error needs to be manually put in
+
+    //sets cursorstate and other variables that need a certain value at start of game
+    private void Awake () {
+
+        uim = GameObject.Find("Canvas").GetComponent<UIManager>();//gives error needs to be manually put in
 
 		fireRate = fireRateTime;
 
 		pistolCurrentAmmo = pistolMagAmmo; //needs to be how much you picked
 		mp40CurrentAmmo = mp40MagAmmo;
+        anim.SetBool("FA", true);
 
-	
-		
-		uim.gunIconSlot.sprite = null;
+
+        uim.gunIconSlot.sprite = null;
 
 		WeaponState();
-	}
+        anim.SetBool("MP40", mp40);
+    }
 	// Update is called once per frame
 	private void Update () {
 		
@@ -73,8 +81,7 @@ public class Shooting : MonoBehaviour {
 			case Weapon.Pistol:
 
 				mp40 = false;
-				pistol = true;
-				damage = pistolDMG;
+                damage = pistolDMG;
 				//play grab pistol animation
 				//show visual weapon this weapon on other off
 				uim.SetGunIcon(pistolIcon);
@@ -85,9 +92,8 @@ public class Shooting : MonoBehaviour {
 
 			case Weapon.Mp40:
 
-				pistol = false;
-				mp40 = true;
-				damage = mp40DMG;
+                mp40 = true;
+                damage = mp40DMG;
 				//play grab mp40 animation
 				//show visual weapon
 				uim.SetGunIcon(mp40Icon);
@@ -101,9 +107,10 @@ public class Shooting : MonoBehaviour {
 
 		if(Input.GetKeyDown(switchkey)) {
 
-			if(pistol == true) {
+			if(mp40 == false) {
 
 				_Weapon = Weapon.Mp40;
+
 				//maybe other guns false
 			}
 			if(mp40 == true) {
@@ -111,12 +118,14 @@ public class Shooting : MonoBehaviour {
 				_Weapon = Weapon.Pistol;
 			}
 			WeaponState();
-		}
+            anim.SetBool("MP40", mp40);
+            anim.SetTrigger("Switch");
+        }
 	}
 	//updates the current ammo values in UIManager
 	public void SendAmmoValues () {
 
-		if(pistol) {
+		if(!mp40) {
             
 			uim.CheckAmmo(pistolCurrentAmmo, pistolAmmoTotal);
 		}
@@ -127,13 +136,22 @@ public class Shooting : MonoBehaviour {
 	}
 	//Checks for shooting Input
 	public void CheckInput () {
-	
-        if(pistol == true && Input.GetKeyDown(key)) {
+        if (Input.GetKey(zoom))
+        {
+            aimed = true;
+            anim.SetBool("Zoom", true);
+        }
+        else
+        {
+            aimed = false;
+            anim.SetBool("Zoom", false);
+        }
+        if(!mp40 && Input.GetKeyDown(key)) {
 
 			CheckAmmoCount();
 			SendAmmoValues();
 		} 
-		else if(mp40 == true && Input.GetKey(key)) {
+		else if(mp40 && Input.GetKey(key)) {
 
 			//how quick it shoots
 			fireRate -= Time.deltaTime;
@@ -156,9 +174,10 @@ public class Shooting : MonoBehaviour {
 
 			pistolCurrentAmmo = 0;
 		}
-		if(pistolCurrentAmmo > 0 & pistol || mp40CurrentAmmo > 0 & mp40) {
+		if(pistolCurrentAmmo > 0 & !mp40 && !reloading || mp40CurrentAmmo > 0 & mp40 && !reloading) {
 
 			Shoot();
+            camShake.Shake(10f);
 		}
 	}
 	//Will fill your magazine again with bullets
@@ -166,14 +185,11 @@ public class Shooting : MonoBehaviour {
 
 		if(Input.GetButtonDown("Reload")) {
 
-			if(pistol) {
-				//play animation
-				pistolCurrentAmmo = pistolMagAmmo;
+			if(!mp40) {
 				
-			}
-			if(mp40) {
-
-				//play animation
+				pistolCurrentAmmo = pistolMagAmmo;
+            }
+			if(mp40) { 
 				
 				//calculates with math that it won't grab ammo that doesn't exist
 				int extraFilling = mp40MagAmmo - mp40CurrentAmmo;
@@ -185,20 +201,24 @@ public class Shooting : MonoBehaviour {
 				mp40CurrentAmmo += extraFilling;
 				mp40AmmoTotal -= extraFilling;		
 			}
-			SendAmmoValues();
+            anim.SetTrigger("Reload");
+            reloading = true;
+            SendAmmoValues();
 		}
 	}
 	//shoots and hit
 	private void Shoot () {
         
-		if(pistol)
-		{
+		if(!mp40)
+        {
 			pistolCurrentAmmo --;
-		}
+            anim.SetBool("FA", false);
+        }
 		if(mp40)
-		{
+        {
 			mp40CurrentAmmo --;
-		}
+            anim.SetBool("FA", false);
+        }
 
 		//random range for accuracy
 		float offsetX = Random.Range(-.05f, .05f);
@@ -212,9 +232,8 @@ public class Shooting : MonoBehaviour {
 			offsetZ = 0;
 		}
 
-
 		RaycastHit hit;
-
+        anim.SetTrigger("Shoot");
 		if (Physics.Raycast(cam.transform.position, new Vector3(cam.transform.forward.x + offsetX, cam.transform.forward.y + offsetY, cam.transform.forward.z + offsetZ), out hit)) {
 
             GameObject objectHit = hit.collider.gameObject; //what you hit
@@ -236,4 +255,10 @@ public class Shooting : MonoBehaviour {
             }
 		}
 	}
+
+    public void Reloaded()
+    {
+        anim.SetBool("FA", true);
+        reloading = false;
+    }
 }
