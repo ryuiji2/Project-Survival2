@@ -177,7 +177,7 @@ public class Shooting : MonoBehaviour {
 		if(pistolCurrentAmmo > 0 & !mp40 && !reloading || mp40CurrentAmmo > 0 & mp40 && !reloading) {
 
 			Shoot();
-            camShake.Shake(10f);
+            //camShake.Shake(10f);
 		}
 	}
 	//Will fill your magazine again with bullets
