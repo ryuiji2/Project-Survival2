@@ -50,7 +50,6 @@ public class Shooting : MonoBehaviour {
     private void Awake () {
 
         uim = GameObject.Find("Canvas").GetComponent<UIManager>();//gives error needs to be manually put in
-
 		fireRate = fireRateTime;
 
 		pistolCurrentAmmo = pistolMagAmmo; //needs to be how much you picked

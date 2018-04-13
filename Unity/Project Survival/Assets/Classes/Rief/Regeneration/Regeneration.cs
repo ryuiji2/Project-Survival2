@@ -15,7 +15,6 @@ public class Regeneration : MonoBehaviour {
     private Coroutine isTimer;
 
     public Animation regenIcon, regenBar;
-    public Animator regenIconR, regenBarR;
 
 
     void Start () {

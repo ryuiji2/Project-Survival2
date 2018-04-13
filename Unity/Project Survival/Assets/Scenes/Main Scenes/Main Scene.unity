@@ -12641,6 +12641,16 @@ Prefab:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 114246351813929776, guid: 94fb53afb3619a8419c842f4837dcc39,
+        type: 2}
+      propertyPath: regenIcon
+      value: 
+      objectReference: {fileID: 350438263}
+    - target: {fileID: 114246351813929776, guid: 94fb53afb3619a8419c842f4837dcc39,
+        type: 2}
+      propertyPath: regenBar
+      value: 
+      objectReference: {fileID: 1996853001}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 94fb53afb3619a8419c842f4837dcc39, type: 2}
   m_IsPrefabParent: 0
@@ -38430,7 +38440,7 @@ Animation:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1996852995}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Animation: {fileID: 7400000, guid: 4259d6672c26a964eb921e515f441ac6, type: 2}
   m_Animations:

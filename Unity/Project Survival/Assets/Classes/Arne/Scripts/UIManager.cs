@@ -54,14 +54,14 @@ public class UIManager : MonoBehaviour
 
 
 	//sets some things ready
-	private void Awake () {	
-		
-		manager = GameObject.Find("GameManager").GetComponent<Manager>();
+	private void Awake () {
+
+        manager = GameObject.Find("GameManager").GetComponent<Manager>();
 		player = GameObject.Find("Player");
 		cam = GameObject.Find("Camera");
 
-		shootScript = GameObject.Find("Gun").GetComponent<Shooting>();
-		wave = GameObject.Find("WaveManager").GetComponent<Wave>();
+        shootScript = GameObject.Find ("Gun").GetComponent<Shooting> ();
+        wave = GameObject.Find("WaveManager").GetComponent<Wave>();
 
 		camLook = cam.GetComponent<CameraLook>();
 		playerMove = player.GetComponent<Movement>();
@@ -70,16 +70,15 @@ public class UIManager : MonoBehaviour
 		//gunIconSlot = GameObject.Find("Gun Icon").GetComponent<Image>(); //not needed?
 
 		cursorActive = false;
-
+        
 		CheckScore(currentScore); //so it updates in ui
-
 		ResetTimer();
 		CheckUIState();
 	}
 	//constantly updates
 	private void Update () {
 
-		PressEscape();
+        PressEscape ();
 		ClockingTime();	
 	}
 	//Updates state of ui
@@ -155,7 +154,7 @@ public class UIManager : MonoBehaviour
 
 			camLook.block = false;
 			playerMove.block = false;
-			shootScript.block = false;
+			//shootScript.block = false;
 			camRotateScript.enabled = false;
 		}
 	}
