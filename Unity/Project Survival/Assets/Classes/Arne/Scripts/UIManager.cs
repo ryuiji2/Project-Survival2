@@ -110,13 +110,12 @@ public class UIManager : MonoBehaviour
 			List<RectTransform> ingameList = new List<RectTransform>() {ingame};
 			EnableMenuItems(ingame);
 
-			manager.ResetHUD();
-			BlockMovement(false);			
+			manager.ResetHUD();		
 			SwitchCursorState(true);
 
 			SetTimer(true); //timer doesnt activate
 			//reset Highscore, Timer, Wave, Enemies, Playerhealth
-			
+			BlockMovement(false);
 			wave.spawnEnemies = true; 
           
             break;
@@ -149,6 +148,7 @@ public class UIManager : MonoBehaviour
 			playerMove.block = true;
 			shootScript.block = true;
 			camRotateScript.enabled = true;
+			//block shooting
 			
 		}
 		if(!state) {

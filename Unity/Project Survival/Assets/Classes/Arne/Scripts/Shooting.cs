@@ -136,7 +136,8 @@ public class Shooting : MonoBehaviour {
 	}
 	//Checks for shooting Input
 	public void CheckInput () {
-        if (Input.GetKey(zoom))
+
+        if(Input.GetKey(zoom))
         {
             aimed = true;
             anim.SetBool("Zoom", true);
@@ -146,7 +147,7 @@ public class Shooting : MonoBehaviour {
             aimed = false;
             anim.SetBool("Zoom", false);
         }
-        if(!mp40 && Input.GetKeyDown(key)) {
+        if(!mp40 && Input.GetKeyDown(key) && !uim.paused) {
 
 			CheckAmmoCount();
 			SendAmmoValues();
@@ -183,7 +184,7 @@ public class Shooting : MonoBehaviour {
 	//Will fill your magazine again with bullets
 	private void Reload () {
 
-		if(Input.GetButtonDown("Reload")) {
+		if(Input.GetButtonDown("Reload") && !aimed) {
 
 			if(!mp40) {
 				
