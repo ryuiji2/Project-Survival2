@@ -183,11 +183,12 @@ public class Shooting : MonoBehaviour {
 	//Will fill your magazine again with bullets
 	private void Reload () {
 
-		if(Input.GetButtonDown("Reload") && !aimed) {
+		if(Input.GetButtonDown("Reload")) {
 
 			if(!mp40) {
 				
 				pistolCurrentAmmo = pistolMagAmmo;
+				
             }
 			if(mp40) { 
 				

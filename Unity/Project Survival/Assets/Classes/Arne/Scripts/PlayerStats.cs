@@ -41,5 +41,6 @@ public class PlayerStats : MonoBehaviour {
 		transform.position = startPos;
 		health = maxHP;
 		PlayerHealth(0f);
+		//playeranimator disable
 	}
 }

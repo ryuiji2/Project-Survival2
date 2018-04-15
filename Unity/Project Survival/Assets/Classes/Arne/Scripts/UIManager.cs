@@ -10,6 +10,27 @@ public class UIManager : MonoBehaviour
 	/*
 	ENEMIES LEFT	
 
+
+
+		BUGS:
+
+	WHEN PRESS QUIT GAME, KILL ENEMIES (ELSE IN MAINMENU, YOU SEE ZOMBIES), RESET CAMERA VIEW(MAYBE RANDOM POSITIONS?)
+	MAKE IT REPLAY FRIENDLY
+
+	Ammo full en dan reload fucks shit up  	(Tom)
+
+	Niet kunnen reloaden terwijl je aimed. 	FIXED
+
+	Kunnen schieten voordat je je wapen gepakt hebt.	(Tom)
+
+	in mainmenu kan je zombies zien, als je exit vanuit ingame(edited)  FIXED
+
+	en animaties moeten gereset worden vanuit ingame naar mainmenu 	FIXED
+
+	armen en guns moeten niet zichtbaar zijn in mainmenu 	FIXED
+
+
+
 	*/
 
 	//script reference
@@ -53,12 +74,16 @@ public class UIManager : MonoBehaviour
 	public int currentScore;
 
 
+	//Misc
+	private GameObject playerAnimator;
+
 	//sets some things ready
 	private void Awake () {
 
         manager = GameObject.Find("GameManager").GetComponent<Manager>();
 		player = GameObject.Find("Player");
 		cam = GameObject.Find("Camera");
+		playerAnimator = GameObject.Find("PlayerAnimator");
 
         shootScript = GameObject.Find ("Gun").GetComponent<Shooting> ();
         wave = GameObject.Find("WaveManager").GetComponent<Wave>();
@@ -90,7 +115,7 @@ public class UIManager : MonoBehaviour
 
 			//get ready everything for mainmenu and needs to loop 
 
-			//manager.SetTimeScale(1);	standard value probably not needed
+			manager.SetTimeScale(1);	//standard value probably not needed
 
 			List<RectTransform> mainmenulist = new List<RectTransform>() {mainMenu};
 			EnableMenuItems(mainmenulist);
@@ -99,6 +124,8 @@ public class UIManager : MonoBehaviour
 			SwitchCursorState(false);
 			playerStats.PlayerReset();
 			SetTimer(false);
+
+			Debug.Log(Time.timeScale);
 
 			//manager.KillEnemies(); 
 
@@ -109,30 +136,31 @@ public class UIManager : MonoBehaviour
 			List<RectTransform> ingameList = new List<RectTransform>() {ingame};
 			EnableMenuItems(ingame);
 
+			playerAnimator.SetActive(true);
 			manager.ResetHUD();		
 			SwitchCursorState(true);
 
-			SetTimer(true); //timer doesnt activate
-			//reset Highscore, Timer, Wave, Enemies, Playerhealth
+			SetTimer(true); 
+			
 			BlockMovement(false);
 			wave.spawnEnemies = true; 
           
             break;
 
-		case UIState.GameOver:			//player cam stutters when dead
+		case UIState.GameOver:	
 
 			List<RectTransform> gameOverList = new List<RectTransform>() {gameOver};
-			EnableMenuItems(gameOverList); //not an issue
+			EnableMenuItems(gameOverList); 
 
-			BlockMovement(true); // not an issue
-			SwitchCursorState(false);// not an issue
+			BlockMovement(true); 
+			SwitchCursorState(false);
 
-			playerStats.PlayerReset(); // not an issue
-			SetTimer(false);// not an issue
+			playerStats.PlayerReset(); 
+			SetTimer(false);
 
-			HighScore(); //show highscore //not an issue
+			HighScore(); //show highscore 
 			wave.spawnEnemies = false;
-			manager.KillEnemies(); //makes game crash....
+			manager.KillEnemies(); 
 
 			break;
         }
@@ -154,7 +182,7 @@ public class UIManager : MonoBehaviour
 
 			camLook.block = false;
 			playerMove.block = false;
-			//shootScript.block = false;
+			shootScript.block = false;
 			camRotateScript.enabled = false;
 		}
 	}
@@ -213,6 +241,12 @@ public class UIManager : MonoBehaviour
 	public void MainMenu () {
 
 		SetState(UIState.MainMenu);
+		//delete monsters
+		manager.KillEnemies();
+		//start position 
+		playerStats.PlayerReset();
+		//playeranimator disabled
+		playerAnimator.SetActive(false);
 	}
 	//button function
 	public void Ingame () {
