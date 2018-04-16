@@ -4342,6 +4342,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &251843712 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114793264242145764, guid: 473322e15fb2bf34d88dcd11a669c4b9,
+    type: 2}
+  m_PrefabInternal: {fileID: 1325738981}
+  m_Script: {fileID: 11500000, guid: 2bd7d058d2373e04582c8a884925f037, type: 3}
 --- !u!1 &255138472
 GameObject:
   m_ObjectHideFlags: 0
@@ -6754,6 +6760,12 @@ Prefab:
       propertyPath: starterEnemycount
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114058108273066720, guid: 730d8073a211bb24d868ef80352e90ff,
+        type: 2}
+      propertyPath: zombie
+      value: 
+      objectReference: {fileID: 1166122948895016, guid: ebbafb426373ea24a88d7d5d2fd1c854,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 730d8073a211bb24d868ef80352e90ff, type: 2}
   m_IsPrefabParent: 0
@@ -7052,6 +7064,28 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 396164564}
   m_Mesh: {fileID: 4300000, guid: 01c17f5dc5fe34a42980a5195c551075, type: 3}
+--- !u!1 &397219824 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1461633029708388, guid: 473322e15fb2bf34d88dcd11a669c4b9,
+    type: 2}
+  m_PrefabInternal: {fileID: 1325738981}
+--- !u!95 &397219826 stripped
+Animator:
+  m_PrefabParentObject: {fileID: 95362405369192694, guid: 473322e15fb2bf34d88dcd11a669c4b9,
+    type: 2}
+  m_PrefabInternal: {fileID: 1325738981}
+--- !u!114 &397219827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 397219824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f916d2695e3ede6498b78ec3b58df802, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shootRef: {fileID: 251843712}
 --- !u!1 &402797974
 GameObject:
   m_ObjectHideFlags: 0
@@ -14025,6 +14059,26 @@ Prefab:
         type: 2}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114778218996884514, guid: 55e66937a3a0c46429e2bb8e9dd2222a,
+        type: 2}
+      propertyPath: _UIState
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224503172905646088, guid: 55e66937a3a0c46429e2bb8e9dd2222a,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -11.800781
+      objectReference: {fileID: 0}
+    - target: {fileID: 224448490635262750, guid: 55e66937a3a0c46429e2bb8e9dd2222a,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 8.455078
+      objectReference: {fileID: 0}
+    - target: {fileID: 224453003214711424, guid: 55e66937a3a0c46429e2bb8e9dd2222a,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 8.462891
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 55e66937a3a0c46429e2bb8e9dd2222a, type: 2}
@@ -24338,6 +24392,26 @@ Prefab:
         type: 2}
       propertyPath: regenBarR
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 95362405369192694, guid: 473322e15fb2bf34d88dcd11a669c4b9,
+        type: 2}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 582e8fc0ce6f1964192c814db74cdd69, type: 2}
+    - target: {fileID: 114793264242145764, guid: 473322e15fb2bf34d88dcd11a669c4b9,
+        type: 2}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 397219826}
+    - target: {fileID: 114793264242145764, guid: 473322e15fb2bf34d88dcd11a669c4b9,
+        type: 2}
+      propertyPath: _Weapon
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114793264242145764, guid: 473322e15fb2bf34d88dcd11a669c4b9,
+        type: 2}
+      propertyPath: zoom
+      value: 324
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 473322e15fb2bf34d88dcd11a669c4b9, type: 2}
