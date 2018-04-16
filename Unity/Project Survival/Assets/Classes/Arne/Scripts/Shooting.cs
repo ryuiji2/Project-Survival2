@@ -42,9 +42,6 @@ public class Shooting : MonoBehaviour {
     public Animator anim;
     public bool reloading;
 
-    //Shake
-    public CameraShake camShake;
-
 
     //sets cursorstate and other variables that need a certain value at start of game
     private void Awake () {
@@ -61,10 +58,10 @@ public class Shooting : MonoBehaviour {
 
 		WeaponState();
         anim.SetBool("MP40", mp40);
+        block = true;
     }
 	// Update is called once per frame
 	private void Update () {
-		
 		if(!block)
 		{
 			CheckInput();
@@ -177,13 +174,11 @@ public class Shooting : MonoBehaviour {
 		if(pistolCurrentAmmo > 0 & !mp40 && !reloading || mp40CurrentAmmo > 0 & mp40 && !reloading) {
 
 			Shoot();
-            //camShake.Shake(10f);
 		}
 	}
 	//Will fill your magazine again with bullets
 	private void Reload () {
-
-		if(Input.GetButtonDown("Reload")) {
+		if(Input.GetButtonDown("Reload") && anim.GetBool("FA") == false) {
 
 			if(!mp40) {
 				
@@ -202,7 +197,10 @@ public class Shooting : MonoBehaviour {
 				mp40CurrentAmmo += extraFilling;
 				mp40AmmoTotal -= extraFilling;		
 			}
-            anim.SetTrigger("Reload");
+            if (!reloading)
+            {
+                anim.SetTrigger("Reload");
+            }
             reloading = true;
             SendAmmoValues();
 		}

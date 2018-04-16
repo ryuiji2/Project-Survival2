@@ -1,4 +1,4 @@
-﻿//Made by Arne
+//Made by Arne
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -111,58 +111,58 @@ public class UIManager : MonoBehaviour
 
 		switch (_UIState) {
 
-        case UIState.MainMenu:
+            case UIState.MainMenu:
+            
+                //playeranimator disabled
+		        playerAnimator.SetActive(false);
+			    //get ready everything for mainmenu and needs to loop 
 
-			//get ready everything for mainmenu and needs to loop 
+			    manager.SetTimeScale(1);	//standard value probably not needed
 
-			manager.SetTimeScale(1);	//standard value probably not needed
+			    List<RectTransform> mainmenulist = new List<RectTransform>() {mainMenu};
+			    EnableMenuItems(mainmenulist);
 
-			List<RectTransform> mainmenulist = new List<RectTransform>() {mainMenu};
-			EnableMenuItems(mainmenulist);
+			    BlockMovement(true);
+			    SwitchCursorState(false);
+			    playerStats.PlayerReset();
+			    SetTimer(false);
 
-			BlockMovement(true);
-			SwitchCursorState(false);
-			playerStats.PlayerReset();
-			SetTimer(false);
+			    //manager.KillEnemies(); 
 
-			Debug.Log(Time.timeScale);
+                break;
 
-			//manager.KillEnemies(); 
+            case UIState.Ingame:
+								    //reset player health etc (everything needed to be game ready)
+			    List<RectTransform> ingameList = new List<RectTransform>() {ingame};
+			    EnableMenuItems(ingame);
 
-            break;
+			    playerAnimator.SetActive(true);
+			    manager.ResetHUD();		
+			    SwitchCursorState(true);
 
-        case UIState.Ingame:
-								//reset player health etc (everything needed to be game ready)
-			List<RectTransform> ingameList = new List<RectTransform>() {ingame};
-			EnableMenuItems(ingame);
-
-			playerAnimator.SetActive(true);
-			manager.ResetHUD();		
-			SwitchCursorState(true);
-
-			SetTimer(true); 
+			    SetTimer(true); 
 			
-			BlockMovement(false);
-			wave.spawnEnemies = true; 
+			    BlockMovement(false);
+			    wave.spawnEnemies = true; 
           
-            break;
+                break;
 
-		case UIState.GameOver:	
+		    case UIState.GameOver:	
 
-			List<RectTransform> gameOverList = new List<RectTransform>() {gameOver};
-			EnableMenuItems(gameOverList); 
+			    List<RectTransform> gameOverList = new List<RectTransform>() {gameOver};
+			    EnableMenuItems(gameOverList); 
 
-			BlockMovement(true); 
-			SwitchCursorState(false);
+			    BlockMovement(true); 
+			    SwitchCursorState(false);
 
-			playerStats.PlayerReset(); 
-			SetTimer(false);
+			    playerStats.PlayerReset(); 
+			    SetTimer(false);
 
-			HighScore(); //show highscore 
-			wave.spawnEnemies = false;
-			manager.KillEnemies(); 
+			    HighScore(); //show highscore 
+			    wave.spawnEnemies = false;
+			    manager.KillEnemies(); 
 
-			break;
+			    break;
         }
 	}
 	
@@ -245,8 +245,6 @@ public class UIManager : MonoBehaviour
 		manager.KillEnemies();
 		//start position 
 		playerStats.PlayerReset();
-		//playeranimator disabled
-		playerAnimator.SetActive(false);
 	}
 	//button function
 	public void Ingame () {

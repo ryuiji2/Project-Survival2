@@ -8,7 +8,15 @@ public class AnimationFix : MonoBehaviour
 
     public void Reload()
     {
-        print("Wa");
         shootRef.Reloaded();
+    }
+
+    public void Block(int i)
+    {
+        if(i < 5)
+        {
+            shootRef.block = true;
+        }
+        else shootRef.block = false;
     }
 }

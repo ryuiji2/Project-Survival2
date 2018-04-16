@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -101,17 +101,15 @@ public class EnemyStats : MonoBehaviour {
             timer -= Time.deltaTime;
     }
 	public void EnemyHealth (float dmg) {
-
-
-        if(health <= 0f) {
+        health -= dmg;
+        if (health <= 0f) {
             GetComponentInChildren<Collider> ().isTrigger = true;
             agent.enabled = false;
             AmmoDrop ();
             wave.currEnemy--;
         }
-            health -= dmg;
-		//stagger?
-	}
+        //stagger?
+    }
 	public void Death() {
 
         if (health <= 0f) {

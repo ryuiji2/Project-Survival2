@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -69,13 +69,11 @@ public class Regeneration : MonoBehaviour {
         //regenBar.Play();
         if(state) {
             
-            Debug.Log("Play");
             regenBar.Play();
             regenIcon.Play();
         }
         if(!state) {
             
-            Debug.Log("Stop");
             regenBar.Stop();
             regenIcon.Stop();
         }
