@@ -6682,6 +6682,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114058108273066720, guid: 730d8073a211bb24d868ef80352e90ff,
+        type: 2}
+      propertyPath: zombie.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4951525113473400, guid: 730d8073a211bb24d868ef80352e90ff, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -6757,6 +6762,17 @@ Prefab:
     - target: {fileID: 114058108273066720, guid: 730d8073a211bb24d868ef80352e90ff,
         type: 2}
       propertyPath: zombie
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114058108273066720, guid: 730d8073a211bb24d868ef80352e90ff,
+        type: 2}
+      propertyPath: zombie.Array.data[1]
+      value: 
+      objectReference: {fileID: 1678453499500202, guid: 2d0a06effc61c5a44a6e1c17c23060fa,
+        type: 2}
+    - target: {fileID: 114058108273066720, guid: 730d8073a211bb24d868ef80352e90ff,
+        type: 2}
+      propertyPath: zombie.Array.data[0]
       value: 
       objectReference: {fileID: 1166122948895016, guid: ebbafb426373ea24a88d7d5d2fd1c854,
         type: 2}
