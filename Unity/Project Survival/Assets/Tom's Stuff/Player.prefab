@@ -3396,8 +3396,8 @@ MonoBehaviour:
   mp40CurrentAmmo: 40
   mp40MagAmmo: 40
   mp40AmmoTotal: 120
-  pistolDMG: 45
-  mp40DMG: 50
+  pistolDMG: 10
+  mp40DMG: 25
   cam: {fileID: 20033938702158884}
   key: 323
   switchkey: 102
@@ -3412,7 +3412,7 @@ MonoBehaviour:
   fireRate: 0
   fireRateTime: 0.1
   aimed: 0
-  damageMulti: 0
+  damageMulti: 2
   anim: {fileID: 95407533317783980}
   reloading: 0
   switching: 0

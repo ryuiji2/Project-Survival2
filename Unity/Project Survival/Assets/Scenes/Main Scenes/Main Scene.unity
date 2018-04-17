@@ -12692,6 +12692,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114314356301676296, guid: 94fb53afb3619a8419c842f4837dcc39,
+        type: 2}
+      propertyPath: reloadAnim
+      value: 
+      objectReference: {fileID: 811947652}
     - target: {fileID: 114090450367374158, guid: 94fb53afb3619a8419c842f4837dcc39,
         type: 2}
       propertyPath: regenIcon
@@ -12702,11 +12707,6 @@ Prefab:
       propertyPath: regenBar
       value: 
       objectReference: {fileID: 1996853001}
-    - target: {fileID: 114314356301676296, guid: 94fb53afb3619a8419c842f4837dcc39,
-        type: 2}
-      propertyPath: reloadAnim
-      value: 
-      objectReference: {fileID: 811947652}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 94fb53afb3619a8419c842f4837dcc39, type: 2}
   m_IsPrefabParent: 0
