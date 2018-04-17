@@ -9,7 +9,7 @@ public class Wave : MonoBehaviour {
     public int maxEnemy; //maximale enemies op de map.
     public float waveEnemy; //hoeveel enemies per wave.
     public float extraSpawn; //hoeveel extra enemies er zijn na de enemy cap.
-    public GameObject zombie; //de zombie.
+    public List<GameObject> zombie = new List<GameObject>(); //de zombie.
     public List<EnemyStats> zombieStats = new List<EnemyStats> (); //list van EnemyStats, handig voor instakill drop (if implimented)
     public List<GameObject> spawnLoc = new List<GameObject>(); //in deze list komen de spawnpoints voor de zombies.
     public float waveTime; //hoeveel tijd er tussen de waves zit.
@@ -68,7 +68,7 @@ public class Wave : MonoBehaviour {
         int randomSpawnLoc = Random.Range (0, spawnLoc.Count);
         if (canSpawnExtra == true) {
             if (extraSpawn > 0 && currEnemy < maxEnemy) {
-                GameObject spawnedZombie = Instantiate (zombie, spawnLoc [randomSpawnLoc].transform.position, Quaternion.identity) as GameObject;
+                GameObject spawnedZombie = Instantiate (zombie[Random.Range(0, zombie.Count)], spawnLoc [randomSpawnLoc].transform.position, Quaternion.identity) as GameObject;
                 zombieStats.Add (spawnedZombie.GetComponent<EnemyStats> ());
                 currEnemy++;
                 extraSpawn--;
@@ -84,7 +84,8 @@ public class Wave : MonoBehaviour {
             if (currEnemy < maxEnemy) {
                 int randomSpawnLoc = Random.Range (0, spawnLoc.Count);
                 yield return new WaitForSeconds (spawnTime);
-                Instantiate (zombie, spawnLoc [randomSpawnLoc].transform.position, Quaternion.identity);
+                GameObject spawnedZombie = Instantiate (zombie[Random.Range(0,zombie.Count)], spawnLoc [randomSpawnLoc].transform.position, Quaternion.identity);
+                zombieStats.Add (spawnedZombie.GetComponent<EnemyStats> ());
                 currEnemy++;
             }
         }
