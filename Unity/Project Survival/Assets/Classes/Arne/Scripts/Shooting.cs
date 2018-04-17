@@ -185,32 +185,9 @@ public class Shooting : MonoBehaviour {
 	}
 	//Will fill your magazine again with bullets
 	private void Reload () {
-<<<<<<< HEAD
         if (!switching)
         {
             if (Input.GetButtonDown("Reload") && anim.GetBool("FA") == false)
-=======
-		if(Input.GetButtonDown("Reload") && anim.GetBool("FA") == false {
-
-			if(!mp40) {
-				
-				pistolCurrentAmmo = pistolMagAmmo;
-				
-            }
-			if(mp40) { 
-				
-				//calculates with math that it won't grab ammo that doesn't exist
-				int extraFilling = mp40MagAmmo - mp40CurrentAmmo;
-
-				if(mp40AmmoTotal < extraFilling)
-				{
-					extraFilling = mp40AmmoTotal;
-				}
-				mp40CurrentAmmo += extraFilling;
-				mp40AmmoTotal -= extraFilling;		
-			}
-            if (!reloading)
->>>>>>> origin/master
             {
 
                 if (!mp40)
@@ -234,10 +211,33 @@ public class Shooting : MonoBehaviour {
                 }
                 if (!reloading)
                 {
-                    anim.SetTrigger("Reload");
+
+                    if (!mp40)
+                    {
+
+                        pistolCurrentAmmo = pistolMagAmmo;
+
+                    }
+                    if (mp40)
+                    {
+
+                        //calculates with math that it won't grab ammo that doesn't exist
+                        int extraFilling = mp40MagAmmo - mp40CurrentAmmo;
+
+                        if (mp40AmmoTotal < extraFilling)
+                        {
+                            extraFilling = mp40AmmoTotal;
+                        }
+                        mp40CurrentAmmo += extraFilling;
+                        mp40AmmoTotal -= extraFilling;
+                    }
+                    if (!reloading)
+                    {
+                        anim.SetTrigger("Reload");
+                    }
+                    reloading = true;
+                    SendAmmoValues();
                 }
-                reloading = true;
-                SendAmmoValues();
             }
         }
 	}
