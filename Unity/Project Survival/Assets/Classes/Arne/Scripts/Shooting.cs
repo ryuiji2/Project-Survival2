@@ -5,7 +5,7 @@ using UnityEngine;
 public class Shooting : MonoBehaviour {
 
 
-	public ParticleSystem shootParticle;
+	public ParticleSystem pistolShootParticle, mp40ShootParticle;
 	public ParticleSystem enemyHit, envWoodhit, envStonehit;
 
 	//weaponswitch 
@@ -38,15 +38,20 @@ public class Shooting : MonoBehaviour {
 
     public int damageMulti;
 
+
     //Animation
     public Animator anim;
     public bool reloading;
     public bool switching;
 
+    public Animation reloadAnim;
+
+    public int headShotPoints, bodyPoints;
 
     //sets cursorstate and other variables that need a certain value at start of game
     private void Awake () {
 
+        
         uim = GameObject.Find("Canvas").GetComponent<UIManager>();//gives error needs to be manually put in
 		fireRate = fireRateTime;
 
@@ -185,6 +190,16 @@ public class Shooting : MonoBehaviour {
 	}
 	//Will fill your magazine again with bullets
 	private void Reload () {
+
+        if(pistolCurrentAmmo == 0 && !mp40|| mp40CurrentAmmo == 0 && mp40) {
+
+            PlayAnimation(true);
+        }
+        else if(pistolCurrentAmmo > 0 || mp40CurrentAmmo > 0) {
+
+           
+            PlayAnimation(false);
+        }
         if (!switching)
         {
             if (Input.GetButtonDown("Reload") && anim.GetBool("FA") == false)
@@ -244,13 +259,17 @@ public class Shooting : MonoBehaviour {
 	//shoots and hit
 	private void Shoot () {
         
+        //play shoot animation
+        
 		if(!mp40)
         {
+            pistolShootParticle.Play();
 			pistolCurrentAmmo --;
             anim.SetBool("FA", false);
         }
 		if(mp40)
         {
+            mp40ShootParticle.Play();
 			mp40CurrentAmmo --;
             anim.SetBool("FA", false);
         }
@@ -279,18 +298,50 @@ public class Shooting : MonoBehaviour {
 
                     enemy.EnemyHealth (damage);
                     //particles
+                    //score to ui 
+                    Instantiate(enemyHit, hit.point, Quaternion.FromToRotation (Vector3.up, hit.normal));
+
+                    //wait before doing this
+                    uim.CheckScore(bodyPoints);
                 }
                 if (hit.collider.tag == "Head") {
-
+                    
                     enemy.EnemyHealth (damage * damageMulti);
-                } else {
+                    //particles
+                    Instantiate(enemyHit, hit.point, Quaternion.FromToRotation (Vector3.up, hit.normal));
+                    //score to ui with animation
+                    //points go down and score goes up
+
+                    uim.CheckScore(headShotPoints);
+                } 
+                if(hit.collider.tag == "Wood") {
 
                     Instantiate (bulletHole, hit.point, Quaternion.FromToRotation (Vector3.up, hit.normal));
+                    ParticleSystem ps = Instantiate(envWoodhit, hit.point, Quaternion.FromToRotation(Vector3.up, hit.normal));
+                    ps.Play();
+                }
+                if(hit.collider.tag == "Stone") {
+
+                    Instantiate (bulletHole, hit.point, Quaternion.FromToRotation (Vector3.up, hit.normal));
+                    ParticleSystem ps = Instantiate(envStonehit, hit.point, Quaternion.FromToRotation(Vector3.up, hit.normal));
+                    ps.Play();
                 }
             }
 		}
 	}
+    private void PlayAnimation (bool state) {
 
+        if(state && !reloadAnim.isPlaying) {
+
+            Debug.Log("Play");
+            reloadAnim.Play();
+        }
+        if(!state) {
+            
+            reloadAnim.Stop();
+            Debug.Log("stop anim");
+        }
+    }
     public void Reloaded()
     {
         anim.SetBool("FA", true);

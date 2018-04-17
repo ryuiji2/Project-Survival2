@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+
 public class EnemyStats : MonoBehaviour {
 
     //random range voor attack
@@ -21,7 +22,7 @@ public class EnemyStats : MonoBehaviour {
 	private Wave wave;
     private NavMeshAgent agent;
     private Animator anim;
-    private UIManager UIM;
+    private UIManager uim;
     private int deathScore;
     public GameObject ammoBox;
     public int maxRNG;
@@ -30,18 +31,28 @@ public class EnemyStats : MonoBehaviour {
     public int whichAttack;
 	private float timer, attackCooldown;
 
+    public int deathPoints;
+
+    public Animation scoreAnim;
+
+    public bool oneTime;
+
+
 	private void Awake () {
 
+        scoreAnim = GameObject.Find("Plus Score").GetComponent<Animation>();
 		regen = GameObject.Find("Player").GetComponent<Regeneration>();
 		player = GameObject.Find("Player").GetComponent<PlayerStats>();
 		wave = GameObject.Find("WaveManager").GetComponent<Wave>();
-        UIM = GameObject.Find ("Canvas").GetComponent<UIManager> ();
+        uim = GameObject.Find ("Canvas").GetComponent<UIManager> ();
         agent = GetComponent<NavMeshAgent> ();
         anim = GetComponent<Animator> ();
 		
 		attackCooldown = 2f;
 	}
 	private void Start () {
+
+        oneTime = false;
         toDrop = Random.Range (0, maxRNG);
 
 		if(!wave.spawnEnemies) {
@@ -101,12 +112,15 @@ public class EnemyStats : MonoBehaviour {
             timer -= Time.deltaTime;
     }
 	public void EnemyHealth (float dmg) {
+
         health -= dmg;
         if (health <= 0f) {
+
             GetComponentInChildren<Collider> ().isTrigger = true;
             agent.enabled = false;
             AmmoDrop ();
             wave.currEnemy--;
+
         }
         //stagger?
     }
@@ -122,9 +136,33 @@ public class EnemyStats : MonoBehaviour {
                 death = true;
             }
             //UIM.checkscore (deathScore); > voor score
+            if(!scoreAnim.isPlaying && !oneTime) {
+
+                PlayAnimation(true);
+
+                uim.bonusScore.text = deathPoints.ToString();
+		        uim.CheckScore(deathPoints);
+                
+                oneTime = !oneTime;
+            }
+            if(!scoreAnim.isPlaying && oneTime) {
+
+                PlayAnimation(false);
+            }
         }
         if (deathTimer <= 0f) {
             gameObject.transform.position += (Vector3.down * Time.deltaTime);
         }
 	}
+    public void PlayAnimation (bool state) {
+
+        if(state) {
+            Debug.Log("play");
+            scoreAnim.Play();
+        }
+        if(!state) {
+            Debug.Log("Stop");
+            scoreAnim.Stop();
+        }
+    }
 }

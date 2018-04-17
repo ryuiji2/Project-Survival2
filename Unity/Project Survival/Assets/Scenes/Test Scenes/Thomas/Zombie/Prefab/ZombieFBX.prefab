@@ -2423,6 +2423,9 @@ MonoBehaviour:
   ammoBox: {fileID: 1282930543594600, guid: 817399b6a71270a4ba91fcbc09821d94, type: 2}
   maxRNG: 40
   whichAttack: 0
+  deathPoints: 100
+  scoreAnim: {fileID: 0}
+  oneTime: 0
 --- !u!114 &114853704232217952
 MonoBehaviour:
   m_ObjectHideFlags: 1
