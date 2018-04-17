@@ -457,6 +457,10 @@ Prefab:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 1118196760952024, guid: 8315f6fb14d89e743915075fef33ea9f, type: 2}
+      propertyPath: m_TagString
+      value: Stone
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8315f6fb14d89e743915075fef33ea9f, type: 2}
   m_IsPrefabParent: 0
@@ -546,7 +550,7 @@ GameObject:
   - component: {fileID: 26293025}
   m_Layer: 0
   m_Name: ConcreteWall (66)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -687,7 +691,7 @@ GameObject:
   - component: {fileID: 33993798}
   m_Layer: 0
   m_Name: ConcreteWall (125)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -803,39 +807,39 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1208710426}
     m_Modifications:
     - target: {fileID: 4720028698538036, guid: c711da9b0037b38449a2d0202a2de72c, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 21.955
+      value: 3.478602
       objectReference: {fileID: 0}
     - target: {fileID: 4720028698538036, guid: c711da9b0037b38449a2d0202a2de72c, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1.66
+      value: 1.1731294
       objectReference: {fileID: 0}
     - target: {fileID: 4720028698538036, guid: c711da9b0037b38449a2d0202a2de72c, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -4.8956
+      value: 4.122537
       objectReference: {fileID: 0}
     - target: {fileID: 4720028698538036, guid: c711da9b0037b38449a2d0202a2de72c, type: 2}
       propertyPath: m_LocalRotation.x
-      value: -0.00529146
+      value: 0.3659041
       objectReference: {fileID: 0}
     - target: {fileID: 4720028698538036, guid: c711da9b0037b38449a2d0202a2de72c, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0.6460332
+      value: 0.5660205
       objectReference: {fileID: 0}
     - target: {fileID: 4720028698538036, guid: c711da9b0037b38449a2d0202a2de72c, type: 2}
       propertyPath: m_LocalRotation.z
-      value: -0.76186216
+      value: -0.71355873
       objectReference: {fileID: 0}
     - target: {fileID: 4720028698538036, guid: c711da9b0037b38449a2d0202a2de72c, type: 2}
       propertyPath: m_LocalRotation.w
-      value: -0.04668146
+      value: 0.19123046
       objectReference: {fileID: 0}
     - target: {fileID: 4720028698538036, guid: c711da9b0037b38449a2d0202a2de72c, type: 2}
       propertyPath: m_RootOrder
-      value: 39
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1454597080538844, guid: c711da9b0037b38449a2d0202a2de72c, type: 2}
       propertyPath: m_Name
@@ -855,19 +859,24 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4720028698538036, guid: c711da9b0037b38449a2d0202a2de72c, type: 2}
       propertyPath: m_LocalScale.x
-      value: 0.8515686
+      value: 0.85156924
       objectReference: {fileID: 0}
     - target: {fileID: 4720028698538036, guid: c711da9b0037b38449a2d0202a2de72c, type: 2}
       propertyPath: m_LocalScale.y
-      value: 0.8515678
+      value: 0.8515682
       objectReference: {fileID: 0}
     - target: {fileID: 4720028698538036, guid: c711da9b0037b38449a2d0202a2de72c, type: 2}
       propertyPath: m_LocalScale.z
-      value: 0.8515678
+      value: 0.85156804
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c711da9b0037b38449a2d0202a2de72c, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &37569973 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4720028698538036, guid: c711da9b0037b38449a2d0202a2de72c,
+    type: 2}
+  m_PrefabInternal: {fileID: 37569972}
 --- !u!1001 &41035522
 Prefab:
   m_ObjectHideFlags: 0
@@ -934,6 +943,10 @@ Prefab:
     - target: {fileID: 4712905693827384, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -127.091
+      objectReference: {fileID: 0}
+    - target: {fileID: 1301119333561918, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
+      propertyPath: m_TagString
+      value: Stone
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
@@ -1065,6 +1078,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.007159862
       objectReference: {fileID: 0}
+    - target: {fileID: 1264971560032384, guid: 83ab080e5b819a74e82d348d730cf6c5, type: 2}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 83ab080e5b819a74e82d348d730cf6c5, type: 2}
   m_IsPrefabParent: 0
@@ -1086,7 +1103,7 @@ GameObject:
   - component: {fileID: 52731288}
   m_Layer: 0
   m_Name: ConcreteWall (108)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1205,6 +1222,10 @@ Prefab:
     - target: {fileID: 4712905693827384, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -197.68599
+      objectReference: {fileID: 0}
+    - target: {fileID: 1301119333561918, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
+      propertyPath: m_TagString
+      value: Stone
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
@@ -1351,6 +1372,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -41.162003
       objectReference: {fileID: 0}
+    - target: {fileID: 1301119333561918, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
+      propertyPath: m_TagString
+      value: Stone
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
   m_IsPrefabParent: 0
@@ -1372,7 +1397,7 @@ GameObject:
   - component: {fileID: 62447641}
   m_Layer: 0
   m_Name: ConcreteWall (120)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1438,7 +1463,7 @@ GameObject:
   - component: {fileID: 73648980}
   m_Layer: 0
   m_Name: ConcreteWall (133)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1627,6 +1652,10 @@ Prefab:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 1422566728064298, guid: 22ab403c7338cd34c9347659ab7df073, type: 2}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 22ab403c7338cd34c9347659ab7df073, type: 2}
   m_IsPrefabParent: 0
@@ -1736,7 +1765,7 @@ GameObject:
   - component: {fileID: 93370402}
   m_Layer: 0
   m_Name: Bench (1)
-  m_TagString: Untagged
+  m_TagString: Wood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1811,6 +1840,10 @@ Prefab:
     - target: {fileID: 4092644309518802, guid: 5d595dbc9ae5e0044b3da428827e5f86, type: 2}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1920100235033952, guid: 5d595dbc9ae5e0044b3da428827e5f86, type: 2}
+      propertyPath: m_TagString
+      value: Stone
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5d595dbc9ae5e0044b3da428827e5f86, type: 2}
@@ -1887,6 +1920,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1.1747509
       objectReference: {fileID: 0}
+    - target: {fileID: 1704764247940412, guid: d00a5aff3d286734da0a5efd43c01556, type: 2}
+      propertyPath: m_TagString
+      value: Stone
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d00a5aff3d286734da0a5efd43c01556, type: 2}
   m_IsPrefabParent: 0
@@ -1913,7 +1950,7 @@ GameObject:
   - component: {fileID: 112156689}
   m_Layer: 0
   m_Name: ConcreteWall (10)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -2193,7 +2230,7 @@ GameObject:
   - component: {fileID: 120133509}
   m_Layer: 0
   m_Name: ConcreteWall (106)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -2503,7 +2540,7 @@ GameObject:
   - component: {fileID: 134203052}
   m_Layer: 0
   m_Name: ConcreteWall (117)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -2654,6 +2691,10 @@ Prefab:
     - target: {fileID: 4802181854500148, guid: bb1edd6b5593e2d47b4ea52fc35fcb3c, type: 2}
       propertyPath: m_LocalPosition.z
       value: -0.151
+      objectReference: {fileID: 0}
+    - target: {fileID: 1416977674018026, guid: bb1edd6b5593e2d47b4ea52fc35fcb3c, type: 2}
+      propertyPath: m_TagString
+      value: Stone
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bb1edd6b5593e2d47b4ea52fc35fcb3c, type: 2}
@@ -2830,6 +2871,10 @@ Prefab:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 1a0eb12c05a4d824ea4fe25fd69f4d15, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1a0eb12c05a4d824ea4fe25fd69f4d15, type: 3}
   m_IsPrefabParent: 0
@@ -2880,7 +2925,7 @@ Transform:
   m_Children:
   - {fileID: 1931675500}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &150886010
 GameObject:
@@ -3045,7 +3090,7 @@ GameObject:
   - component: {fileID: 151816979}
   m_Layer: 0
   m_Name: ConcreteWall (26)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -3251,7 +3296,7 @@ GameObject:
   - component: {fileID: 160453397}
   m_Layer: 0
   m_Name: ConcreteWall (92)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -3339,7 +3384,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4967499227456274, guid: 5c34d0fedaa95f14fa478ce165e54cd6, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1506086925546700, guid: 5c34d0fedaa95f14fa478ce165e54cd6, type: 2}
       propertyPath: m_Name
@@ -3513,7 +3558,7 @@ GameObject:
   - component: {fileID: 166897359}
   m_Layer: 0
   m_Name: ConcreteWall (115)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -3889,7 +3934,7 @@ GameObject:
   - component: {fileID: 180564913}
   m_Layer: 0
   m_Name: Rocks (1)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3914,7 +3959,7 @@ Transform:
   - {fileID: 1670738674}
   - {fileID: 1716781330}
   m_Father: {fileID: 0}
-  m_RootOrder: 37
+  m_RootOrder: 36
   m_LocalEulerAnglesHint: {x: -72.26601, y: -102.906006, z: 58.731003}
 --- !u!1001 &184770771
 Prefab:
@@ -3982,6 +4027,10 @@ Prefab:
     - target: {fileID: 4712905693827384, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 54.860004
+      objectReference: {fileID: 0}
+    - target: {fileID: 1301119333561918, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
+      propertyPath: m_TagString
+      value: Stone
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
@@ -4207,6 +4256,10 @@ Prefab:
     - target: {fileID: 4712905693827384, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 34.977
+      objectReference: {fileID: 0}
+    - target: {fileID: 1301119333561918, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
+      propertyPath: m_TagString
+      value: Stone
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
@@ -4449,7 +4502,7 @@ GameObject:
   - component: {fileID: 219446125}
   m_Layer: 0
   m_Name: ConcreteWall (99)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -4557,6 +4610,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.60000014
       objectReference: {fileID: 0}
+    - target: {fileID: 1301119333561918, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
+      propertyPath: m_TagString
+      value: Stone
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
   m_IsPrefabParent: 0
@@ -4573,7 +4630,7 @@ GameObject:
   - component: {fileID: 221680996}
   m_Layer: 0
   m_Name: ConcreteWall (130)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -4692,6 +4749,10 @@ Prefab:
     - target: {fileID: 4534768090903956, guid: d00a5aff3d286734da0a5efd43c01556, type: 2}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 213.41699
+      objectReference: {fileID: 0}
+    - target: {fileID: 1704764247940412, guid: d00a5aff3d286734da0a5efd43c01556, type: 2}
+      propertyPath: m_TagString
+      value: Stone
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d00a5aff3d286734da0a5efd43c01556, type: 2}
@@ -5071,7 +5132,7 @@ Transform:
   m_Children:
   - {fileID: 1384425469}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &239391622
 GameObject:
@@ -5294,6 +5355,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -48.471985
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cdd8767176cb06f42bc1f09c004841f4, type: 3}
+      propertyPath: m_TagString
+      value: Stone
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cdd8767176cb06f42bc1f09c004841f4, type: 3}
   m_IsPrefabParent: 0
@@ -5439,7 +5504,7 @@ Transform:
   - {fileID: 399253113}
   - {fileID: 156570460}
   m_Father: {fileID: 0}
-  m_RootOrder: 34
+  m_RootOrder: 33
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &248046778 stripped
 GameObject:
@@ -5491,7 +5556,7 @@ Transform:
   - {fileID: 248046781}
   - {fileID: 772716993}
   m_Father: {fileID: 0}
-  m_RootOrder: 25
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &255138472
 GameObject:
@@ -5578,7 +5643,7 @@ GameObject:
   - component: {fileID: 255507826}
   m_Layer: 0
   m_Name: SandBags
-  m_TagString: Untagged
+  m_TagString: Wood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -5621,7 +5686,7 @@ Transform:
   - {fileID: 1806241}
   - {fileID: 1029894298}
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &256480731
 GameObject:
@@ -5966,7 +6031,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4967499227456274, guid: 5c34d0fedaa95f14fa478ce165e54cd6, type: 2}
       propertyPath: m_RootOrder
-      value: 35
+      value: 34
       objectReference: {fileID: 0}
     - target: {fileID: 1506086925546700, guid: 5c34d0fedaa95f14fa478ce165e54cd6, type: 2}
       propertyPath: m_Name
@@ -5983,6 +6048,10 @@ Prefab:
     - target: {fileID: 4406130793425326, guid: 5c34d0fedaa95f14fa478ce165e54cd6, type: 2}
       propertyPath: m_LocalPosition.z
       value: 0.031
+      objectReference: {fileID: 0}
+    - target: {fileID: 1506086925546700, guid: 5c34d0fedaa95f14fa478ce165e54cd6, type: 2}
+      propertyPath: m_TagString
+      value: Stone
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114561021141321590, guid: 5c34d0fedaa95f14fa478ce165e54cd6, type: 2}
@@ -6138,6 +6207,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a1194af016ed1bb44a79e4bf73fed9ff, type: 2}
+    - target: {fileID: 100000, guid: cdd8767176cb06f42bc1f09c004841f4, type: 3}
+      propertyPath: m_TagString
+      value: Stone
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cdd8767176cb06f42bc1f09c004841f4, type: 3}
   m_IsPrefabParent: 0
@@ -6708,7 +6781,7 @@ GameObject:
   - component: {fileID: 295671121}
   m_Layer: 0
   m_Name: ConcreteWall (51)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -6849,7 +6922,7 @@ GameObject:
   - component: {fileID: 297429085}
   m_Layer: 0
   m_Name: ConcreteWall (29)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -7145,6 +7218,10 @@ Prefab:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 1301119333561918, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
+      propertyPath: m_TagString
+      value: Stone
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
   m_IsPrefabParent: 0
@@ -7406,7 +7483,7 @@ GameObject:
   - component: {fileID: 329386385}
   m_Layer: 0
   m_Name: ConcreteWall (44)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -7514,6 +7591,10 @@ Prefab:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 1122268874836352, guid: db6b693f27a548d409a21337f586dbee, type: 2}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: db6b693f27a548d409a21337f586dbee, type: 2}
   m_IsPrefabParent: 0
@@ -7559,7 +7640,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4642071716736936, guid: c88b3f5bdf99c7b44bdf15603810fac0, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4642071716736936, guid: c88b3f5bdf99c7b44bdf15603810fac0, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -7793,6 +7874,10 @@ Prefab:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 1118196760952024, guid: 8315f6fb14d89e743915075fef33ea9f, type: 2}
+      propertyPath: m_TagString
+      value: Stone
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8315f6fb14d89e743915075fef33ea9f, type: 2}
   m_IsPrefabParent: 0
@@ -7884,7 +7969,7 @@ GameObject:
   - component: {fileID: 357209044}
   m_Layer: 0
   m_Name: ConcreteWall (95)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -7981,7 +8066,7 @@ GameObject:
   - component: {fileID: 365849841}
   m_Layer: 0
   m_Name: ConcreteWall (30)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -8251,6 +8336,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 34.977
       objectReference: {fileID: 0}
+    - target: {fileID: 1301119333561918, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
+      propertyPath: m_TagString
+      value: Stone
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
   m_IsPrefabParent: 0
@@ -8272,7 +8361,7 @@ GameObject:
   - component: {fileID: 380243501}
   m_Layer: 0
   m_Name: ConcreteWall (89)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -8338,7 +8427,7 @@ GameObject:
   - component: {fileID: 381883909}
   m_Layer: 0
   m_Name: ConcreteWall (88)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -8496,7 +8585,7 @@ GameObject:
   - component: {fileID: 393894860}
   m_Layer: 0
   m_Name: ConcreteWall (83)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -8707,7 +8796,7 @@ GameObject:
   - component: {fileID: 402797977}
   m_Layer: 0
   m_Name: ConcreteWall
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -8772,7 +8861,7 @@ GameObject:
   - component: {fileID: 411331557}
   m_Layer: 0
   m_Name: ConcreteWall (3)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -8895,6 +8984,10 @@ Prefab:
     - target: {fileID: 1301119333561918, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1301119333561918, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
+      propertyPath: m_TagString
+      value: Stone
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
@@ -9021,7 +9114,7 @@ GameObject:
   - component: {fileID: 422162503}
   m_Layer: 0
   m_Name: Plane001
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -9199,6 +9292,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.x
       value: 10.1
       objectReference: {fileID: 0}
+    - target: {fileID: 1028570426954240, guid: b701a07fa610c5241881d9edce73273f, type: 2}
+      propertyPath: m_TagString
+      value: Stone
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b701a07fa610c5241881d9edce73273f, type: 2}
   m_IsPrefabParent: 0
@@ -9220,7 +9317,7 @@ GameObject:
   - component: {fileID: 427713195}
   m_Layer: 0
   m_Name: ConcreteWall (109)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -9286,7 +9383,7 @@ GameObject:
   - component: {fileID: 440996795}
   m_Layer: 0
   m_Name: ConcreteWall (101)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -9423,6 +9520,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 34.977
       objectReference: {fileID: 0}
+    - target: {fileID: 1301119333561918, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
+      propertyPath: m_TagString
+      value: Stone
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
   m_IsPrefabParent: 0
@@ -9439,7 +9540,7 @@ GameObject:
   - component: {fileID: 442920224}
   m_Layer: 0
   m_Name: ConcreteWall (48)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -9559,6 +9660,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -197.68599
       objectReference: {fileID: 0}
+    - target: {fileID: 1301119333561918, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
+      propertyPath: m_TagString
+      value: Stone
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
   m_IsPrefabParent: 0
@@ -9622,6 +9727,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.60000014
       objectReference: {fileID: 0}
+    - target: {fileID: 1301119333561918, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
+      propertyPath: m_TagString
+      value: Stone
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
   m_IsPrefabParent: 0
@@ -9663,7 +9772,7 @@ Transform:
   - {fileID: 1775726913}
   - {fileID: 1554752087}
   m_Father: {fileID: 0}
-  m_RootOrder: 27
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &454734722
 GameObject:
@@ -9712,7 +9821,7 @@ GameObject:
   - component: {fileID: 457858867}
   m_Layer: 0
   m_Name: ConcreteWall (49)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -9853,7 +9962,7 @@ GameObject:
   - component: {fileID: 461271440}
   m_Layer: 0
   m_Name: ConcreteWall (87)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -9919,7 +10028,7 @@ GameObject:
   - component: {fileID: 461396990}
   m_Layer: 0
   m_Name: ConcreteWall (13)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -10147,7 +10256,7 @@ GameObject:
   - component: {fileID: 469526048}
   m_Layer: 0
   m_Name: ConcreteWall (36)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -10430,6 +10539,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 42.844
       objectReference: {fileID: 0}
+    - target: {fileID: 1704764247940412, guid: d00a5aff3d286734da0a5efd43c01556, type: 2}
+      propertyPath: m_TagString
+      value: Stone
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d00a5aff3d286734da0a5efd43c01556, type: 2}
   m_IsPrefabParent: 0
@@ -10505,6 +10618,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -127.091
       objectReference: {fileID: 0}
+    - target: {fileID: 1301119333561918, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
+      propertyPath: m_TagString
+      value: Stone
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
   m_IsPrefabParent: 0
@@ -10537,7 +10654,7 @@ Transform:
   - {fileID: 1739615464}
   - {fileID: 543168192}
   m_Father: {fileID: 0}
-  m_RootOrder: 31
+  m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: -7.8610005, z: 0}
 --- !u!1001 &484793727
 Prefab:
@@ -10589,6 +10706,10 @@ Prefab:
     - target: {fileID: 4720028698538036, guid: c711da9b0037b38449a2d0202a2de72c, type: 2}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1454597080538844, guid: c711da9b0037b38449a2d0202a2de72c, type: 2}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c711da9b0037b38449a2d0202a2de72c, type: 2}
@@ -11054,6 +11175,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f106f76cb2dcb494f9386ad6770dc580, type: 2}
+    - target: {fileID: 100000, guid: cdd8767176cb06f42bc1f09c004841f4, type: 3}
+      propertyPath: m_TagString
+      value: Stone
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cdd8767176cb06f42bc1f09c004841f4, type: 3}
   m_IsPrefabParent: 0
@@ -11086,7 +11211,7 @@ GameObject:
   - component: {fileID: 503116885}
   m_Layer: 0
   m_Name: ConcreteWall (19)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -11474,6 +11599,10 @@ Prefab:
       propertyPath: m_Name
       value: WoodenCrate (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1454597080538844, guid: c711da9b0037b38449a2d0202a2de72c, type: 2}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c711da9b0037b38449a2d0202a2de72c, type: 2}
   m_IsPrefabParent: 0
@@ -11548,6 +11677,10 @@ Prefab:
     - target: {fileID: 100000, guid: 99b3622d9bd9eed45b0a620227d49d4e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 99b3622d9bd9eed45b0a620227d49d4e, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 99b3622d9bd9eed45b0a620227d49d4e, type: 3}
@@ -11845,7 +11978,7 @@ GameObject:
   - component: {fileID: 548459130}
   m_Layer: 0
   m_Name: ConcreteWall (16)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -11964,6 +12097,10 @@ Prefab:
     - target: {fileID: 4712905693827384, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -197.68599
+      objectReference: {fileID: 0}
+    - target: {fileID: 1301119333561918, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
+      propertyPath: m_TagString
+      value: Stone
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
@@ -12136,7 +12273,7 @@ GameObject:
   - component: {fileID: 552243845}
   m_Layer: 0
   m_Name: ConcreteWall (119)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -12298,7 +12435,7 @@ GameObject:
   - component: {fileID: 566919890}
   m_Layer: 0
   m_Name: ConcreteWall (57)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -12603,7 +12740,7 @@ Transform:
   - {fileID: 1154626602}
   - {fileID: 848541039}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &578551136
 GameObject:
@@ -12691,7 +12828,7 @@ GameObject:
   - component: {fileID: 590120759}
   m_Layer: 0
   m_Name: ConcreteWall (77)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -12762,7 +12899,7 @@ GameObject:
   - component: {fileID: 599576202}
   m_Layer: 0
   m_Name: ConcreteWall (38)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -13032,6 +13169,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 34.977
       objectReference: {fileID: 0}
+    - target: {fileID: 1301119333561918, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
+      propertyPath: m_TagString
+      value: Stone
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
   m_IsPrefabParent: 0
@@ -13112,6 +13253,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 780554c09b43adc429cbf38585b199ce, type: 2}
+    - target: {fileID: 1118196760952024, guid: 8315f6fb14d89e743915075fef33ea9f, type: 2}
+      propertyPath: m_TagString
+      value: Stone
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8315f6fb14d89e743915075fef33ea9f, type: 2}
   m_IsPrefabParent: 0
@@ -13203,7 +13348,7 @@ GameObject:
   - component: {fileID: 625358237}
   m_Layer: 0
   m_Name: ConcreteWall (34)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -13618,7 +13763,7 @@ GameObject:
   - component: {fileID: 636437627}
   m_Layer: 0
   m_Name: ConcreteWall (90)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -13684,7 +13829,7 @@ GameObject:
   - component: {fileID: 641216245}
   m_Layer: 0
   m_Name: ConcreteWall (54)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -13796,6 +13941,10 @@ Prefab:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 1301119333561918, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
+      propertyPath: m_TagString
+      value: Stone
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
   m_IsPrefabParent: 0
@@ -13889,7 +14038,7 @@ GameObject:
   - component: {fileID: 646666345}
   m_Layer: 0
   m_Name: BrokenConcreteWall (2)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -13994,7 +14143,7 @@ GameObject:
   - component: {fileID: 647723985}
   m_Layer: 0
   m_Name: ConcreteWall (32)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -14177,6 +14326,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.60000014
       objectReference: {fileID: 0}
+    - target: {fileID: 1301119333561918, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
+      propertyPath: m_TagString
+      value: Stone
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
   m_IsPrefabParent: 0
@@ -14252,6 +14405,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -127.091
       objectReference: {fileID: 0}
+    - target: {fileID: 1301119333561918, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
+      propertyPath: m_TagString
+      value: Stone
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
   m_IsPrefabParent: 0
@@ -14278,7 +14435,7 @@ GameObject:
   - component: {fileID: 653043476}
   m_Layer: 0
   m_Name: ConcreteWall (103)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -14714,6 +14871,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.x
       value: 105.00699
       objectReference: {fileID: 0}
+    - target: {fileID: 1454597080538844, guid: c711da9b0037b38449a2d0202a2de72c, type: 2}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c711da9b0037b38449a2d0202a2de72c, type: 2}
   m_IsPrefabParent: 0
@@ -14800,7 +14961,7 @@ GameObject:
   - component: {fileID: 667201608}
   m_Layer: 0
   m_Name: ConcreteWall (27)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -14966,6 +15127,10 @@ Prefab:
     - target: {fileID: 4534768090903956, guid: d00a5aff3d286734da0a5efd43c01556, type: 2}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 394.842
+      objectReference: {fileID: 0}
+    - target: {fileID: 1704764247940412, guid: d00a5aff3d286734da0a5efd43c01556, type: 2}
+      propertyPath: m_TagString
+      value: Stone
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d00a5aff3d286734da0a5efd43c01556, type: 2}
@@ -15134,7 +15299,7 @@ GameObject:
   - component: {fileID: 691124584}
   m_Layer: 0
   m_Name: Point light (10)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15201,7 +15366,7 @@ GameObject:
   - component: {fileID: 693925146}
   m_Layer: 0
   m_Name: ConcreteWall (33)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -15302,7 +15467,7 @@ GameObject:
   - component: {fileID: 707143641}
   m_Layer: 0
   m_Name: ConcreteWall (25)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -15508,7 +15673,7 @@ GameObject:
   - component: {fileID: 730173592}
   m_Layer: 0
   m_Name: ConcreteWall (21)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -15631,6 +15796,10 @@ Prefab:
     - target: {fileID: 1301119333561918, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1301119333561918, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
+      propertyPath: m_TagString
+      value: Stone
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
@@ -15798,7 +15967,7 @@ GameObject:
   - component: {fileID: 740602629}
   m_Layer: 0
   m_Name: ConcreteWall (73)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -15865,7 +16034,7 @@ GameObject:
   - component: {fileID: 744289043}
   m_Layer: 0
   m_Name: Bench
-  m_TagString: Untagged
+  m_TagString: Wood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -16057,6 +16226,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1.3162085
       objectReference: {fileID: 0}
+    - target: {fileID: 1704764247940412, guid: d00a5aff3d286734da0a5efd43c01556, type: 2}
+      propertyPath: m_TagString
+      value: Stone
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d00a5aff3d286734da0a5efd43c01556, type: 2}
   m_IsPrefabParent: 0
@@ -16158,7 +16331,7 @@ GameObject:
   - component: {fileID: 752683634}
   m_Layer: 0
   m_Name: ConcreteWall (23)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -16547,7 +16720,7 @@ GameObject:
   - component: {fileID: 768770215}
   m_Layer: 0
   m_Name: ConcreteWall (81)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -16887,6 +17060,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 231.79
       objectReference: {fileID: 0}
+    - target: {fileID: 1704764247940412, guid: d00a5aff3d286734da0a5efd43c01556, type: 2}
+      propertyPath: m_TagString
+      value: Stone
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d00a5aff3d286734da0a5efd43c01556, type: 2}
   m_IsPrefabParent: 0
@@ -17192,6 +17369,10 @@ Prefab:
     - target: {fileID: 1301119333561918, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1301119333561918, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
+      propertyPath: m_TagString
+      value: Stone
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
@@ -17561,7 +17742,7 @@ GameObject:
   - component: {fileID: 792522796}
   m_Layer: 0
   m_Name: ConcreteWall (45)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -17768,6 +17949,10 @@ Prefab:
     - target: {fileID: 4708971402576996, guid: 83ab080e5b819a74e82d348d730cf6c5, type: 2}
       propertyPath: m_LocalScale.z
       value: 0.0071598636
+      objectReference: {fileID: 0}
+    - target: {fileID: 1264971560032384, guid: 83ab080e5b819a74e82d348d730cf6c5, type: 2}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 83ab080e5b819a74e82d348d730cf6c5, type: 2}
@@ -18134,6 +18319,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.015000005
       objectReference: {fileID: 0}
+    - target: {fileID: 1834501101843810, guid: 2fe4bb0aa5ceb424f8f50801f85ff78f, type: 2}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2fe4bb0aa5ceb424f8f50801f85ff78f, type: 2}
   m_IsPrefabParent: 0
@@ -18152,7 +18341,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 106.932755, y: 49.397186, z: 24.312822}
+  m_Size: {x: 106.932755, y: 49.397186, z: 399.76}
   m_Center: {x: -16.547808, y: 0.02235438, z: -7.6212006}
 --- !u!1 &833954878
 GameObject:
@@ -18240,7 +18429,7 @@ GameObject:
   - component: {fileID: 835823863}
   m_Layer: 0
   m_Name: ConcreteWall (56)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -18431,6 +18620,10 @@ Prefab:
       propertyPath: m_LocalScale.x
       value: 1.2323607
       objectReference: {fileID: 0}
+    - target: {fileID: 1764652886491950, guid: acf3e3475154d5e4d8a111c63c0b1bb4, type: 2}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: acf3e3475154d5e4d8a111c63c0b1bb4, type: 2}
   m_IsPrefabParent: 0
@@ -18452,7 +18645,7 @@ GameObject:
   - component: {fileID: 844926246}
   m_Layer: 0
   m_Name: ConcreteWall (112)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -18518,7 +18711,7 @@ GameObject:
   - component: {fileID: 845415122}
   m_Layer: 0
   m_Name: ConcreteWall (113)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -18589,7 +18782,7 @@ GameObject:
   - component: {fileID: 849529817}
   m_Layer: 0
   m_Name: ConcreteWall (82)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -18686,7 +18879,7 @@ GameObject:
   - component: {fileID: 853342896}
   m_Layer: 0
   m_Name: ConcreteWall (39)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -19280,7 +19473,7 @@ GameObject:
   - component: {fileID: 867681586}
   m_Layer: 0
   m_Name: ConcreteWall (63)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -19563,7 +19756,7 @@ GameObject:
   - component: {fileID: 880312808}
   m_Layer: 0
   m_Name: ConcreteWall (8)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -19781,7 +19974,7 @@ GameObject:
   - component: {fileID: 898307152}
   m_Layer: 0
   m_Name: BrokenConcreteWall (1)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20043,7 +20236,7 @@ Transform:
   - {fileID: 705267134}
   - {fileID: 466758533}
   m_Father: {fileID: 0}
-  m_RootOrder: 28
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &909192228
 GameObject:
@@ -20324,6 +20517,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 34.977
       objectReference: {fileID: 0}
+    - target: {fileID: 1301119333561918, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
+      propertyPath: m_TagString
+      value: Stone
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
   m_IsPrefabParent: 0
@@ -20476,6 +20673,10 @@ Prefab:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 1301119333561918, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
+      propertyPath: m_TagString
+      value: Stone
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
   m_IsPrefabParent: 0
@@ -20538,7 +20739,7 @@ GameObject:
   - component: {fileID: 924720632}
   m_Layer: 0
   m_Name: ConcreteWall (100)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -20754,7 +20955,7 @@ GameObject:
   - component: {fileID: 928798804}
   m_Layer: 0
   m_Name: ConcreteWall (110)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -20952,6 +21153,10 @@ Prefab:
     - target: {fileID: 1629559206646208, guid: 65ac3dfa2f7161a4290beb954f32db87, type: 2}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1629559206646208, guid: 65ac3dfa2f7161a4290beb954f32db87, type: 2}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 65ac3dfa2f7161a4290beb954f32db87, type: 2}
@@ -21263,7 +21468,7 @@ GameObject:
   - component: {fileID: 963742838}
   m_Layer: 0
   m_Name: Walls
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -21417,7 +21622,7 @@ Transform:
   - {fileID: 36181528}
   - {fileID: 1812469920}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &964982322
 Prefab:
@@ -21511,7 +21716,7 @@ GameObject:
   - component: {fileID: 966150587}
   m_Layer: 0
   m_Name: ConcreteWall (104)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -21632,6 +21837,10 @@ Prefab:
     - target: {fileID: 100000, guid: 1a0eb12c05a4d824ea4fe25fd69f4d15, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 1a0eb12c05a4d824ea4fe25fd69f4d15, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1a0eb12c05a4d824ea4fe25fd69f4d15, type: 3}
@@ -22103,6 +22312,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -41.162003
       objectReference: {fileID: 0}
+    - target: {fileID: 1301119333561918, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
+      propertyPath: m_TagString
+      value: Stone
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
   m_IsPrefabParent: 0
@@ -22124,7 +22337,7 @@ GameObject:
   - component: {fileID: 991321806}
   m_Layer: 0
   m_Name: ConcreteWall (15)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -22392,6 +22605,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.x
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 1454597080538844, guid: c711da9b0037b38449a2d0202a2de72c, type: 2}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c711da9b0037b38449a2d0202a2de72c, type: 2}
   m_IsPrefabParent: 0
@@ -22488,7 +22705,7 @@ GameObject:
   - component: {fileID: 1002393518}
   m_Layer: 0
   m_Name: ConcreteWall (18)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -22940,7 +23157,7 @@ GameObject:
   - component: {fileID: 1020184354}
   m_Layer: 0
   m_Name: ConcreteWall (65)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -23006,7 +23223,7 @@ GameObject:
   - component: {fileID: 1020447221}
   m_Layer: 0
   m_Name: ConcreteWall (55)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -23256,7 +23473,7 @@ GameObject:
   - component: {fileID: 1033899451}
   m_Layer: 0
   m_Name: ConcreteWall (94)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -23364,6 +23581,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1337794702394328, guid: cfcd868bcf34aec439644d76b3e8322e, type: 2}
+      propertyPath: m_TagString
+      value: Stone
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cfcd868bcf34aec439644d76b3e8322e, type: 2}
   m_IsPrefabParent: 0
@@ -23385,7 +23606,7 @@ GameObject:
   - component: {fileID: 1035145832}
   m_Layer: 0
   m_Name: ConcreteWall (42)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -23744,6 +23965,10 @@ Prefab:
     - target: {fileID: 4712905693827384, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0.651
+      objectReference: {fileID: 0}
+    - target: {fileID: 1301119333561918, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
+      propertyPath: m_TagString
+      value: Stone
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
@@ -24249,7 +24474,7 @@ GameObject:
   - component: {fileID: 1073880733}
   m_Layer: 0
   m_Name: ConcreteWall (122)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -24320,7 +24545,7 @@ GameObject:
   - component: {fileID: 1086496586}
   m_Layer: 0
   m_Name: ConcreteWall (59)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -24710,7 +24935,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4246572928997754, guid: bab10bc61a541f944af15b6609ff4169, type: 2}
       propertyPath: m_RootOrder
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 4246572928997754, guid: bab10bc61a541f944af15b6609ff4169, type: 2}
       propertyPath: m_LocalScale.x
@@ -24771,6 +24996,70 @@ Prefab:
     - target: {fileID: 1792087209162454, guid: bab10bc61a541f944af15b6609ff4169, type: 2}
       propertyPath: m_Name
       value: Broken house 002
+      objectReference: {fileID: 0}
+    - target: {fileID: 1792087209162454, guid: bab10bc61a541f944af15b6609ff4169, type: 2}
+      propertyPath: m_TagString
+      value: Stone
+      objectReference: {fileID: 0}
+    - target: {fileID: 1767362664158698, guid: bab10bc61a541f944af15b6609ff4169, type: 2}
+      propertyPath: m_TagString
+      value: Stone
+      objectReference: {fileID: 0}
+    - target: {fileID: 1552611165697162, guid: bab10bc61a541f944af15b6609ff4169, type: 2}
+      propertyPath: m_TagString
+      value: Stone
+      objectReference: {fileID: 0}
+    - target: {fileID: 1903473507521898, guid: bab10bc61a541f944af15b6609ff4169, type: 2}
+      propertyPath: m_TagString
+      value: Stone
+      objectReference: {fileID: 0}
+    - target: {fileID: 1953065026555820, guid: bab10bc61a541f944af15b6609ff4169, type: 2}
+      propertyPath: m_TagString
+      value: Stone
+      objectReference: {fileID: 0}
+    - target: {fileID: 1865525756590546, guid: bab10bc61a541f944af15b6609ff4169, type: 2}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
+    - target: {fileID: 1252435643826286, guid: bab10bc61a541f944af15b6609ff4169, type: 2}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
+    - target: {fileID: 1365108356036244, guid: bab10bc61a541f944af15b6609ff4169, type: 2}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
+    - target: {fileID: 1694886977453228, guid: bab10bc61a541f944af15b6609ff4169, type: 2}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
+    - target: {fileID: 1851726573199502, guid: bab10bc61a541f944af15b6609ff4169, type: 2}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
+    - target: {fileID: 1039043751288168, guid: bab10bc61a541f944af15b6609ff4169, type: 2}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
+    - target: {fileID: 1047261756944716, guid: bab10bc61a541f944af15b6609ff4169, type: 2}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
+    - target: {fileID: 1229735539618652, guid: bab10bc61a541f944af15b6609ff4169, type: 2}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
+    - target: {fileID: 1569098431603868, guid: bab10bc61a541f944af15b6609ff4169, type: 2}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
+    - target: {fileID: 1481015446068194, guid: bab10bc61a541f944af15b6609ff4169, type: 2}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
+    - target: {fileID: 1820739263958848, guid: bab10bc61a541f944af15b6609ff4169, type: 2}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bab10bc61a541f944af15b6609ff4169, type: 2}
@@ -24916,6 +25205,10 @@ Prefab:
     - target: {fileID: 4720028698538036, guid: c711da9b0037b38449a2d0202a2de72c, type: 2}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -98.68201
+      objectReference: {fileID: 0}
+    - target: {fileID: 1454597080538844, guid: c711da9b0037b38449a2d0202a2de72c, type: 2}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c711da9b0037b38449a2d0202a2de72c, type: 2}
@@ -25219,6 +25512,10 @@ Prefab:
     - target: {fileID: 4712905693827384, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 34.977
+      objectReference: {fileID: 0}
+    - target: {fileID: 1301119333561918, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
+      propertyPath: m_TagString
+      value: Stone
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
@@ -25960,6 +26257,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 11a2a595354004c4480de567535327c4, type: 2}
+    - target: {fileID: 1924468463751812, guid: 13b5653da76edac419456af17f2e6f4a, type: 2}
+      propertyPath: m_TagString
+      value: Stone
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 13b5653da76edac419456af17f2e6f4a, type: 2}
   m_IsPrefabParent: 0
@@ -26152,7 +26453,7 @@ GameObject:
   - component: {fileID: 1167221763}
   m_Layer: 0
   m_Name: ConcreteWall (85)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -26271,6 +26572,10 @@ Prefab:
     - target: {fileID: 4949092022397254, guid: 2fe4bb0aa5ceb424f8f50801f85ff78f, type: 2}
       propertyPath: m_LocalScale.z
       value: 0.01500001
+      objectReference: {fileID: 0}
+    - target: {fileID: 1834501101843810, guid: 2fe4bb0aa5ceb424f8f50801f85ff78f, type: 2}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2fe4bb0aa5ceb424f8f50801f85ff78f, type: 2}
@@ -26526,6 +26831,10 @@ Prefab:
       propertyPath: m_LocalPosition.y
       value: 0.079
       objectReference: {fileID: 0}
+    - target: {fileID: 1416977674018026, guid: bb1edd6b5593e2d47b4ea52fc35fcb3c, type: 2}
+      propertyPath: m_TagString
+      value: Stone
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bb1edd6b5593e2d47b4ea52fc35fcb3c, type: 2}
   m_IsPrefabParent: 0
@@ -26652,7 +26961,7 @@ GameObject:
   - component: {fileID: 1185292917}
   m_Layer: 0
   m_Name: ConcreteWall (53)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -26922,6 +27231,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 34.977
       objectReference: {fileID: 0}
+    - target: {fileID: 1301119333561918, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
+      propertyPath: m_TagString
+      value: Stone
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
   m_IsPrefabParent: 0
@@ -27018,7 +27331,7 @@ GameObject:
   - component: {fileID: 1193304927}
   m_Layer: 0
   m_Name: ConcreteWall (118)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -27395,6 +27708,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -41.162003
       objectReference: {fileID: 0}
+    - target: {fileID: 1301119333561918, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
+      propertyPath: m_TagString
+      value: Stone
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
   m_IsPrefabParent: 0
@@ -27509,8 +27826,11 @@ Transform:
   - {fileID: 43122495}
   - {fileID: 797864580}
   - {fileID: 1754846571}
+  - {fileID: 1722473115}
+  - {fileID: 37569973}
+  - {fileID: 1792176360}
   m_Father: {fileID: 0}
-  m_RootOrder: 30
+  m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1210251406
 GameObject:
@@ -27525,7 +27845,7 @@ GameObject:
   - component: {fileID: 1210251409}
   m_Layer: 0
   m_Name: ConcreteWall (80)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -27588,7 +27908,7 @@ GameObject:
   - component: {fileID: 1225105186}
   m_Layer: 0
   m_Name: PileOfDebris
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27611,7 +27931,7 @@ Transform:
   - {fileID: 2041405710}
   - {fileID: 1666190818}
   m_Father: {fileID: 0}
-  m_RootOrder: 36
+  m_RootOrder: 35
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1225789991
 GameObject:
@@ -27750,6 +28070,10 @@ Prefab:
     - target: {fileID: 1282930543594600, guid: 817399b6a71270a4ba91fcbc09821d94, type: 2}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1282930543594600, guid: 817399b6a71270a4ba91fcbc09821d94, type: 2}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 817399b6a71270a4ba91fcbc09821d94, type: 2}
@@ -27933,7 +28257,7 @@ GameObject:
   - component: {fileID: 1240259306}
   m_Layer: 0
   m_Name: ConcreteWall (22)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -28116,6 +28440,10 @@ Prefab:
     - target: {fileID: 4712905693827384, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1301119333561918, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
+      propertyPath: m_TagString
+      value: Stone
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
@@ -28342,6 +28670,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 43.792004
       objectReference: {fileID: 0}
+    - target: {fileID: 1704764247940412, guid: d00a5aff3d286734da0a5efd43c01556, type: 2}
+      propertyPath: m_TagString
+      value: Stone
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d00a5aff3d286734da0a5efd43c01556, type: 2}
   m_IsPrefabParent: 0
@@ -28401,6 +28733,10 @@ Prefab:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 1869036764325326, guid: 0cd9b94892638b746863b9004dd4e840, type: 2}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0cd9b94892638b746863b9004dd4e840, type: 2}
   m_IsPrefabParent: 0
@@ -28439,7 +28775,7 @@ GameObject:
   - component: {fileID: 1264402792}
   m_Layer: 0
   m_Name: ConcreteWall (128)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -28693,7 +29029,7 @@ GameObject:
   - component: {fileID: 1273417036}
   m_Layer: 0
   m_Name: ConcreteWall (62)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -28981,7 +29317,7 @@ GameObject:
   - component: {fileID: 1283578474}
   m_Layer: 0
   m_Name: ConcreteWall (93)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -29163,6 +29499,10 @@ Prefab:
     - target: {fileID: 1578696245537588, guid: 8315f6fb14d89e743915075fef33ea9f, type: 2}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1118196760952024, guid: 8315f6fb14d89e743915075fef33ea9f, type: 2}
+      propertyPath: m_TagString
+      value: Stone
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8315f6fb14d89e743915075fef33ea9f, type: 2}
@@ -29379,6 +29719,10 @@ Prefab:
     - target: {fileID: 4708971402576996, guid: 83ab080e5b819a74e82d348d730cf6c5, type: 2}
       propertyPath: m_LocalScale.z
       value: 0.007159866
+      objectReference: {fileID: 0}
+    - target: {fileID: 1264971560032384, guid: 83ab080e5b819a74e82d348d730cf6c5, type: 2}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 83ab080e5b819a74e82d348d730cf6c5, type: 2}
@@ -29818,7 +30162,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4967499227456274, guid: 5c34d0fedaa95f14fa478ce165e54cd6, type: 2}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 108180050869801786, guid: 5c34d0fedaa95f14fa478ce165e54cd6,
         type: 2}
@@ -30029,7 +30373,7 @@ Transform:
   - {fileID: 749086038}
   - {fileID: 1487190118}
   m_Father: {fileID: 0}
-  m_RootOrder: 33
+  m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1336410108
 GameObject:
@@ -30160,6 +30504,10 @@ Prefab:
     - target: {fileID: 4949092022397254, guid: 2fe4bb0aa5ceb424f8f50801f85ff78f, type: 2}
       propertyPath: m_LocalScale.z
       value: 0.0150000015
+      objectReference: {fileID: 0}
+    - target: {fileID: 1834501101843810, guid: 2fe4bb0aa5ceb424f8f50801f85ff78f, type: 2}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2fe4bb0aa5ceb424f8f50801f85ff78f, type: 2}
@@ -30316,7 +30664,7 @@ GameObject:
   - component: {fileID: 1347307569}
   m_Layer: 0
   m_Name: ConcreteWall (20)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -30668,7 +31016,7 @@ GameObject:
   - component: {fileID: 1351171820}
   m_Layer: 0
   m_Name: ConcreteWall (134)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -30734,7 +31082,7 @@ GameObject:
   - component: {fileID: 1360904407}
   m_Layer: 0
   m_Name: ConcreteWall (4)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -30950,7 +31298,7 @@ GameObject:
   - component: {fileID: 1377064870}
   m_Layer: 0
   m_Name: ConcreteWall (52)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -31016,7 +31364,7 @@ GameObject:
   - component: {fileID: 1377376779}
   m_Layer: 0
   m_Name: ConcreteWall (47)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -31124,6 +31472,10 @@ Prefab:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 1028570426954240, guid: b701a07fa610c5241881d9edce73273f, type: 2}
+      propertyPath: m_TagString
+      value: Stone
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b701a07fa610c5241881d9edce73273f, type: 2}
   m_IsPrefabParent: 0
@@ -31164,7 +31516,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4967499227456274, guid: 5c34d0fedaa95f14fa478ce165e54cd6, type: 2}
       propertyPath: m_RootOrder
-      value: 29
+      value: 28
       objectReference: {fileID: 0}
     - target: {fileID: 1506086925546700, guid: 5c34d0fedaa95f14fa478ce165e54cd6, type: 2}
       propertyPath: m_Name
@@ -31199,6 +31551,10 @@ Prefab:
         type: 2}
       propertyPath: m_Range
       value: 5.73
+      objectReference: {fileID: 0}
+    - target: {fileID: 1506086925546700, guid: 5c34d0fedaa95f14fa478ce165e54cd6, type: 2}
+      propertyPath: m_TagString
+      value: Stone
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114561021141321590, guid: 5c34d0fedaa95f14fa478ce165e54cd6, type: 2}
@@ -31369,7 +31725,7 @@ GameObject:
   - component: {fileID: 1384609895}
   m_Layer: 0
   m_Name: ConcreteWall (50)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -31680,6 +32036,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 42.844
       objectReference: {fileID: 0}
+    - target: {fileID: 1704764247940412, guid: d00a5aff3d286734da0a5efd43c01556, type: 2}
+      propertyPath: m_TagString
+      value: Stone
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d00a5aff3d286734da0a5efd43c01556, type: 2}
   m_IsPrefabParent: 0
@@ -31817,6 +32177,10 @@ Prefab:
     - target: {fileID: 4712905693827384, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
       propertyPath: m_LocalScale.z
       value: 1.4000002
+      objectReference: {fileID: 0}
+    - target: {fileID: 1301119333561918, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
+      propertyPath: m_TagString
+      value: Stone
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
@@ -31964,6 +32328,10 @@ Prefab:
     - target: {fileID: 1028570426954240, guid: b701a07fa610c5241881d9edce73273f, type: 2}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1028570426954240, guid: b701a07fa610c5241881d9edce73273f, type: 2}
+      propertyPath: m_TagString
+      value: Stone
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b701a07fa610c5241881d9edce73273f, type: 2}
@@ -32742,6 +33110,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 17.358002
       objectReference: {fileID: 0}
+    - target: {fileID: 1301119333561918, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
+      propertyPath: m_TagString
+      value: Stone
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
   m_IsPrefabParent: 0
@@ -33178,6 +33550,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.007159864
       objectReference: {fileID: 0}
+    - target: {fileID: 1264971560032384, guid: 83ab080e5b819a74e82d348d730cf6c5, type: 2}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 83ab080e5b819a74e82d348d730cf6c5, type: 2}
   m_IsPrefabParent: 0
@@ -33559,6 +33935,10 @@ Prefab:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 1118196760952024, guid: 8315f6fb14d89e743915075fef33ea9f, type: 2}
+      propertyPath: m_TagString
+      value: Stone
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8315f6fb14d89e743915075fef33ea9f, type: 2}
   m_IsPrefabParent: 0
@@ -33771,6 +34151,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -347.02798
       objectReference: {fileID: 0}
+    - target: {fileID: 1454597080538844, guid: c711da9b0037b38449a2d0202a2de72c, type: 2}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c711da9b0037b38449a2d0202a2de72c, type: 2}
   m_IsPrefabParent: 0
@@ -33851,7 +34235,7 @@ GameObject:
   - component: {fileID: 1485715108}
   m_Layer: 0
   m_Name: ConcreteWall (71)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -33963,6 +34347,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.015000017
       objectReference: {fileID: 0}
+    - target: {fileID: 1834501101843810, guid: 2fe4bb0aa5ceb424f8f50801f85ff78f, type: 2}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2fe4bb0aa5ceb424f8f50801f85ff78f, type: 2}
   m_IsPrefabParent: 0
@@ -34041,6 +34429,10 @@ Prefab:
     - target: {fileID: 1704764247940412, guid: d00a5aff3d286734da0a5efd43c01556, type: 2}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1704764247940412, guid: d00a5aff3d286734da0a5efd43c01556, type: 2}
+      propertyPath: m_TagString
+      value: Stone
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d00a5aff3d286734da0a5efd43c01556, type: 2}
@@ -34138,7 +34530,7 @@ GameObject:
   - component: {fileID: 1494783614}
   m_Layer: 0
   m_Name: ConcreteWall (97)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -34277,7 +34669,7 @@ GameObject:
   - component: {fileID: 1496142425}
   m_Layer: 0
   m_Name: ConcreteWall (84)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -34418,7 +34810,7 @@ GameObject:
   - component: {fileID: 1498142321}
   m_Layer: 0
   m_Name: ConcreteWall (123)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -34557,7 +34949,7 @@ GameObject:
   - component: {fileID: 1500244214}
   m_Layer: 0
   m_Name: ConcreteWall (91)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -34817,11 +35209,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4642071716736936, guid: c88b3f5bdf99c7b44bdf15603810fac0, type: 2}
       propertyPath: m_RootOrder
-      value: 17
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 1291365007720284, guid: c88b3f5bdf99c7b44bdf15603810fac0, type: 2}
       propertyPath: m_Name
       value: BrokenConcreteWall
+      objectReference: {fileID: 0}
+    - target: {fileID: 1291365007720284, guid: c88b3f5bdf99c7b44bdf15603810fac0, type: 2}
+      propertyPath: m_TagString
+      value: Stone
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c88b3f5bdf99c7b44bdf15603810fac0, type: 2}
@@ -34940,7 +35336,7 @@ Transform:
   - {fileID: 1174042982}
   - {fileID: 2107976895}
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1515438113
 GameObject:
@@ -35105,7 +35501,7 @@ GameObject:
   - component: {fileID: 1515975300}
   m_Layer: 0
   m_Name: ConcreteWall (124)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -35363,6 +35759,10 @@ Prefab:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 1028570426954240, guid: b701a07fa610c5241881d9edce73273f, type: 2}
+      propertyPath: m_TagString
+      value: Stone
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b701a07fa610c5241881d9edce73273f, type: 2}
   m_IsPrefabParent: 0
@@ -35470,7 +35870,7 @@ Transform:
   - {fileID: 651229860}
   - {fileID: 262069964}
   m_Father: {fileID: 0}
-  m_RootOrder: 26
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1533296444
 GameObject:
@@ -35536,7 +35936,7 @@ Transform:
   m_Children:
   - {fileID: 625618967}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 44.688004, y: -50.744003, z: -75.819}
 --- !u!1001 &1533497422
 Prefab:
@@ -35577,6 +35977,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 24
       objectReference: {fileID: 0}
+    - target: {fileID: 1422566728064298, guid: 22ab403c7338cd34c9347659ab7df073, type: 2}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 22ab403c7338cd34c9347659ab7df073, type: 2}
   m_IsPrefabParent: 0
@@ -35593,7 +35997,7 @@ GameObject:
   - component: {fileID: 1535184364}
   m_Layer: 0
   m_Name: ConcreteWall (132)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -35808,7 +36212,7 @@ GameObject:
   - component: {fileID: 1549179802}
   m_Layer: 0
   m_Name: ConcreteWall (127)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -36014,7 +36418,7 @@ GameObject:
   - component: {fileID: 1552292020}
   m_Layer: 0
   m_Name: ConcreteWall (61)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -36282,6 +36686,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 43.792004
       objectReference: {fileID: 0}
+    - target: {fileID: 1704764247940412, guid: d00a5aff3d286734da0a5efd43c01556, type: 2}
+      propertyPath: m_TagString
+      value: Stone
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d00a5aff3d286734da0a5efd43c01556, type: 2}
   m_IsPrefabParent: 0
@@ -36303,7 +36711,7 @@ GameObject:
   - component: {fileID: 1559047510}
   m_Layer: 0
   m_Name: ConcreteWall (131)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -36598,7 +37006,7 @@ GameObject:
   - component: {fileID: 1563870273}
   m_Layer: 0
   m_Name: ConcreteWall (126)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -36728,6 +37136,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: cc68082c0d8d1974dacbfc7efb47488d, type: 2}
+    - target: {fileID: 1122268874836352, guid: db6b693f27a548d409a21337f586dbee, type: 2}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: db6b693f27a548d409a21337f586dbee, type: 2}
   m_IsPrefabParent: 0
@@ -36899,7 +37311,7 @@ GameObject:
   - component: {fileID: 1580010506}
   m_Layer: 0
   m_Name: ConcreteWall (37)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -37038,7 +37450,7 @@ GameObject:
   - component: {fileID: 1583187031}
   m_Layer: 0
   m_Name: ConcreteWall (67)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -37255,7 +37667,7 @@ GameObject:
   - component: {fileID: 1597003758}
   m_Layer: 0
   m_Name: ConcreteWall (14)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -37437,6 +37849,10 @@ Prefab:
     - target: {fileID: 4720028698538036, guid: c711da9b0037b38449a2d0202a2de72c, type: 2}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1454597080538844, guid: c711da9b0037b38449a2d0202a2de72c, type: 2}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c711da9b0037b38449a2d0202a2de72c, type: 2}
@@ -37772,6 +38188,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90.811005
       objectReference: {fileID: 0}
+    - target: {fileID: 1454597080538844, guid: c711da9b0037b38449a2d0202a2de72c, type: 2}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c711da9b0037b38449a2d0202a2de72c, type: 2}
   m_IsPrefabParent: 0
@@ -37854,6 +38274,10 @@ Prefab:
     - target: {fileID: 100000, guid: 1a0eb12c05a4d824ea4fe25fd69f4d15, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 1a0eb12c05a4d824ea4fe25fd69f4d15, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1a0eb12c05a4d824ea4fe25fd69f4d15, type: 3}
@@ -38092,7 +38516,7 @@ Transform:
   m_Children:
   - {fileID: 1627009146}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &1625281297
 Rigidbody:
@@ -38380,7 +38804,7 @@ GameObject:
   - component: {fileID: 1648062860}
   m_Layer: 0
   m_Name: ConcreteWall (35)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -38446,7 +38870,7 @@ GameObject:
   - component: {fileID: 1648489804}
   m_Layer: 0
   m_Name: ConcreteWall (107)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -38512,7 +38936,7 @@ GameObject:
   - component: {fileID: 1653657960}
   m_Layer: 0
   m_Name: ConcreteWall (64)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -38673,7 +39097,7 @@ Transform:
   - {fileID: 1491595755}
   - {fileID: 746437440}
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1663379879
 GameObject:
@@ -38688,7 +39112,7 @@ GameObject:
   - component: {fileID: 1663379882}
   m_Layer: 0
   m_Name: ConcreteWall (72)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -38829,7 +39253,7 @@ GameObject:
   - component: {fileID: 1668235991}
   m_Layer: 0
   m_Name: ConcreteWall (12)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -38895,7 +39319,7 @@ GameObject:
   - component: {fileID: 1670010685}
   m_Layer: 0
   m_Name: ConcreteWall (79)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -39006,6 +39430,10 @@ Prefab:
     - target: {fileID: 1301119333561918, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1301119333561918, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
+      propertyPath: m_TagString
+      value: Stone
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
@@ -39153,7 +39581,7 @@ Transform:
   - {fileID: 966681567}
   - {fileID: 1620414508}
   m_Father: {fileID: 0}
-  m_RootOrder: 32
+  m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1679189574
 GameObject:
@@ -39267,11 +39695,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4107800311326152, guid: 116fa98da69e11e40837c3563b70b389, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1572213073625306, guid: 116fa98da69e11e40837c3563b70b389, type: 2}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1572213073625306, guid: 116fa98da69e11e40837c3563b70b389, type: 2}
+      propertyPath: m_TagString
+      value: Stone
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 116fa98da69e11e40837c3563b70b389, type: 2}
@@ -39294,7 +39726,7 @@ GameObject:
   - component: {fileID: 1685404265}
   m_Layer: 0
   m_Name: ConcreteWall (114)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -39511,7 +39943,7 @@ GameObject:
   - component: {fileID: 1697961521}
   m_Layer: 0
   m_Name: ConcreteWall (116)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -39601,7 +40033,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4967499227456274, guid: 5c34d0fedaa95f14fa478ce165e54cd6, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1506086925546700, guid: 5c34d0fedaa95f14fa478ce165e54cd6, type: 2}
       propertyPath: m_Name
@@ -39618,6 +40050,10 @@ Prefab:
     - target: {fileID: 4406130793425326, guid: 5c34d0fedaa95f14fa478ce165e54cd6, type: 2}
       propertyPath: m_LocalPosition.z
       value: 0.031
+      objectReference: {fileID: 0}
+    - target: {fileID: 1506086925546700, guid: 5c34d0fedaa95f14fa478ce165e54cd6, type: 2}
+      propertyPath: m_TagString
+      value: Stone
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114561021141321590, guid: 5c34d0fedaa95f14fa478ce165e54cd6, type: 2}
@@ -39764,6 +40200,10 @@ Prefab:
     - target: {fileID: 4712905693827384, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 34.977
+      objectReference: {fileID: 0}
+    - target: {fileID: 1301119333561918, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
+      propertyPath: m_TagString
+      value: Stone
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
@@ -39974,6 +40414,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1301119333561918, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
+      propertyPath: m_TagString
+      value: Stone
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
   m_IsPrefabParent: 0
@@ -39995,7 +40439,7 @@ GameObject:
   - component: {fileID: 1717478717}
   m_Layer: 0
   m_Name: ConcreteWall (5)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -40053,39 +40497,39 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1208710426}
     m_Modifications:
     - target: {fileID: 4720028698538036, guid: c711da9b0037b38449a2d0202a2de72c, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 21.967
+      value: 3.5981808
       objectReference: {fileID: 0}
     - target: {fileID: 4720028698538036, guid: c711da9b0037b38449a2d0202a2de72c, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.70023
+      value: 0.17920862
       objectReference: {fileID: 0}
     - target: {fileID: 4720028698538036, guid: c711da9b0037b38449a2d0202a2de72c, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -5.2252
+      value: 3.955921
       objectReference: {fileID: 0}
     - target: {fileID: 4720028698538036, guid: c711da9b0037b38449a2d0202a2de72c, type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0.0000001333275
+      value: 0.37314126
       objectReference: {fileID: 0}
     - target: {fileID: 4720028698538036, guid: c711da9b0037b38449a2d0202a2de72c, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0.6326806
+      value: 0.53293914
       objectReference: {fileID: 0}
     - target: {fileID: 4720028698538036, guid: c711da9b0037b38449a2d0202a2de72c, type: 2}
       propertyPath: m_LocalRotation.z
-      value: -0.7744129
+      value: -0.7247529
       objectReference: {fileID: 0}
     - target: {fileID: 4720028698538036, guid: c711da9b0037b38449a2d0202a2de72c, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 0.00000016319537
+      value: 0.22688054
       objectReference: {fileID: 0}
     - target: {fileID: 4720028698538036, guid: c711da9b0037b38449a2d0202a2de72c, type: 2}
       propertyPath: m_RootOrder
-      value: 38
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 1454597080538844, guid: c711da9b0037b38449a2d0202a2de72c, type: 2}
       propertyPath: m_Name
@@ -40105,19 +40549,24 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4720028698538036, guid: c711da9b0037b38449a2d0202a2de72c, type: 2}
       propertyPath: m_LocalScale.x
-      value: 0.8515686
+      value: 0.8515687
       objectReference: {fileID: 0}
     - target: {fileID: 4720028698538036, guid: c711da9b0037b38449a2d0202a2de72c, type: 2}
       propertyPath: m_LocalScale.y
-      value: 0.8515678
+      value: 0.851568
       objectReference: {fileID: 0}
     - target: {fileID: 4720028698538036, guid: c711da9b0037b38449a2d0202a2de72c, type: 2}
       propertyPath: m_LocalScale.z
-      value: 0.8515678
+      value: 0.851568
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c711da9b0037b38449a2d0202a2de72c, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &1722473115 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4720028698538036, guid: c711da9b0037b38449a2d0202a2de72c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1722473114}
 --- !u!1 &1723839327
 GameObject:
   m_ObjectHideFlags: 0
@@ -40154,7 +40603,7 @@ Transform:
   - {fileID: 1618912914}
   - {fileID: 1601833855}
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1725631258
 GameObject:
@@ -40242,7 +40691,7 @@ GameObject:
   - component: {fileID: 1727164855}
   m_Layer: 0
   m_Name: ConcreteWall (74)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -40332,7 +40781,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4246572928997754, guid: bab10bc61a541f944af15b6609ff4169, type: 2}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1792087209162454, guid: bab10bc61a541f944af15b6609ff4169, type: 2}
       propertyPath: m_Name
@@ -40462,6 +40911,66 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -3.5970001
       objectReference: {fileID: 0}
+    - target: {fileID: 1903473507521898, guid: bab10bc61a541f944af15b6609ff4169, type: 2}
+      propertyPath: m_TagString
+      value: Stone
+      objectReference: {fileID: 0}
+    - target: {fileID: 1552611165697162, guid: bab10bc61a541f944af15b6609ff4169, type: 2}
+      propertyPath: m_TagString
+      value: Stone
+      objectReference: {fileID: 0}
+    - target: {fileID: 1953065026555820, guid: bab10bc61a541f944af15b6609ff4169, type: 2}
+      propertyPath: m_TagString
+      value: Stone
+      objectReference: {fileID: 0}
+    - target: {fileID: 1767362664158698, guid: bab10bc61a541f944af15b6609ff4169, type: 2}
+      propertyPath: m_TagString
+      value: Stone
+      objectReference: {fileID: 0}
+    - target: {fileID: 1047261756944716, guid: bab10bc61a541f944af15b6609ff4169, type: 2}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
+    - target: {fileID: 1229735539618652, guid: bab10bc61a541f944af15b6609ff4169, type: 2}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
+    - target: {fileID: 1252435643826286, guid: bab10bc61a541f944af15b6609ff4169, type: 2}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
+    - target: {fileID: 1694886977453228, guid: bab10bc61a541f944af15b6609ff4169, type: 2}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
+    - target: {fileID: 1569098431603868, guid: bab10bc61a541f944af15b6609ff4169, type: 2}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
+    - target: {fileID: 1865525756590546, guid: bab10bc61a541f944af15b6609ff4169, type: 2}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
+    - target: {fileID: 1039043751288168, guid: bab10bc61a541f944af15b6609ff4169, type: 2}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
+    - target: {fileID: 1365108356036244, guid: bab10bc61a541f944af15b6609ff4169, type: 2}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
+    - target: {fileID: 1558830880226090, guid: bab10bc61a541f944af15b6609ff4169, type: 2}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
+    - target: {fileID: 1851726573199502, guid: bab10bc61a541f944af15b6609ff4169, type: 2}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
+    - target: {fileID: 1481015446068194, guid: bab10bc61a541f944af15b6609ff4169, type: 2}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bab10bc61a541f944af15b6609ff4169, type: 2}
   m_IsPrefabParent: 0
@@ -40478,7 +40987,7 @@ GameObject:
   - component: {fileID: 1733325654}
   m_Layer: 0
   m_Name: ConcreteWall (76)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -40598,6 +41107,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 34.977
       objectReference: {fileID: 0}
+    - target: {fileID: 1301119333561918, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
+      propertyPath: m_TagString
+      value: Stone
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
   m_IsPrefabParent: 0
@@ -40619,7 +41132,7 @@ GameObject:
   - component: {fileID: 1735524167}
   m_Layer: 0
   m_Name: ConcreteWall (98)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -40685,7 +41198,7 @@ GameObject:
   - component: {fileID: 1736115889}
   m_Layer: 0
   m_Name: ConcreteWall (135)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -40804,6 +41317,10 @@ Prefab:
     - target: {fileID: 4534768090903956, guid: d00a5aff3d286734da0a5efd43c01556, type: 2}
       propertyPath: m_LocalScale.z
       value: 0.90156996
+      objectReference: {fileID: 0}
+    - target: {fileID: 1704764247940412, guid: d00a5aff3d286734da0a5efd43c01556, type: 2}
+      propertyPath: m_TagString
+      value: Stone
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d00a5aff3d286734da0a5efd43c01556, type: 2}
@@ -40971,6 +41488,10 @@ Prefab:
       propertyPath: m_LocalPosition.z
       value: -0.089
       objectReference: {fileID: 0}
+    - target: {fileID: 1924468463751812, guid: 13b5653da76edac419456af17f2e6f4a, type: 2}
+      propertyPath: m_TagString
+      value: Stone
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 13b5653da76edac419456af17f2e6f4a, type: 2}
   m_IsPrefabParent: 0
@@ -41062,6 +41583,10 @@ Prefab:
     - target: {fileID: 1945887465905496, guid: 400157da2cdd9be40ba53d15c673d974, type: 2}
       propertyPath: m_Name
       value: BendedSandBag Prefab (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1945887465905496, guid: 400157da2cdd9be40ba53d15c673d974, type: 2}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 400157da2cdd9be40ba53d15c673d974, type: 2}
@@ -41337,7 +41862,7 @@ GameObject:
   - component: {fileID: 1760544579}
   m_Layer: 0
   m_Name: BrokenConcreteWall (3)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -41492,6 +42017,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.0063636377
       objectReference: {fileID: 0}
+    - target: {fileID: 1945887465905496, guid: 400157da2cdd9be40ba53d15c673d974, type: 2}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 400157da2cdd9be40ba53d15c673d974, type: 2}
   m_IsPrefabParent: 0
@@ -41510,7 +42039,7 @@ GameObject:
   - component: {fileID: 1764143478}
   m_Layer: 0
   m_Name: Rocks
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -41539,7 +42068,7 @@ Transform:
   - {fileID: 122472669}
   - {fileID: 1915117370}
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: -72.26601, y: -54.976, z: 58.731003}
 --- !u!1 &1765181780
 GameObject:
@@ -41773,7 +42302,7 @@ GameObject:
   - component: {fileID: 1775726909}
   m_Layer: 0
   m_Name: BrokenConcreteWall (4)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -42258,55 +42787,60 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1208710426}
     m_Modifications:
     - target: {fileID: 4720028698538036, guid: c711da9b0037b38449a2d0202a2de72c, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 21.933
+      value: 2.8338282
       objectReference: {fileID: 0}
     - target: {fileID: 4720028698538036, guid: c711da9b0037b38449a2d0202a2de72c, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.86633
+      value: 0.47966173
       objectReference: {fileID: 0}
     - target: {fileID: 4720028698538036, guid: c711da9b0037b38449a2d0202a2de72c, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -4.23
+      value: 4.5429997
       objectReference: {fileID: 0}
     - target: {fileID: 4720028698538036, guid: c711da9b0037b38449a2d0202a2de72c, type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0.00000014901163
+      value: 0.3485247
       objectReference: {fileID: 0}
     - target: {fileID: 4720028698538036, guid: c711da9b0037b38449a2d0202a2de72c, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0.70710677
+      value: 0.60289055
       objectReference: {fileID: 0}
     - target: {fileID: 4720028698538036, guid: c711da9b0037b38449a2d0202a2de72c, type: 2}
       propertyPath: m_LocalRotation.z
-      value: -0.70710677
+      value: -0.6676929
       objectReference: {fileID: 0}
     - target: {fileID: 4720028698538036, guid: c711da9b0037b38449a2d0202a2de72c, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 0.00000014901163
+      value: 0.26313442
       objectReference: {fileID: 0}
     - target: {fileID: 4720028698538036, guid: c711da9b0037b38449a2d0202a2de72c, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 4720028698538036, guid: c711da9b0037b38449a2d0202a2de72c, type: 2}
       propertyPath: m_LocalScale.x
-      value: 0.8515686
+      value: 0.8515683
       objectReference: {fileID: 0}
     - target: {fileID: 4720028698538036, guid: c711da9b0037b38449a2d0202a2de72c, type: 2}
       propertyPath: m_LocalScale.y
-      value: 0.8515678
+      value: 0.8515677
       objectReference: {fileID: 0}
     - target: {fileID: 4720028698538036, guid: c711da9b0037b38449a2d0202a2de72c, type: 2}
       propertyPath: m_LocalScale.z
-      value: 0.8515678
+      value: 0.8515677
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c711da9b0037b38449a2d0202a2de72c, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &1792176360 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4720028698538036, guid: c711da9b0037b38449a2d0202a2de72c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1792176359}
 --- !u!1 &1793781223
 GameObject:
   m_ObjectHideFlags: 0
@@ -42320,7 +42854,7 @@ GameObject:
   - component: {fileID: 1793781226}
   m_Layer: 0
   m_Name: ConcreteWall (17)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -42661,6 +43195,10 @@ Prefab:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 1301119333561918, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
+      propertyPath: m_TagString
+      value: Stone
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
   m_IsPrefabParent: 0
@@ -42863,7 +43401,7 @@ GameObject:
   - component: {fileID: 1819712675}
   m_Layer: 0
   m_Name: ConcreteWall (11)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -43031,7 +43569,7 @@ GameObject:
   - component: {fileID: 1825252409}
   m_Layer: 0
   m_Name: ConcreteWall (70)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -43247,7 +43785,7 @@ GameObject:
   - component: {fileID: 1837106460}
   m_Layer: 0
   m_Name: ConcreteWall (46)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -43453,6 +43991,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 34.977
       objectReference: {fileID: 0}
+    - target: {fileID: 1301119333561918, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
+      propertyPath: m_TagString
+      value: Stone
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
   m_IsPrefabParent: 0
@@ -43628,6 +44170,10 @@ Prefab:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 99b3622d9bd9eed45b0a620227d49d4e, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 99b3622d9bd9eed45b0a620227d49d4e, type: 3}
   m_IsPrefabParent: 0
@@ -43718,6 +44264,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 55.227
       objectReference: {fileID: 0}
+    - target: {fileID: 1704764247940412, guid: d00a5aff3d286734da0a5efd43c01556, type: 2}
+      propertyPath: m_TagString
+      value: Stone
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d00a5aff3d286734da0a5efd43c01556, type: 2}
   m_IsPrefabParent: 0
@@ -43739,7 +44289,7 @@ GameObject:
   - component: {fileID: 1850534831}
   m_Layer: 0
   m_Name: ConcreteWall (111)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -43805,7 +44355,7 @@ GameObject:
   - component: {fileID: 1855680499}
   m_Layer: 0
   m_Name: ConcreteWall (75)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -44019,7 +44569,7 @@ GameObject:
   - component: {fileID: 1863103948}
   m_Layer: 0
   m_Name: ConcreteWall (69)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -44085,7 +44635,7 @@ GameObject:
   - component: {fileID: 1868142103}
   m_Layer: 0
   m_Name: ConcreteWall (96)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -44301,7 +44851,7 @@ GameObject:
   - component: {fileID: 1872607117}
   m_Layer: 0
   m_Name: ConcreteWall (58)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -44994,7 +45544,7 @@ GameObject:
   - component: {fileID: 1919699122}
   m_Layer: 0
   m_Name: ConcreteWall (78)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -45193,6 +45743,10 @@ Prefab:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 1301119333561918, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
+      propertyPath: m_TagString
+      value: Stone
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
   m_IsPrefabParent: 0
@@ -45375,6 +45929,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -323.203
       objectReference: {fileID: 0}
+    - target: {fileID: 1301119333561918, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
+      propertyPath: m_TagString
+      value: Stone
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
   m_IsPrefabParent: 0
@@ -45396,7 +45954,7 @@ GameObject:
   - component: {fileID: 1957870381}
   m_Layer: 0
   m_Name: ConcreteWall (40)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -45703,7 +46261,7 @@ Transform:
   - {fileID: 1888619019}
   - {fileID: 225023344}
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1973792203
 GameObject:
@@ -45866,7 +46424,7 @@ GameObject:
   - component: {fileID: 1983301614}
   m_Layer: 0
   m_Name: ConcreteWall (129)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -46657,6 +47215,10 @@ Prefab:
       propertyPath: m_LocalPosition.y
       value: 0.501
       objectReference: {fileID: 0}
+    - target: {fileID: 1771384553525290, guid: 9c25121fd179d8e4abecc1bb18ae7ab6, type: 2}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9c25121fd179d8e4abecc1bb18ae7ab6, type: 2}
   m_IsPrefabParent: 0
@@ -46990,7 +47552,7 @@ GameObject:
   - component: {fileID: 2016308487}
   m_Layer: 0
   m_Name: ConcreteWall (28)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -47131,7 +47693,7 @@ GameObject:
   - component: {fileID: 2022804269}
   m_Layer: 0
   m_Name: ConcreteWall (105)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -47310,7 +47872,7 @@ Transform:
   - {fileID: 193829838}
   - {fileID: 1838757633}
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: -72.26601, y: 35.293003, z: 58.731003}
 --- !u!1 &2029736609
 GameObject:
@@ -47473,7 +48035,7 @@ GameObject:
   - component: {fileID: 2031690242}
   m_Layer: 0
   m_Name: ConcreteWall (6)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -47611,7 +48173,7 @@ GameObject:
   - component: {fileID: 2037643171}
   m_Layer: 0
   m_Name: ConcreteWall (60)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -47804,7 +48366,7 @@ GameObject:
   - component: {fileID: 2047188506}
   m_Layer: 0
   m_Name: ConcreteWall (68)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -47870,7 +48432,7 @@ GameObject:
   - component: {fileID: 2047523961}
   m_Layer: 0
   m_Name: ConcreteWall (102)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -48159,7 +48721,7 @@ GameObject:
   - component: {fileID: 2056588533}
   m_Layer: 0
   m_Name: ConcreteWall (1)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -48265,6 +48827,10 @@ Prefab:
     - target: {fileID: 100000, guid: 1a0eb12c05a4d824ea4fe25fd69f4d15, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 1a0eb12c05a4d824ea4fe25fd69f4d15, type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1a0eb12c05a4d824ea4fe25fd69f4d15, type: 3}
@@ -48452,7 +49018,7 @@ GameObject:
   - component: {fileID: 2072848479}
   m_Layer: 0
   m_Name: ConcreteWall (9)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -48524,7 +49090,7 @@ GameObject:
   - component: {fileID: 2083905016}
   m_Layer: 0
   m_Name: Concrete Wall
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -48858,7 +49424,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4560971650613190, guid: bb1edd6b5593e2d47b4ea52fc35fcb3c, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1416977674018026, guid: bb1edd6b5593e2d47b4ea52fc35fcb3c, type: 2}
       propertyPath: m_Name
@@ -48879,6 +49445,22 @@ Prefab:
     - target: {fileID: 4597038620423680, guid: bb1edd6b5593e2d47b4ea52fc35fcb3c, type: 2}
       propertyPath: m_LocalPosition.z
       value: 0.902
+      objectReference: {fileID: 0}
+    - target: {fileID: 1638976244252552, guid: bb1edd6b5593e2d47b4ea52fc35fcb3c, type: 2}
+      propertyPath: m_TagString
+      value: Stone
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705671699133110, guid: bb1edd6b5593e2d47b4ea52fc35fcb3c, type: 2}
+      propertyPath: m_TagString
+      value: Stone
+      objectReference: {fileID: 0}
+    - target: {fileID: 1204195666317166, guid: bb1edd6b5593e2d47b4ea52fc35fcb3c, type: 2}
+      propertyPath: m_TagString
+      value: Stone
+      objectReference: {fileID: 0}
+    - target: {fileID: 1193441522831204, guid: bb1edd6b5593e2d47b4ea52fc35fcb3c, type: 2}
+      propertyPath: m_TagString
+      value: Stone
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bb1edd6b5593e2d47b4ea52fc35fcb3c, type: 2}
@@ -48954,6 +49536,10 @@ Prefab:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 1301119333561918, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
+      propertyPath: m_TagString
+      value: Stone
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
   m_IsPrefabParent: 0
@@ -49012,6 +49598,10 @@ Prefab:
       propertyPath: m_LocalPosition.y
       value: -0.018
       objectReference: {fileID: 0}
+    - target: {fileID: 1416977674018026, guid: bb1edd6b5593e2d47b4ea52fc35fcb3c, type: 2}
+      propertyPath: m_TagString
+      value: Stone
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bb1edd6b5593e2d47b4ea52fc35fcb3c, type: 2}
   m_IsPrefabParent: 0
@@ -49050,7 +49640,7 @@ GameObject:
   - component: {fileID: 2108383660}
   m_Layer: 0
   m_Name: ConcreteWall (31)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -49146,6 +49736,10 @@ Prefab:
       propertyPath: m_LocalPosition.y
       value: -0.033
       objectReference: {fileID: 0}
+    - target: {fileID: 1924468463751812, guid: 13b5653da76edac419456af17f2e6f4a, type: 2}
+      propertyPath: m_TagString
+      value: Stone
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 13b5653da76edac419456af17f2e6f4a, type: 2}
   m_IsPrefabParent: 0
@@ -49222,6 +49816,10 @@ Prefab:
       propertyPath: m_LocalPosition.y
       value: 0.096
       objectReference: {fileID: 0}
+    - target: {fileID: 1416977674018026, guid: bb1edd6b5593e2d47b4ea52fc35fcb3c, type: 2}
+      propertyPath: m_TagString
+      value: Stone
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bb1edd6b5593e2d47b4ea52fc35fcb3c, type: 2}
   m_IsPrefabParent: 0
@@ -49260,7 +49858,7 @@ GameObject:
   - component: {fileID: 2113364658}
   m_Layer: 0
   m_Name: ConcreteWall (2)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -49528,6 +50126,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 34.977
       objectReference: {fileID: 0}
+    - target: {fileID: 1301119333561918, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
+      propertyPath: m_TagString
+      value: Stone
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
   m_IsPrefabParent: 0
@@ -49668,6 +50270,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 193.57199
       objectReference: {fileID: 0}
+    - target: {fileID: 1704764247940412, guid: d00a5aff3d286734da0a5efd43c01556, type: 2}
+      propertyPath: m_TagString
+      value: Stone
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d00a5aff3d286734da0a5efd43c01556, type: 2}
   m_IsPrefabParent: 0
@@ -49689,7 +50295,7 @@ GameObject:
   - component: {fileID: 2126600960}
   m_Layer: 0
   m_Name: ConcreteWall (7)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -49792,6 +50398,10 @@ Prefab:
     - target: {fileID: 4712905693827384, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1301119333561918, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
+      propertyPath: m_TagString
+      value: Stone
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 31d124e025a024a4f8abcef0d070ee48, type: 2}
@@ -49992,7 +50602,7 @@ Transform:
   - {fileID: 1034946144}
   - {fileID: 426865800}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2131074334
 GameObject:
@@ -50007,7 +50617,7 @@ GameObject:
   - component: {fileID: 2131074337}
   m_Layer: 0
   m_Name: ConcreteWall (121)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -50073,7 +50683,7 @@ GameObject:
   - component: {fileID: 2131100854}
   m_Layer: 0
   m_Name: ConcreteWall (86)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -50412,6 +51022,10 @@ Prefab:
     - target: {fileID: 4670670095362098, guid: 9c25121fd179d8e4abecc1bb18ae7ab6, type: 2}
       propertyPath: m_LocalScale.z
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1771384553525290, guid: 9c25121fd179d8e4abecc1bb18ae7ab6, type: 2}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9c25121fd179d8e4abecc1bb18ae7ab6, type: 2}
