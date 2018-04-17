@@ -101,6 +101,7 @@ public class Shooting : MonoBehaviour {
 	}
 	//switches weapon
 	public void SwitchWeapon () { //scroll and a value goes up and scroll in a list of weapons, if hit limit of list goes back to 0
+
         if (!reloading)
         {
             if (Input.GetKeyDown(switchkey))
@@ -184,9 +185,32 @@ public class Shooting : MonoBehaviour {
 	}
 	//Will fill your magazine again with bullets
 	private void Reload () {
+<<<<<<< HEAD
         if (!switching)
         {
             if (Input.GetButtonDown("Reload") && anim.GetBool("FA") == false)
+=======
+		if(Input.GetButtonDown("Reload") && anim.GetBool("FA") == false {
+
+			if(!mp40) {
+				
+				pistolCurrentAmmo = pistolMagAmmo;
+				
+            }
+			if(mp40) { 
+				
+				//calculates with math that it won't grab ammo that doesn't exist
+				int extraFilling = mp40MagAmmo - mp40CurrentAmmo;
+
+				if(mp40AmmoTotal < extraFilling)
+				{
+					extraFilling = mp40AmmoTotal;
+				}
+				mp40CurrentAmmo += extraFilling;
+				mp40AmmoTotal -= extraFilling;		
+			}
+            if (!reloading)
+>>>>>>> origin/master
             {
 
                 if (!mp40)
