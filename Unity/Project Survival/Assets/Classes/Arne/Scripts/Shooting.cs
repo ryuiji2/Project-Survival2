@@ -100,22 +100,27 @@ public class Shooting : MonoBehaviour {
 	}
 	//switches weapon
 	public void SwitchWeapon () { //scroll and a value goes up and scroll in a list of weapons, if hit limit of list goes back to 0
+        if (!reloading)
+        {
+            if (Input.GetKeyDown(switchkey))
+            {
 
-		if(Input.GetKeyDown(switchkey)) {
+                if (mp40 == false)
+                {
 
-			if(mp40 == false) {
+                    _Weapon = Weapon.Mp40;
 
-				_Weapon = Weapon.Mp40;
+                    //maybe other guns false
+                }
+                if (mp40 == true)
+                {
 
-				//maybe other guns false
-			}
-			if(mp40 == true) {
-
-				_Weapon = Weapon.Pistol;
-			}
-			WeaponState();
-            anim.SetBool("MP40", mp40);
-            anim.SetTrigger("Switch");
+                    _Weapon = Weapon.Pistol;
+                }
+                WeaponState();
+                anim.SetBool("MP40", mp40);
+                anim.SetTrigger("Switch");
+            }
         }
 	}
 	//updates the current ammo values in UIManager
