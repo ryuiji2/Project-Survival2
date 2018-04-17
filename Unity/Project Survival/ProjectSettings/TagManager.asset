@@ -9,6 +9,8 @@ TagManager:
   - deathZone
   - Body
   - Head
+  - Stone
+  - Wood
   layers:
   - Default
   - TransparentFX
