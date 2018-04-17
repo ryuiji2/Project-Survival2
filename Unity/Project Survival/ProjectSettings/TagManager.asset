@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - deathZone
   - Body
+  - Head
   layers:
   - Default
   - TransparentFX

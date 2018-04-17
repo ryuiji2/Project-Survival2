@@ -847,7 +847,7 @@ GameObject:
   - component: {fileID: 136108870382217808}
   m_Layer: 0
   m_Name: Head
-  m_TagString: Untagged
+  m_TagString: Head
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -894,7 +894,7 @@ GameObject:
   - component: {fileID: 136387098439203128}
   m_Layer: 0
   m_Name: Helmet
-  m_TagString: Untagged
+  m_TagString: Head
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
