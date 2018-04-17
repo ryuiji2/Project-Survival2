@@ -100,6 +100,7 @@ public class Shooting : MonoBehaviour {
 	}
 	//switches weapon
 	public void SwitchWeapon () { //scroll and a value goes up and scroll in a list of weapons, if hit limit of list goes back to 0
+
         if (!reloading)
         {
             if (Input.GetKeyDown(switchkey))
@@ -183,7 +184,7 @@ public class Shooting : MonoBehaviour {
 	}
 	//Will fill your magazine again with bullets
 	private void Reload () {
-		if(Input.GetButtonDown("Reload") && anim.GetBool("FA") == false) {
+		if(Input.GetButtonDown("Reload") && anim.GetBool("FA") == false {
 
 			if(!mp40) {
 				
