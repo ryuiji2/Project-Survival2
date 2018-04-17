@@ -10,25 +10,14 @@ public class UIManager : MonoBehaviour
 	/*
 	ENEMIES LEFT	
 
-
+	
 
 		BUGS:
 
 	WHEN PRESS QUIT GAME, KILL ENEMIES (ELSE IN MAINMENU, YOU SEE ZOMBIES), RESET CAMERA VIEW(MAYBE RANDOM POSITIONS?)
 	MAKE IT REPLAY FRIENDLY
 
-	Ammo full en dan reload fucks shit up  	(Tom)
-
-	Niet kunnen reloaden terwijl je aimed. 	FIXED
-
-	Kunnen schieten voordat je je wapen gepakt hebt.	(Tom)
-
-	in mainmenu kan je zombies zien, als je exit vanuit ingame(edited)  FIXED
-
-	en animaties moeten gereset worden vanuit ingame naar mainmenu 	FIXED
-
-	armen en guns moeten niet zichtbaar zijn in mainmenu 	FIXED
-
+	RETRY AMMO ISNT RESET
 
 
 	*/
@@ -41,6 +30,7 @@ public class UIManager : MonoBehaviour
 	public CameraLook camLook;
 	public Movement playerMove;
 	public Manager manager;
+
 
 	//HUD
 	public Image healthBar;
@@ -72,7 +62,8 @@ public class UIManager : MonoBehaviour
 
 	//Score
 	public int currentScore;
-
+	public Text bonusScore;
+	
 
 	//Misc
 	private GameObject playerAnimator;
@@ -103,7 +94,7 @@ public class UIManager : MonoBehaviour
 	//constantly updates
 	private void Update () {
 
-        PressEscape ();
+        PressEscape();
 		ClockingTime();	
 	}
 	//Updates state of ui
@@ -315,6 +306,7 @@ public class UIManager : MonoBehaviour
 	//checks score and updates ui
 	public void CheckScore (int points) {
 
+		//not immediatly but, slowly points go down and score goes up
 		currentScore += points;
 		scoreText.text = "Score: " + currentScore;
 	}
