@@ -41,6 +41,7 @@ public class Shooting : MonoBehaviour {
     //Animation
     public Animator anim;
     public bool reloading;
+    public bool switching;
 
 
     //sets cursorstate and other variables that need a certain value at start of game
@@ -104,7 +105,7 @@ public class Shooting : MonoBehaviour {
         {
             if (Input.GetKeyDown(switchkey))
             {
-
+                switching = true;
                 if (mp40 == false)
                 {
 
@@ -183,32 +184,38 @@ public class Shooting : MonoBehaviour {
 	}
 	//Will fill your magazine again with bullets
 	private void Reload () {
-		if(Input.GetButtonDown("Reload") && anim.GetBool("FA") == false) {
-
-			if(!mp40) {
-				
-				pistolCurrentAmmo = pistolMagAmmo;
-				
-            }
-			if(mp40) { 
-				
-				//calculates with math that it won't grab ammo that doesn't exist
-				int extraFilling = mp40MagAmmo - mp40CurrentAmmo;
-
-				if(mp40AmmoTotal < extraFilling)
-				{
-					extraFilling = mp40AmmoTotal;
-				}
-				mp40CurrentAmmo += extraFilling;
-				mp40AmmoTotal -= extraFilling;		
-			}
-            if (!reloading)
+        if (!switching)
+        {
+            if (Input.GetButtonDown("Reload") && anim.GetBool("FA") == false)
             {
-                anim.SetTrigger("Reload");
+
+                if (!mp40)
+                {
+
+                    pistolCurrentAmmo = pistolMagAmmo;
+
+                }
+                if (mp40)
+                {
+
+                    //calculates with math that it won't grab ammo that doesn't exist
+                    int extraFilling = mp40MagAmmo - mp40CurrentAmmo;
+
+                    if (mp40AmmoTotal < extraFilling)
+                    {
+                        extraFilling = mp40AmmoTotal;
+                    }
+                    mp40CurrentAmmo += extraFilling;
+                    mp40AmmoTotal -= extraFilling;
+                }
+                if (!reloading)
+                {
+                    anim.SetTrigger("Reload");
+                }
+                reloading = true;
+                SendAmmoValues();
             }
-            reloading = true;
-            SendAmmoValues();
-		}
+        }
 	}
 	//shoots and hit
 	private void Shoot () {

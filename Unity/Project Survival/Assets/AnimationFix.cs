@@ -19,4 +19,9 @@ public class AnimationFix : MonoBehaviour
         }
         else shootRef.block = false;
     }
+
+    public void Switch()
+    {
+        shootRef.switching = false;
+    }
 }
