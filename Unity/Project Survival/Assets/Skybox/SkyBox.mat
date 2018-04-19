@@ -85,8 +85,8 @@ Material:
     - _Parallax: 0.02
     - _SSX: -1
     - _SSY: 0.5
-    - _SliderOne: 0.7892265
-    - _SliderTwo: 0.21077491
+    - _SliderOne: 0.42143765
+    - _SliderTwo: 0.57856214
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
