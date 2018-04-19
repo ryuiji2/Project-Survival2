@@ -85,8 +85,18 @@ Material:
     - _Parallax: 0.02
     - _SSX: -1
     - _SSY: 0.5
+<<<<<<< HEAD
     - _SliderOne: 0.6641422
     - _SliderTwo: 0.33585876
+=======
+<<<<<<< HEAD
+    - _SliderOne: 0.42143765
+    - _SliderTwo: 0.57856214
+=======
+    - _SliderOne: 0.099816285
+    - _SliderTwo: 0.9001836
+>>>>>>> parent of b850584... Checking and fixing scenes and bugs
+>>>>>>> 44ce34df68681f71be6436fba2c89324f605221e
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
