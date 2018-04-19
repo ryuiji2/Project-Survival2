@@ -13,6 +13,7 @@ public class Shooting : MonoBehaviour {
 	public Weapon _Weapon;
     public bool mp40;
 	public int pistolCurrentAmmo, pistolMagAmmo, pistolAmmoTotal, mp40CurrentAmmo, mp40MagAmmo, mp40AmmoTotal;
+    public int pistolStandardAmmo, pistolStandardMag, mp40StandardAmmo, mp40StandardMag;
 	public int pistolDMG, mp40DMG;
 
 	//USE INHERITANCE?
@@ -51,12 +52,18 @@ public class Shooting : MonoBehaviour {
     //sets cursorstate and other variables that need a certain value at start of game
     private void Awake () {
 
-        
         uim = GameObject.Find("Canvas").GetComponent<UIManager>();//gives error needs to be manually put in
 		fireRate = fireRateTime;
 
 		pistolCurrentAmmo = pistolMagAmmo; //needs to be how much you picked
 		mp40CurrentAmmo = mp40MagAmmo;
+
+        pistolStandardAmmo = pistolAmmoTotal;
+        pistolStandardMag = pistolMagAmmo;
+
+        mp40StandardAmmo = mp40AmmoTotal;
+        mp40StandardMag = mp40MagAmmo;
+
         anim.SetBool("FA", true);
 
 
@@ -68,6 +75,7 @@ public class Shooting : MonoBehaviour {
     }
 	// Update is called once per frame
 	private void Update () {
+        
 		if(!block)
 		{
 			CheckInput();
@@ -331,6 +339,22 @@ public class Shooting : MonoBehaviour {
             }
 		}
 	}
+    //resets ammo to standard values
+    public void ResetGuns () {
+
+        pistolCurrentAmmo = pistolStandardMag;
+        pistolAmmoTotal = pistolStandardAmmo;
+        pistolMagAmmo = pistolStandardMag;
+
+        mp40CurrentAmmo = mp40StandardMag;
+        mp40AmmoTotal = mp40StandardAmmo;
+        mp40MagAmmo = mp40StandardMag;
+
+        _Weapon = Weapon.Pistol;
+        mp40 = false;
+
+        SendAmmoValues();
+    }
     private void PlayAnimation (bool state) {
 
         if(state && !reloadAnim.isPlaying) {

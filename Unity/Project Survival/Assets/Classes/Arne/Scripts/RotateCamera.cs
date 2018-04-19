@@ -12,6 +12,10 @@ public class RotateCamera : MonoBehaviour {
 
 		cam = GameObject.Find("Camera");
 	}
+	private void OnEnable () {
+
+		cam.transform.rotation = Quaternion.identity;
+	}
 	//constantly rotates
 	void FixedUpdate () 
 	{

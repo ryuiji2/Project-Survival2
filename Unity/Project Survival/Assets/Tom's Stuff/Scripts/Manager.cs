@@ -17,8 +17,11 @@ public class Manager : MonoBehaviour {
 	private GameObject player;
 	private PlayerStats playerStats;
 
+	private Shooting shootScript;
+
 	private void Awake () {
 
+		shootScript = GameObject.Find("Gun").GetComponent<Shooting>();
 		wave = GameObject.Find("WaveManager").GetComponent<Wave>();
 		uim = GameObject.Find("Canvas").GetComponent<UIManager>();
 
@@ -40,9 +43,11 @@ public class Manager : MonoBehaviour {
 
 		//reset Highscore, Timer, Wave, Enemies, Playerhealth
 		uim.currentScore = 0;
+		uim.CheckScore(uim.currentScore);
 		uim.ResetTimer();
 		uim.wave.ResetEnemies();
 		playerStats.PlayerReset();
+		shootScript.ResetGuns();
 	}
 	public void SetTimeScale (int scale) { //needed?
 

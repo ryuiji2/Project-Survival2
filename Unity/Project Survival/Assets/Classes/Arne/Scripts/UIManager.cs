@@ -8,16 +8,8 @@ public class UIManager : MonoBehaviour
 {
 	//Things to be added:
 	/*
-	ENEMIES LEFT	
-
-	
-
-		BUGS:
-
-	WHEN PRESS QUIT GAME, KILL ENEMIES (ELSE IN MAINMENU, YOU SEE ZOMBIES), RESET CAMERA VIEW(MAYBE RANDOM POSITIONS?)
-	MAKE IT REPLAY FRIENDLY
-
-	RETRY AMMO ISNT RESET
+	ENEMIES LEFT
+	XML HIGHSCORES
 
 
 	*/
@@ -127,8 +119,9 @@ public class UIManager : MonoBehaviour
 			    List<RectTransform> ingameList = new List<RectTransform>() {ingame};
 			    EnableMenuItems(ingame);
 
+				manager.ResetHUD();
 			    playerAnimator.SetActive(true);
-			    manager.ResetHUD();		
+			    		
 			    SwitchCursorState(true);
 
 			    SetTimer(true); 

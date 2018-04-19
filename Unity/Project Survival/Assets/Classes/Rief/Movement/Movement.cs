@@ -6,7 +6,7 @@ public class Movement : MonoBehaviour {
 
     public float moveSpeed;
     public float rotateSpeed;
-    private bool canJump;
+    public bool canJump;
     public int jumpHeight = 3; //hoog zetten, werkt anders niet heel goed. 300 werkte prima.
 
     public bool block;
