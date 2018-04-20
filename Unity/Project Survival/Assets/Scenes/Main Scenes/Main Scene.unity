@@ -12707,63 +12707,6 @@ Prefab:
       propertyPath: regenBar
       value: 
       objectReference: {fileID: 1996853001}
-<<<<<<< HEAD
-    - target: {fileID: 114178952523607314, guid: 94fb53afb3619a8419c842f4837dcc39,
-        type: 2}
-      propertyPath: jumpHeight
-      value: 2
-=======
-    - target: {fileID: 198332397650580028, guid: 94fb53afb3619a8419c842f4837dcc39,
-        type: 2}
-      propertyPath: InitialModule.startColor.maxColor.a
-      value: 0.19607843
-      objectReference: {fileID: 0}
-    - target: {fileID: 198332397650580028, guid: 94fb53afb3619a8419c842f4837dcc39,
-        type: 2}
-      propertyPath: randomSeed
-      value: 922734747
-      objectReference: {fileID: 0}
-    - target: {fileID: 198332397650580028, guid: 94fb53afb3619a8419c842f4837dcc39,
-        type: 2}
-      propertyPath: InitialModule.startColor.maxColor.r
-      value: 0.2352941
-      objectReference: {fileID: 0}
-    - target: {fileID: 198332397650580028, guid: 94fb53afb3619a8419c842f4837dcc39,
-        type: 2}
-      propertyPath: InitialModule.startColor.maxColor.g
-      value: 0.2352941
-      objectReference: {fileID: 0}
-    - target: {fileID: 198332397650580028, guid: 94fb53afb3619a8419c842f4837dcc39,
-        type: 2}
-      propertyPath: InitialModule.startColor.maxColor.b
-      value: 0.2352941
-      objectReference: {fileID: 0}
-    - target: {fileID: 198081493133245714, guid: 94fb53afb3619a8419c842f4837dcc39,
-        type: 2}
-      propertyPath: InitialModule.startColor.maxColor.a
-      value: 0.19607843
-      objectReference: {fileID: 0}
-    - target: {fileID: 198081493133245714, guid: 94fb53afb3619a8419c842f4837dcc39,
-        type: 2}
-      propertyPath: randomSeed
-      value: -1725006524
-      objectReference: {fileID: 0}
-    - target: {fileID: 198081493133245714, guid: 94fb53afb3619a8419c842f4837dcc39,
-        type: 2}
-      propertyPath: InitialModule.startColor.maxColor.r
-      value: 0.23529412
-      objectReference: {fileID: 0}
-    - target: {fileID: 198081493133245714, guid: 94fb53afb3619a8419c842f4837dcc39,
-        type: 2}
-      propertyPath: InitialModule.startColor.maxColor.g
-      value: 0.23529412
-      objectReference: {fileID: 0}
-    - target: {fileID: 198081493133245714, guid: 94fb53afb3619a8419c842f4837dcc39,
-        type: 2}
-      propertyPath: InitialModule.startColor.maxColor.b
-      value: 0.23529412
->>>>>>> a121f45df2ea799cd1d00cbf25c1b51f873037f6
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 94fb53afb3619a8419c842f4837dcc39, type: 2}
   m_IsPrefabParent: 0
@@ -17945,71 +17888,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 977734615}
   m_Mesh: {fileID: 4300004, guid: 01c17f5dc5fe34a42980a5195c551075, type: 3}
---- !u!1 &983221983
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 983221985}
-  - component: {fileID: 983221984}
-  m_Layer: 0
-  m_Name: Directional light
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!108 &983221984
-Light:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 983221983}
-  m_Enabled: 1
-  serializedVersion: 8
-  m_Type: 1
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
-  m_Range: 10
-  m_SpotAngle: 30
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 0
-    m_Resolution: -1
-    m_CustomResolution: -1
-    m_Strength: 1
-    m_Bias: 0.05
-    m_NormalBias: 0.4
-    m_NearPlane: 0.2
-  m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
-  m_Flare: {fileID: 0}
-  m_RenderMode: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_Lightmapping: 4
-  m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
-  m_ColorTemperature: 6570
-  m_UseColorTemperature: 0
-  m_ShadowRadius: 0
-  m_ShadowAngle: 0
---- !u!4 &983221985
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 983221983}
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 5.752691, y: 0.7048135, z: 20.521463}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 21
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &984148649
 GameObject:
   m_ObjectHideFlags: 0
@@ -26490,7 +26368,7 @@ GameObject:
   - component: {fileID: 1384425466}
   m_Layer: 0
   m_Name: Ground
-  m_TagString: Ground
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
