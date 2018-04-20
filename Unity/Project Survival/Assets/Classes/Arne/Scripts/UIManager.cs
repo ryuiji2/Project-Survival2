@@ -59,6 +59,7 @@ public class UIManager : MonoBehaviour
 
 	//Misc
 	private GameObject playerAnimator;
+	
 
 	//sets some things ready
 	private void Awake () {

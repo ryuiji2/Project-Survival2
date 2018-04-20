@@ -167,6 +167,7 @@ public class EnemyStats : MonoBehaviour {
     public void PlayAnimation (bool state) {
 
         if(state) {
+        
             Debug.Log("play");
             scoreAnim.Play();
         }

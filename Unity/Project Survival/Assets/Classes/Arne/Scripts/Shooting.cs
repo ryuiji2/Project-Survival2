@@ -304,22 +304,28 @@ public class Shooting : MonoBehaviour {
                 if (hit.collider.tag == "Enemy" && hit.collider.isTrigger == false) {
 
                     enemy.EnemyHealth (damage);
+                    uim.bonusScore.text = bodyPoints.ToString();
+		            uim.CheckScore(bodyPoints);
+                    
                     //particles
                     //score to ui 
                     Instantiate(enemyHit, hit.point, Quaternion.FromToRotation (Vector3.up, hit.normal));
-
+                    enemy.PlayAnimation(true);
                     //wait before doing this
                     uim.CheckScore(bodyPoints);
                 }
                 if (hit.collider.tag == "Head") {
                     
                     enemy.EnemyHealth (damage * damageMulti);
+
+                    uim.bonusScore.text = headShotPoints.ToString();
                     //particles
                     Instantiate(enemyHit, hit.point, Quaternion.FromToRotation (Vector3.up, hit.normal));
                     //score to ui with animation
                     //points go down and score goes up
-
+                    enemy.PlayAnimation(true);
                     uim.CheckScore(headShotPoints);
+                    
                 } 
                 if(hit.collider.tag == "Wood") {
 
