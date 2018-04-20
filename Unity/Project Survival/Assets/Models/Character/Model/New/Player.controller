@@ -932,7 +932,7 @@ AnimatorState:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Handgun zoom in
-  m_Speed: 2
+  m_Speed: 5
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 1101809761968955906}
@@ -1090,7 +1090,7 @@ AnimatorState:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Handgun reload
-  m_Speed: 2
+  m_Speed: 1.5
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 1101044721079116636}
@@ -1144,7 +1144,7 @@ AnimatorState:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Handgun zoom out
-  m_Speed: -1
+  m_Speed: -5
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 1101545100036074160}
