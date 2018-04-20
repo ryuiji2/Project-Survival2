@@ -12712,6 +12712,7 @@ Prefab:
       propertyPath: regenBar
       value: 
       objectReference: {fileID: 1996853001}
+<<<<<<< HEAD
     - target: {fileID: 198332397650580028, guid: 94fb53afb3619a8419c842f4837dcc39,
         type: 2}
       propertyPath: InitialModule.startColor.maxColor.a
@@ -12796,6 +12797,8 @@ Prefab:
       propertyPath: mp40StandardMag
       value: 40
       objectReference: {fileID: 0}
+=======
+>>>>>>> origin/master
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 94fb53afb3619a8419c842f4837dcc39, type: 2}
   m_IsPrefabParent: 0
@@ -26468,7 +26471,7 @@ GameObject:
   - component: {fileID: 1384425466}
   m_Layer: 0
   m_Name: Ground
-  m_TagString: Ground
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
