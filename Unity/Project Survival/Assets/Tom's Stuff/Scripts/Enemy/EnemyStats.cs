@@ -166,6 +166,11 @@ public class EnemyStats : MonoBehaviour {
 	}
     public void PlayAnimation (bool state) {
 
+        if(scoreAnim.isPlaying) {
+
+            
+            scoreAnim.Rewind();
+        }
         if(state) {
         
             Debug.Log("play");
