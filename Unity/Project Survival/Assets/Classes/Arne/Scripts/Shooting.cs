@@ -52,7 +52,7 @@ public class Shooting : MonoBehaviour {
     //sets cursorstate and other variables that need a certain value at start of game
     private void Awake () {
 
-        uim = GameObject.Find("Canvas").GetComponent<UIManager>();//gives error needs to be manually put in
+        //uim = GameObject.Find("Canvas").GetComponent<UIManager>();//gives error needs to be manually put in
 		fireRate = fireRateTime;
 
 		pistolCurrentAmmo = pistolMagAmmo; //needs to be how much you picked
@@ -75,7 +75,6 @@ public class Shooting : MonoBehaviour {
     }
 	// Update is called once per frame
 	private void Update () {
-        
 		if(!block)
 		{
 			CheckInput();

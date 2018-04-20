@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -17,11 +17,11 @@ public class Manager : MonoBehaviour {
 	private GameObject player;
 	private PlayerStats playerStats;
 
-	private Shooting shootScript;
+	public Shooting shootScript;
 
 	private void Awake () {
 
-		shootScript = GameObject.Find("Gun").GetComponent<Shooting>();
+		//shootScript = GameObject.FindWithTag("Gun").GetComponent<Shooting>();
 		wave = GameObject.Find("WaveManager").GetComponent<Wave>();
 		uim = GameObject.Find("Canvas").GetComponent<UIManager>();
 

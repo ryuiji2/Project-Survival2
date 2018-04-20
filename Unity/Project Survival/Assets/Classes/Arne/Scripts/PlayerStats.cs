@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,7 +12,7 @@ public class PlayerStats : MonoBehaviour {
 	public float maxHP;
 	public float health;
 	public float healthPercentage;
-	UIManager uim;
+	public UIManager uim;
 
 	public Vector3 startPos;
 
@@ -20,7 +20,7 @@ public class PlayerStats : MonoBehaviour {
 
 	private void Awake () {
 
-		uim = GameObject.Find("Canvas").GetComponent<UIManager>(); //gives error needs to be manually put in
+		//uim = GameObject.FindWithTag("Canvas").GetComponent<UIManager>(); //gives error needs to be manually put in
 		maxHP = 100;
 		health = maxHP;
 		startPos = transform.position;

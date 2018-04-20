@@ -62,13 +62,13 @@ public class UIManager : MonoBehaviour
 
 	//sets some things ready
 	private void Awake () {
-
         manager = GameObject.Find("GameManager").GetComponent<Manager>();
 		player = GameObject.Find("Player");
 		cam = GameObject.Find("Camera");
 		playerAnimator = GameObject.Find("PlayerAnimator");
 
-        shootScript = GameObject.Find ("Gun").GetComponent<Shooting> ();
+        //shootScript = GameObject.FindWithTag("Gun").GetComponent<Shooting> ();
+        print(shootScript);
         wave = GameObject.Find("WaveManager").GetComponent<Wave>();
 
 		camLook = cam.GetComponent<CameraLook>();
@@ -81,7 +81,7 @@ public class UIManager : MonoBehaviour
         
 		CheckScore(currentScore); //so it updates in ui
 		ResetTimer();
-		CheckUIState();
+        CheckUIState();
 	}
 	//constantly updates
 	private void Update () {
@@ -91,26 +91,22 @@ public class UIManager : MonoBehaviour
 	}
 	//Updates state of ui
 	private void CheckUIState () {
-
-		switch (_UIState) {
+        switch (_UIState) {
 
             case UIState.MainMenu:
-            
+                
                 //playeranimator disabled
 		        playerAnimator.SetActive(false);
-			    //get ready everything for mainmenu and needs to loop 
-
-			    manager.SetTimeScale(1);	//standard value probably not needed
+                //get ready everything for mainmenu and needs to loop 
+                manager.SetTimeScale(1);	//standard value probably not needed
 
 			    List<RectTransform> mainmenulist = new List<RectTransform>() {mainMenu};
 			    EnableMenuItems(mainmenulist);
-
 			    BlockMovement(true);
 			    SwitchCursorState(false);
 			    playerStats.PlayerReset();
 			    SetTimer(false);
-
-			    //manager.KillEnemies(); 
+                //manager.KillEnemies(); 
 
                 break;
 

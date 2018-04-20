@@ -9356,6 +9356,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114889359641058020, guid: c2587966b28ace7478cdd9f436e5101c,
+        type: 2}
+      propertyPath: shootScript
+      value: 
+      objectReference: {fileID: 793620532}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c2587966b28ace7478cdd9f436e5101c, type: 2}
   m_IsPrefabParent: 0
@@ -12757,6 +12762,40 @@ Prefab:
       propertyPath: InitialModule.startColor.maxColor.b
       value: 0.23529412
       objectReference: {fileID: 0}
+    - target: {fileID: 1860957049955950, guid: 94fb53afb3619a8419c842f4837dcc39, type: 2}
+      propertyPath: m_TagString
+      value: Gun
+      objectReference: {fileID: 0}
+    - target: {fileID: 114358284315283064, guid: 94fb53afb3619a8419c842f4837dcc39,
+        type: 2}
+      propertyPath: uim
+      value: 
+      objectReference: {fileID: 731673728}
+    - target: {fileID: 114314356301676296, guid: 94fb53afb3619a8419c842f4837dcc39,
+        type: 2}
+      propertyPath: uim
+      value: 
+      objectReference: {fileID: 731673728}
+    - target: {fileID: 114314356301676296, guid: 94fb53afb3619a8419c842f4837dcc39,
+        type: 2}
+      propertyPath: pistolStandardAmmo
+      value: 999
+      objectReference: {fileID: 0}
+    - target: {fileID: 114314356301676296, guid: 94fb53afb3619a8419c842f4837dcc39,
+        type: 2}
+      propertyPath: pistolStandardMag
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114314356301676296, guid: 94fb53afb3619a8419c842f4837dcc39,
+        type: 2}
+      propertyPath: mp40StandardAmmo
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 114314356301676296, guid: 94fb53afb3619a8419c842f4837dcc39,
+        type: 2}
+      propertyPath: mp40StandardMag
+      value: 40
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 94fb53afb3619a8419c842f4837dcc39, type: 2}
   m_IsPrefabParent: 0
@@ -13880,6 +13919,12 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 0}
+--- !u!114 &793620532 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114314356301676296, guid: 94fb53afb3619a8419c842f4837dcc39,
+    type: 2}
+  m_PrefabInternal: {fileID: 739695080}
+  m_Script: {fileID: 11500000, guid: 2bd7d058d2373e04582c8a884925f037, type: 3}
 --- !u!1 &794826208
 GameObject:
   m_ObjectHideFlags: 0
@@ -14396,7 +14441,7 @@ Prefab:
     - target: {fileID: 114778218996884514, guid: 55e66937a3a0c46429e2bb8e9dd2222a,
         type: 2}
       propertyPath: _UIState
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1773189346118140, guid: 55e66937a3a0c46429e2bb8e9dd2222a, type: 2}
       propertyPath: m_IsActive
@@ -14585,6 +14630,11 @@ Prefab:
       propertyPath: bonusScore
       value: 
       objectReference: {fileID: 1151720720}
+    - target: {fileID: 114778218996884514, guid: 55e66937a3a0c46429e2bb8e9dd2222a,
+        type: 2}
+      propertyPath: shootScript
+      value: 
+      objectReference: {fileID: 793620532}
     m_RemovedComponents:
     - {fileID: 95020832328604212, guid: 55e66937a3a0c46429e2bb8e9dd2222a, type: 2}
     - {fileID: 95337760562894186, guid: 55e66937a3a0c46429e2bb8e9dd2222a, type: 2}

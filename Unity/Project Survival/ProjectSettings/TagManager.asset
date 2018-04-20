@@ -11,6 +11,7 @@ TagManager:
   - Head
   - Stone
   - Wood
+  - Gun
   layers:
   - Default
   - TransparentFX
