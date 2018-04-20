@@ -36,7 +36,6 @@ public class EnemyStats : MonoBehaviour {
     public Animation scoreAnim;
 
     public bool oneTime;
-    private bool getHit = true;
 
 
 	private void Awake () {
@@ -87,9 +86,7 @@ public class EnemyStats : MonoBehaviour {
         if (Physics.Raycast (new Vector3 (transform.position.x, transform.position.y + 1, transform.position.z), transform.forward, out hit, attackRange, mask)) {
             anim.SetBool ("InRange", true);
             if (timer <= 0f && health > 0) {
-                //agent.isStopped = true;
-                agent.speed = 0;
-                print("stop");
+                agent.isStopped = true;
 
                 whichAttack = Random.Range (0, 1);
 
@@ -107,10 +104,9 @@ public class EnemyStats : MonoBehaviour {
             }
         } else {
             if (!anim.GetCurrentAnimatorStateInfo (0).IsName ("Attack")) {
-                print ("no longer attacking");
                 anim.SetBool ("InRange", false);
                 if (agent != null && health> 0) {
-                    agent.speed = 1.5f;
+                    agent.isStopped = false;
                 }
             }
             }
@@ -119,12 +115,13 @@ public class EnemyStats : MonoBehaviour {
 	public void EnemyHealth (float dmg) {
 
         health -= dmg;
-        if (health <= 0f && getHit == true) {
-                GetComponentInChildren<Collider> ().isTrigger = true;
-                agent.enabled = false;
-                AmmoDrop ();
-                wave.currEnemy--;
-                getHit = false;
+        if (health <= 0f) {
+
+            GetComponentInChildren<Collider> ().isTrigger = true;
+            agent.enabled = false;
+            AmmoDrop ();
+            wave.currEnemy--;
+
         }
         //stagger?
     }
