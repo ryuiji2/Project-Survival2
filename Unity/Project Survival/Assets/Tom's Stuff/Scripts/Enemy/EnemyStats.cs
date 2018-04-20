@@ -9,6 +9,7 @@ public class EnemyStats : MonoBehaviour {
     //random range voor attack
 
 	[Range(100f,0f)]
+
 	public float health = 100f;
 	public float damage = 10f;
     public float deathTimer;
@@ -38,9 +39,10 @@ public class EnemyStats : MonoBehaviour {
     public bool oneTime;
 
     private bool canTakeDmg = true;
+    public List<Collider> gates = new List<Collider> ();
 
 
-	private void Awake () {
+    private void Awake () {
 
         scoreAnim = GameObject.Find("Plus Score").GetComponent<Animation>();
 		regen = GameObject.Find("Player").GetComponent<Regeneration>();
@@ -63,7 +65,11 @@ public class EnemyStats : MonoBehaviour {
 			wave.ResetEnemies();
 			Death();
 		}
-	}
+
+        foreach (Collider c in gates) {
+            Physics.IgnoreCollision (c, gameObject.GetComponentInChildren<Collider> ());
+        }
+    }
 	public void FixedUpdate () {
         
 

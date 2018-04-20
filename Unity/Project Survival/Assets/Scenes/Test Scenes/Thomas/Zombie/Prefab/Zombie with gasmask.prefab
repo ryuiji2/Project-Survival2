@@ -2463,6 +2463,11 @@ MonoBehaviour:
   deathPoints: 100
   scoreAnim: {fileID: 0}
   oneTime: 0
+  gates:
+  - {fileID: 65657870026194574, guid: c21dd5a0475936845a8fcf74a0df7c89, type: 2}
+  - {fileID: 65467734758023398, guid: ebaf3d4b69519e04f8bab8ba574f3d69, type: 2}
+  - {fileID: 65932900205699430, guid: 8713dcfbc00ac7c458f68be3b95f3ecc, type: 2}
+  - {fileID: 65287934786107416, guid: 03be90f2b33fb4a47baca9c29fa9e4ae, type: 2}
 --- !u!114 &114236876760592208
 MonoBehaviour:
   m_ObjectHideFlags: 1
