@@ -24,6 +24,8 @@ public class AnimationFix : MonoBehaviour
     public void Switch()
     {
         shootRef.switching = false;
+        shootRef.block = false;
+        print(shootRef.block);
     }
 
     public void Shoot(float f)

@@ -132,6 +132,7 @@ public class Shooting : MonoBehaviour {
                     _Weapon = Weapon.Pistol;
                 }
                 WeaponState();
+                block = true;
                 anim.SetBool("MP40", mp40);
                 anim.SetTrigger("Switch");
             }
