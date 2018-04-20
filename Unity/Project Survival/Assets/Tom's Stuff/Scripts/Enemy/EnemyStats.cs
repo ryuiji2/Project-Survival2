@@ -40,7 +40,7 @@ public class EnemyStats : MonoBehaviour {
 
 	private void Awake () {
 
-        //scoreAnim = GameObject.Find("Plus Score").GetComponent<Animation>();
+        scoreAnim = GameObject.Find("Plus Score").GetComponent<Animation>();
 		regen = GameObject.Find("Player").GetComponent<Regeneration>();
 		player = GameObject.Find("Player").GetComponent<PlayerStats>();
 		wave = GameObject.Find("WaveManager").GetComponent<Wave>();
