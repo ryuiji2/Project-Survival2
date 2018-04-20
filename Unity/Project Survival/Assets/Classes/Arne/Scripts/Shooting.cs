@@ -329,12 +329,16 @@ public class Shooting : MonoBehaviour {
                     ParticleSystem ps = Instantiate(envWoodhit, hit.point, Quaternion.identity);
                     ps.Play();
                 }
-                if(hit.collider.tag == "Stone" || hit.collider.tag == "Ground") {
+                if(hit.collider.tag == "Stone" || hit.collider.tag == "Ground") { //NEVER FINDS GROUND TAG
 
                     Debug.Log("Stone");
                     Instantiate (bulletHole, hit.point, Quaternion.FromToRotation (Vector3.up, hit.normal));
                     ParticleSystem ps = Instantiate(envStonehit, hit.point, Quaternion.identity);
                     ps.Play();
+                }
+                else if(hit.collider.tag == "Untagged") { //dont work...
+
+                    Instantiate(bulletHole, hit.point, Quaternion.FromToRotation (Vector3.up, hit.normal));   
                 }
             }
 		}
@@ -351,9 +355,7 @@ public class Shooting : MonoBehaviour {
         mp40MagAmmo = mp40StandardMag;
 
         _Weapon = Weapon.Pistol;
-        mp40 = false;
-
-        SendAmmoValues();
+        WeaponState();
     }
     private void PlayAnimation (bool state) {
 
@@ -362,9 +364,10 @@ public class Shooting : MonoBehaviour {
             Debug.Log("Play");
             reloadAnim.Play();
         }
-        if(!state) {
+        if(!state && !reloadAnim.isPlaying) {
             
             reloadAnim.Stop();
+           
             Debug.Log("stop anim");
         }
     }

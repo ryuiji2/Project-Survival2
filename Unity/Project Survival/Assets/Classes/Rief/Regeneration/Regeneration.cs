@@ -73,9 +73,9 @@ public class Regeneration : MonoBehaviour {
             regenIcon.Play();
         }
         if(!state) {
-            
+
             regenBar.Stop();
-            regenIcon.Stop();
+            regenIcon.Stop(); 
         }
     }
 }
