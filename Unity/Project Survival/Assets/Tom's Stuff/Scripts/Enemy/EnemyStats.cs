@@ -37,6 +37,8 @@ public class EnemyStats : MonoBehaviour {
 
     public bool oneTime;
 
+    private bool canTakeDmg = true;
+
 
 	private void Awake () {
 
@@ -115,12 +117,13 @@ public class EnemyStats : MonoBehaviour {
 	public void EnemyHealth (float dmg) {
 
         health -= dmg;
-        if (health <= 0f) {
+        if (health <= 0f && canTakeDmg == true) {
 
             GetComponentInChildren<Collider> ().isTrigger = true;
             agent.enabled = false;
             AmmoDrop ();
             wave.currEnemy--;
+            canTakeDmg = false;
 
         }
         //stagger?
