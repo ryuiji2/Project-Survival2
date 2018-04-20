@@ -644,7 +644,7 @@ GameObject:
   m_TagString: Wood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &27691104
 Transform:
@@ -4311,12 +4311,12 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 153226649}
-  m_LocalRotation: {x: 0.13702634, y: 0.89762944, z: 0.37973565, w: -0.17687856}
-  m_LocalPosition: {x: 6.3143, y: 0.78179, z: 0.14379}
-  m_LocalScale: {x: 0.3822001, y: 0.46547967, z: 0.5492105}
+  m_LocalRotation: {x: -0.10202851, y: -0.22837202, z: 0.19034052, w: 0.9493192}
+  m_LocalPosition: {x: -16.460793, y: 11.27531, z: 2.26283}
+  m_LocalScale: {x: 0.35779232, y: 0.39142624, z: 0.42632034}
   m_Children: []
-  m_Father: {fileID: 2083529751}
-  m_RootOrder: 2
+  m_Father: {fileID: 414961924}
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: -46.903004, y: 198.20699, z: 9.406}
 --- !u!95 &153226651
 Animator:
@@ -4605,7 +4605,7 @@ GameObject:
   m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &160787560
 Transform:
@@ -9677,7 +9677,7 @@ GameObject:
   m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &246201729
 Transform:
@@ -11651,7 +11651,7 @@ GameObject:
   m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &295143661
 Transform:
@@ -18246,6 +18246,9 @@ Transform:
   - {fileID: 1027054343}
   - {fileID: 2060064250}
   - {fileID: 1486245546}
+  - {fileID: 815629836}
+  - {fileID: 1916683079}
+  - {fileID: 153226650}
   m_Father: {fileID: 1066486215}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -19377,7 +19380,7 @@ GameObject:
   m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &462958801
 Transform:
@@ -19621,7 +19624,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &468012072
 Transform:
@@ -20789,7 +20792,7 @@ GameObject:
   m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &506084932
 Transform:
@@ -21049,7 +21052,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &512069732
 Transform:
@@ -22533,7 +22536,7 @@ GameObject:
   m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &561420618
 Transform:
@@ -23254,7 +23257,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &583034039
 Transform:
@@ -23816,7 +23819,7 @@ GameObject:
   m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &598187826
 Transform:
@@ -25380,7 +25383,7 @@ GameObject:
   m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &651761965
 Transform:
@@ -26348,7 +26351,7 @@ GameObject:
   m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &670835230
 Transform:
@@ -30466,12 +30469,12 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 815629835}
-  m_LocalRotation: {x: -0.14554128, y: 0.8765683, z: 0.3338667, w: -0.3146092}
-  m_LocalPosition: {x: -1.0981866, y: 0.25045964, z: 0.15067725}
-  m_LocalScale: {x: 0.5228448, y: 0.6367687, z: 0.751311}
+  m_LocalRotation: {x: -0, y: 0.00000010430811, z: -0.000000089406946, w: 1}
+  m_LocalPosition: {x: -10.494572, y: 11.232362, z: 5.4695225}
+  m_LocalScale: {x: 0.5303843, y: 0.53038204, z: 0.5303841}
   m_Children: []
-  m_Father: {fileID: 2083529751}
-  m_RootOrder: 0
+  m_Father: {fileID: 414961924}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 34.925003, y: 164.516, z: 34.029003}
 --- !u!95 &815629837
 Animator:
@@ -35048,7 +35051,7 @@ GameObject:
   m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &861078422
 Transform:
@@ -35749,7 +35752,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &889558506
 Transform:
@@ -38077,7 +38080,7 @@ GameObject:
   m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &968000569
 Transform:
@@ -40720,7 +40723,7 @@ GameObject:
   m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1052211601
 Transform:
@@ -45238,7 +45241,7 @@ GameObject:
   m_TagString: Wood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1083956398
 Transform:
@@ -45578,7 +45581,7 @@ GameObject:
   m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1094402609
 Transform:
@@ -47005,7 +47008,7 @@ GameObject:
   m_TagString: Wood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1135618593
 Transform:
@@ -47531,7 +47534,7 @@ GameObject:
   m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1151419512
 Transform:
@@ -47801,7 +47804,7 @@ GameObject:
   m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1156483263
 Transform:
@@ -52830,7 +52833,7 @@ GameObject:
   m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1224888937
 Transform:
@@ -54030,7 +54033,7 @@ GameObject:
   m_TagString: Wood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1272386431
 Transform:
@@ -55106,7 +55109,7 @@ GameObject:
   m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1307762891
 Transform:
@@ -56094,7 +56097,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1333178053
 Transform:
@@ -60244,7 +60247,7 @@ GameObject:
   m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1357267726
 Transform:
@@ -60509,7 +60512,7 @@ GameObject:
   m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1363672847
 Transform:
@@ -66753,7 +66756,7 @@ GameObject:
   m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1447231879
 Transform:
@@ -74494,7 +74497,7 @@ GameObject:
   m_TagString: Wood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1685477812
 Transform:
@@ -74777,7 +74780,7 @@ GameObject:
   m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1701294285
 Transform:
@@ -76392,7 +76395,7 @@ GameObject:
   m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1746503302
 Transform:
@@ -77956,7 +77959,7 @@ GameObject:
   m_TagString: Wood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1803497601
 Transform:
@@ -80816,7 +80819,7 @@ GameObject:
   m_TagString: Wood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1912736815
 Transform:
@@ -81026,12 +81029,13 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1916683078}
-  m_LocalRotation: {x: -0.14554133, y: 0.8765682, z: 0.33386672, w: -0.31460917}
-  m_LocalPosition: {x: -2.983, y: -9.485, z: 0.176}
-  m_LocalScale: {x: 0.52284265, y: 0.63676673, z: 0.7513098}
+  m_LocalRotation: {x: -0.000000014901159, y: 0.0000000745058, z: -0.00000008940696,
+    w: 1}
+  m_LocalPosition: {x: -4.4358826, y: 5.3597646, z: 2.9290614}
+  m_LocalScale: {x: 0.53038144, y: 0.5303804, z: 0.53038263}
   m_Children: []
-  m_Father: {fileID: 2083529751}
-  m_RootOrder: 1
+  m_Father: {fileID: 414961924}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 34.925003, y: 164.516, z: 34.029003}
 --- !u!95 &1916683080
 Animator:
@@ -82901,7 +82905,7 @@ GameObject:
   m_TagString: Wood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1979979033
 Transform:
@@ -83301,7 +83305,7 @@ GameObject:
   m_TagString: Wood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1994502356
 Transform:
@@ -89371,7 +89375,7 @@ GameObject:
   m_TagString: Wood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &2082233167
 Transform:
@@ -89669,7 +89673,7 @@ GameObject:
   m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &2083529751
 Transform:
@@ -89681,10 +89685,7 @@ Transform:
   m_LocalRotation: {x: -0.58272207, y: -0.39527744, z: -0.39860445, w: 0.5876269}
   m_LocalPosition: {x: 3.585, y: -0.058, z: 6.459}
   m_LocalScale: {x: 1.2000005, y: 1.2000005, z: 1.2000003}
-  m_Children:
-  - {fileID: 815629836}
-  - {fileID: 1916683079}
-  - {fileID: 153226650}
+  m_Children: []
   m_Father: {fileID: 1066486215}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: -89.520004, y: -0.001, z: -68.3}
@@ -90209,7 +90210,7 @@ GameObject:
   m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &2110939801
 Transform:
