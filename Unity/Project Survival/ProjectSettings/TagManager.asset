@@ -12,6 +12,7 @@ TagManager:
   - Stone
   - Wood
   - Gun
+  - AmmoDrop
   layers:
   - Default
   - TransparentFX

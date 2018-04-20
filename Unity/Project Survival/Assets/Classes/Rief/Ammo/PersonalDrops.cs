@@ -20,11 +20,11 @@ public class PersonalDrops : MonoBehaviour {
             Destroy (drop.gameObject);
         }
         if(drop.transform.tag == "Finish") {
-            StartCoroutine (InstaKill());
+            /*StartCoroutine (InstaKill());*/
         }
     }
 
-    IEnumerator InstaKill () {
+    /*IEnumerator InstaKill () {
         foreach (EnemyStats enemy in wave.zombieStats) {
             enemyHealth = enemy.health;
             enemy.health = 1;
@@ -34,5 +34,5 @@ public class PersonalDrops : MonoBehaviour {
         foreach (EnemyStats enemy in wave.zombieStats) {
             enemy.health = enemyHealth;
         }
-    }
+    }*/
 }
