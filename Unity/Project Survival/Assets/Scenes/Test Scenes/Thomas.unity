@@ -12960,7 +12960,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81058b27c9420ac42a34b0ddf6b584a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  material: {fileID: 2100000, guid: f90f9762718653641b9c2de178042e8b, type: 2}
+  material: {fileID: 2100000, guid: 7f782f900ca9bad49a2a844153c27ea0, type: 2}
   boolA: 1
   boolB: 0
   timeMultiplier: 0.2
@@ -37549,7 +37549,7 @@ Prefab:
     - target: {fileID: 2300000, guid: 57a72d8f46641244081f4cf5f60c612f, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: f90f9762718653641b9c2de178042e8b, type: 2}
+      objectReference: {fileID: 2100000, guid: 7f782f900ca9bad49a2a844153c27ea0, type: 2}
     - target: {fileID: 9500000, guid: 57a72d8f46641244081f4cf5f60c612f, type: 3}
       propertyPath: m_Controller
       value: 
@@ -41071,6 +41071,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 6
   rotateSpeed: 5
+  canJump: 0
   jumpHeight: 3
   block: 0
 --- !u!4 &1625281296
