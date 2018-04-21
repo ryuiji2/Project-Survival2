@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -11,8 +11,7 @@ public class EnemyMovement : MonoBehaviour {
 	public Transform player;	// Assign in WaveSystem
 	private Wave wave;
 
-	private void Start() {
-
+	private void Awake() {
 		wave = GameObject.Find("WaveManager").GetComponent<Wave>();
 		player = wave.player;
 		agent = GetComponent<NavMeshAgent>();
@@ -22,7 +21,6 @@ public class EnemyMovement : MonoBehaviour {
 
         if (agent.enabled == true) {
             agent.destination = player.position;
-
         }
 	}
 	private IEnumerator Movement() {  //werkt niet
@@ -30,5 +28,16 @@ public class EnemyMovement : MonoBehaviour {
 		yield return new WaitForSeconds(1f);
 		//agent.destination = player.position;
 	}
+
+    public void Move()
+    {
+        agent.enabled = true;
+        
+    }
+
+    public void Stop()
+    {
+        agent.enabled = false;
+    }
 	
 }

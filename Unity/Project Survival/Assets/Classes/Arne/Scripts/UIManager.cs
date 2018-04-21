@@ -69,7 +69,6 @@ public class UIManager : MonoBehaviour
 		playerAnimator = GameObject.Find("PlayerAnimator");
 
         //shootScript = GameObject.FindWithTag("Gun").GetComponent<Shooting> ();
-        print(shootScript);
         wave = GameObject.Find("WaveManager").GetComponent<Wave>();
 
 		camLook = cam.GetComponent<CameraLook>();

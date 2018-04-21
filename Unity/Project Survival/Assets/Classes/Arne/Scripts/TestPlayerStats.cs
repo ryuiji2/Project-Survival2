@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -30,8 +30,7 @@ public class TestPlayerStats : MonoBehaviour {
 		health -= dmg;
 		healthPercentage = health / maxHP;
 		if(health <= 0f) {
-
-			Debug.Log("Dead");	
+            
 			uim.SetState(UIManager.UIState.GameOver);
 		}
 		uim.CheckHealth();

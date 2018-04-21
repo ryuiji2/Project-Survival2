@@ -329,15 +329,13 @@ public class Shooting : MonoBehaviour {
                     
                 } 
                 if(hit.collider.tag == "Wood") {
-
-                    Debug.Log("wood");
+                    
                     Instantiate (bulletHole, hit.point, Quaternion.FromToRotation (Vector3.up, hit.normal));
                     ParticleSystem ps = Instantiate(envWoodhit, hit.point, Quaternion.identity);
                     ps.Play();
                 }
                 if(hit.collider.tag == "Stone" || hit.collider.tag == "Ground") { //NEVER FINDS GROUND TAG
-
-                    Debug.Log("Stone");
+                    
                     Instantiate (bulletHole, hit.point, Quaternion.FromToRotation (Vector3.up, hit.normal));
                     ParticleSystem ps = Instantiate(envStonehit, hit.point, Quaternion.identity);
                     ps.Play();
@@ -366,15 +364,12 @@ public class Shooting : MonoBehaviour {
     private void PlayAnimation (bool state) {
 
         if(state && !reloadAnim.isPlaying) {
-
-            Debug.Log("Play");
+            
             reloadAnim.Play();
         }
         if(!state && !reloadAnim.isPlaying) {
             
             reloadAnim.Stop();
-           
-            Debug.Log("stop anim");
         }
     }
     public void Reloaded()

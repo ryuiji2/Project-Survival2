@@ -72,7 +72,6 @@ public class AnimatieTest : MonoBehaviour
 	IEnumerator Reload () {
 		reloading = true;
 		AnimationClip ac = (mp40) ? pistolReload : mp40Reload;
-		print("Reloading!");
 		yield return new WaitForSeconds(ac.length);
 		ammo = _ammo;
 		anim.SetBool("FA", true);

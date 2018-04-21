@@ -36,7 +36,6 @@ public class Manager : MonoBehaviour {
 			
 			wave.ResetEnemies();
 			Destroy(enemy);
-			Debug.Log("reset");
 		}
 	}
 	public void ResetHUD () {

@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -35,7 +35,6 @@ public class Movement : MonoBehaviour {
     void Jump () {
 
         if (Input.GetButtonDown ("Jump") && canJump) {
-            print(1);
             GetComponent<Rigidbody> ().AddForce (0, jumpHeight * 100, 0);
             canJump = false;
         }

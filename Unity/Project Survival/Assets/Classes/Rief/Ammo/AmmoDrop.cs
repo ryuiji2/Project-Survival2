@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -15,7 +15,6 @@ public class AmmoDrop : MonoBehaviour {
 
     private void OnCollisionEnter (Collision ammoDrop) {
         if(ammoDrop.transform.tag == "AmmoDrop") {
-            print ("hit the box");
             mp40.mp40AmmoTotal += ammo;
             Destroy (ammoDrop.gameObject);
         }

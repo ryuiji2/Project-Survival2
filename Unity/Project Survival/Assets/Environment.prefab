@@ -3350,7 +3350,7 @@ GameObject:
   - component: {fileID: 23309854131631228}
   m_Layer: 0
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9079,7 +9079,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4705115863527862}
   - component: {fileID: 108354410835712290}
-  - component: {fileID: 114262047874256426}
   m_Layer: 0
   m_Name: Point light (4)
   m_TagString: Untagged
@@ -9129,7 +9128,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4047819706270078}
   - component: {fileID: 108972866009542192}
-  - component: {fileID: 114938444738150066}
   - component: {fileID: 95795263094188090}
   m_Layer: 0
   m_Name: Point light (3)
@@ -9486,7 +9484,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4306903478988474}
   - component: {fileID: 108081749643596274}
-  - component: {fileID: 114670841641604690}
   - component: {fileID: 95863990929697372}
   m_Layer: 0
   m_Name: Light
@@ -55426,28 +55423,6 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &114262047874256426
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1631390452921118}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &114670841641604690
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1669524121271420}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114847388900572528
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -55463,17 +55438,6 @@ MonoBehaviour:
   boolA: 1
   boolB: 0
   timeMultiplier: 0.2
---- !u!114 &114938444738150066
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1635747910128820}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!154 &154436748758337314
 TerrainCollider:
   m_ObjectHideFlags: 1

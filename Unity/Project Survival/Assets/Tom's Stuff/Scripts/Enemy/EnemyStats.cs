@@ -94,7 +94,6 @@ public class EnemyStats : MonoBehaviour {
         if (Physics.Raycast (new Vector3 (transform.position.x, transform.position.y + 1, transform.position.z), transform.forward, out hit, attackRange, mask)) {
             anim.SetBool ("InRange", true);
             if (timer <= 0f && health > 0) {
-                agent.isStopped = true;
 
                 whichAttack = Random.Range (0, 1);
 
@@ -110,15 +109,13 @@ public class EnemyStats : MonoBehaviour {
                 timer = attackCooldown;
 
             }
-        } else {
+        }
+        else {
             if (!anim.GetCurrentAnimatorStateInfo (0).IsName ("Attack")) {
                 anim.SetBool ("InRange", false);
-                if (agent != null && health> 0) {
-                    agent.isStopped = false;
-                }
             }
-            }
-            timer -= Time.deltaTime;
+        }
+        timer -= Time.deltaTime;
     }
 	public void EnemyHealth (float dmg) {
 
@@ -143,6 +140,10 @@ public class EnemyStats : MonoBehaviour {
                 anim.SetTrigger ("Death");
                 anim.SetBool ("InRange", false);
                 anim.SetBool ("Attack", false);
+                foreach(CapsuleCollider collider in transform.GetComponentsInChildren<CapsuleCollider>())
+                {
+                    Destroy(collider);
+                }
                 death = true;
             }
             //UIM.checkscore (deathScore); > voor score
@@ -173,11 +174,9 @@ public class EnemyStats : MonoBehaviour {
         }
         if(state) {
         
-            Debug.Log("play");
             scoreAnim.Play();
         }
         if(!state) {
-            Debug.Log("Stop");
             scoreAnim.Stop();
         }
     }
