@@ -612,6 +612,36 @@ Prefab:
       propertyPath: reloadAnim
       value: 
       objectReference: {fileID: 811947652}
+    - target: {fileID: 54760934676080382, guid: 94fb53afb3619a8419c842f4837dcc39,
+        type: 2}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114489844701521812, guid: 94fb53afb3619a8419c842f4837dcc39,
+        type: 2}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 939486912}
+    - target: {fileID: 114489844701521812, guid: 94fb53afb3619a8419c842f4837dcc39,
+        type: 2}
+      propertyPath: pistolShoot
+      value: 
+      objectReference: {fileID: 8300000, guid: 4968d856c14a5d84588491520e35d6b8, type: 3}
+    - target: {fileID: 114489844701521812, guid: 94fb53afb3619a8419c842f4837dcc39,
+        type: 2}
+      propertyPath: pistolReload
+      value: 
+      objectReference: {fileID: 8300000, guid: eaa048cf5faa18b43a83042b6ae7bec4, type: 3}
+    - target: {fileID: 114489844701521812, guid: 94fb53afb3619a8419c842f4837dcc39,
+        type: 2}
+      propertyPath: mp40Shoot
+      value: 
+      objectReference: {fileID: 8300000, guid: 95b46d73c937f3b408df971e86f3322d, type: 3}
+    - target: {fileID: 114489844701521812, guid: 94fb53afb3619a8419c842f4837dcc39,
+        type: 2}
+      propertyPath: mp40Reload
+      value: 
+      objectReference: {fileID: 8300000, guid: 596efe1f8adfdb44eb9a7e1be79ca5d7, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 94fb53afb3619a8419c842f4837dcc39, type: 2}
   m_IsPrefabParent: 0
@@ -1089,6 +1119,91 @@ Animation:
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!1 &939486908 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1503922068865926, guid: 94fb53afb3619a8419c842f4837dcc39,
+    type: 2}
+  m_PrefabInternal: {fileID: 739695080}
+--- !u!82 &939486912
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 939486908}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!4 &1084987866 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4550163105640380, guid: def5f50a769bfdb40a222b3cdb0f7be3,

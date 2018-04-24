@@ -13,6 +13,7 @@ TagManager:
   - Wood
   - Gun
   - AmmoDrop
+  - Damage
   layers:
   - Default
   - TransparentFX

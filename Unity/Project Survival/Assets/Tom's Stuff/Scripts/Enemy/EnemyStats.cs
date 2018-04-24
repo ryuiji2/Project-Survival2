@@ -6,10 +6,6 @@ using UnityEngine.AI;
 
 public class EnemyStats : MonoBehaviour {
 
-    //random range voor attack
-
-	[Range(100f,0f)]
-
 	public float health = 100f;
 	public float damage = 10f;
     public float deathTimer;
@@ -41,9 +37,14 @@ public class EnemyStats : MonoBehaviour {
     private bool canTakeDmg = true;
     public List<Collider> gates = new List<Collider> ();
 
+    private GameObject attackZone;
+
 
     private void Awake () {
 
+        attackZone = transform.GetChild(0).gameObject;
+        attackZone.GetComponent<Attack>().damage = damage;
+        attackZone.SetActive(false);
         scoreAnim = GameObject.Find("Plus Score").GetComponent<Animation>();
 		regen = GameObject.Find("Player").GetComponent<Regeneration>();
 		player = GameObject.Find("Player").GetComponent<PlayerStats>();
@@ -73,8 +74,8 @@ public class EnemyStats : MonoBehaviour {
 	public void FixedUpdate () {
         
 
-        Death ();
-        Attack ();
+        Death();
+        RangeCheck();
 
     }
 
@@ -84,7 +85,7 @@ public class EnemyStats : MonoBehaviour {
             Instantiate (ammoBox, transform.position, Quaternion.identity);
         }
     }
-	public void Attack () { //bug not touching player and player receives damage
+	public void RangeCheck() { //bug not touching player and player receives damage
 
         
 
@@ -103,9 +104,8 @@ public class EnemyStats : MonoBehaviour {
                     anim.SetBool ("Attack", false);
                 }
 
-                regen.EnemyAttack ();
-
-                player.PlayerHealth (damage);
+                //regen.EnemyAttack ();
+                //player.PlayerHealth (damage);
                 timer = attackCooldown;
 
             }
@@ -117,6 +117,17 @@ public class EnemyStats : MonoBehaviour {
         }
         timer -= Time.deltaTime;
     }
+
+    public void Attack()
+    {
+        attackZone.SetActive(true);
+    }
+
+    public void RemoveAttack()
+    {
+        attackZone.SetActive(false);
+    }
+
 	public void EnemyHealth (float dmg) {
 
         health -= dmg;
@@ -163,6 +174,10 @@ public class EnemyStats : MonoBehaviour {
         }
         if (deathTimer <= 0f) {
             gameObject.transform.position += (Vector3.down * Time.deltaTime);
+        }
+        if(deathTimer <= -3)
+        {
+            Destroy(gameObject);
         }
 	}
     public void PlayAnimation (bool state) {

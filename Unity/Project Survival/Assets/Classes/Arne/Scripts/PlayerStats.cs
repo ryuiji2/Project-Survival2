@@ -15,8 +15,8 @@ public class PlayerStats : MonoBehaviour {
 	public UIManager uim;
 
 	public Vector3 startPos;
-
-
+    
+    private HashSet<Collider> attackedBy = new HashSet<Collider>();
 
 	private void Awake () {
 
@@ -42,4 +42,24 @@ public class PlayerStats : MonoBehaviour {
 		PlayerHealth(0f);
 		//playeranimator disable
 	}
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "Damage" /*&& !attackedBy.Contains(other)*/)
+        {
+            //attackedBy.Add(other);
+            GetComponent<Regeneration>().EnemyAttack();
+            PlayerHealth(other.GetComponent<Attack>().damage);
+        }
+    }
+
+    public IEnumerator DamageSpam (Collider col)
+    {
+        yield return new WaitForSeconds(1);
+        if (attackedBy.Contains(col))
+        {
+            attackedBy.Remove(col);
+        }
+        else print("Doesn't work!");
+    }
 }
