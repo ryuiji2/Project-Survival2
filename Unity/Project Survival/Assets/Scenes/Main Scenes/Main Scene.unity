@@ -642,6 +642,12 @@ Prefab:
       propertyPath: mp40Reload
       value: 
       objectReference: {fileID: 8300000, guid: 596efe1f8adfdb44eb9a7e1be79ca5d7, type: 3}
+    - target: {fileID: 114314356301676296, guid: 94fb53afb3619a8419c842f4837dcc39,
+        type: 2}
+      propertyPath: enemyHit
+      value: 
+      objectReference: {fileID: 198059037940332672, guid: e5e841b61667d384a97603134ee6ebcf,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 94fb53afb3619a8419c842f4837dcc39, type: 2}
   m_IsPrefabParent: 0
