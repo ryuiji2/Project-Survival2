@@ -1,4 +1,4 @@
-﻿Shader "Simulation/Walls" {
+Shader "Simulation/Walls" {
 	Properties {
 		_Color ("Color", Color) = (1,1,1,1)
 		_MainTex ("Albedo (RGB)", 2D) = "white" {}
@@ -15,7 +15,7 @@
 		
 	}
 	SubShader {
-		Tags{ "Queue" = "Geometry" "RenderType" = "Geometry" }
+		Tags{ "Queue" = "Geometry" "RenderType" = "Opaque" }
 		
 		LOD 200
 
@@ -63,7 +63,6 @@
 			o.Metallic = 0;
 			o.Smoothness = 0;
 			o.Normal = UnpackNormal(tex2D(_Normal, IN.uv_Normal));
-			o.Alpha = 1;
 		}
 		ENDCG
 	}
